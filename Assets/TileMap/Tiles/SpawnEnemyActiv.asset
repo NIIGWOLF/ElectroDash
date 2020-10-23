@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9d1514134bc4fbd41bb739b1b9a49231, type: 3}
-  m_Name: SpawnPoint
+  m_Name: SpawnEnemyActiv
   m_EditorClassIdentifier: 
-  m_DefaultSprite: {fileID: 21300000, guid: fb5db03972d534241b24d8c0c8e1c7e2, type: 3}
-  m_DefaultGameObject: {fileID: 4908378528019452410, guid: a89271c16b6e2be41b0ab36ca47f1632,
+  m_DefaultSprite: {fileID: 21300000, guid: 1160618cdc9f44648a53d035e7c13cdf, type: 3}
+  m_DefaultGameObject: {fileID: 5834087204627317833, guid: fa7a41592048a7c4ca35c2c215ecb982,
     type: 3}
   m_DefaultColliderType: 1
   m_TilingRules: []

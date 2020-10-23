@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d1514134bc4fbd41bb739b1b9a49231, type: 3}
   m_Name: SwitchPoint
   m_EditorClassIdentifier: 
-  m_DefaultSprite: {fileID: 21300000, guid: 9ea7ddb8358e5b84e95c4e59f2b55341, type: 3}
+  m_DefaultSprite: {fileID: 21300000, guid: 36fd5de8240356242ad08e67117767b7, type: 3}
   m_DefaultGameObject: {fileID: 1335618219162192983, guid: 65edb78ba8388a449ac4d64c27e24d48,
     type: 3}
   m_DefaultColliderType: 1

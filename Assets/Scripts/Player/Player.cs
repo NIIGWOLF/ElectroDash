@@ -1,33 +1,13 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using DG.Tweening;
-using UnityEngine.Tilemaps;
+﻿using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Player : Character
 {
-    private bool isMove = false;
-    private Vector3Int backPos;
-    private Vector3Int nextPos = new Vector3Int(0, 0, 1);
-    private Vector3Int currentPos;
-    private Sequence seq;
-    private float speed = 5f;
-    private Ease ease = Ease.Linear;
-    private Tilemap tileMap;
-    // Start is called before the first frame update
-    void Start()
-    {
-        backPos = Vector3Int.CeilToInt(transform.position);
-        tileMap = ScriptManager.objectManager.tilemap;
-        currentPos = Vector3Int.CeilToInt(transform.position);
-    }
-
     // Update is called once per frame
     void Update()
     {
         if (isMove)
         {
-            transform.position = Vector3.MoveTowards(transform.position, nextPos, speed*Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, nextPos, speed * Time.deltaTime);
             if (transform.position.Equals(nextPos))
             {
                 currentPos = nextPos;
@@ -35,7 +15,7 @@ public class Player : MonoBehaviour
                 if (nextPos.z == 0)
                 {
                     backPos = currentPos;
-                    tileMap.GetInstantiatedObject(nextPos).GetComponent<BasePoint>().OutComming();
+                    tileMap.GetInstantiatedObject(currentPos).GetComponent<BasePoint>().OutComming();
                 }
                 else
                 {
@@ -47,7 +27,6 @@ public class Player : MonoBehaviour
 
     public void Swipe(int rot)
     {
-        seq = DOTween.Sequence();
         GameObject goTemp;
         Debug.Log("swipe");
         switch (rot)
@@ -60,7 +39,7 @@ public class Player : MonoBehaviour
                     {
                         backPos = currentPos;
                         nextPos = currentPos + new Vector3Int(0, 1, 0);
-                        goTemp.GetComponent<BasePoint>().OutComming();
+                        tileMap.GetInstantiatedObject(currentPos).GetComponent<BasePoint>().OutComming();
                         isMove = true;
                     }
                 }
@@ -73,7 +52,7 @@ public class Player : MonoBehaviour
                     {
                         backPos = currentPos;
                         nextPos = currentPos + new Vector3Int(1, 0, 0);
-                        goTemp.GetComponent<BasePoint>().OutComming();
+                        tileMap.GetInstantiatedObject(currentPos).GetComponent<BasePoint>().OutComming();
                         isMove = true;
                     }
                 }
@@ -86,7 +65,7 @@ public class Player : MonoBehaviour
                     {
                         backPos = currentPos;
                         nextPos = currentPos + new Vector3Int(0, -1, 0);
-                        goTemp.GetComponent<BasePoint>().OutComming();
+                        tileMap.GetInstantiatedObject(currentPos).GetComponent<BasePoint>().OutComming();
                         isMove = true;
                     }
                 }
@@ -99,11 +78,17 @@ public class Player : MonoBehaviour
                     {
                         backPos = currentPos;
                         nextPos = currentPos + new Vector3Int(-1, 0, 0);
-                        goTemp.GetComponent<BasePoint>().OutComming();
+                        tileMap.GetInstantiatedObject(currentPos).GetComponent<BasePoint>().OutComming();
                         isMove = true;
                     }
                 }
                 break;
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D collider){
+        if (collider.gameObject.GetComponent<Character>()){
+            returnBack();
         }
     }
 }
