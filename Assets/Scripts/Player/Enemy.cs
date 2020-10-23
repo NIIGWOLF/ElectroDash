@@ -6,6 +6,8 @@ public class Enemy : Character
 {
 
     private float timeleft = 1;
+
+    // Update is called once per frame
     void Update()
     {
         if (isMove)
@@ -14,10 +16,11 @@ public class Enemy : Character
             if (transform.position.Equals(nextPos))
             {
                 currentPos = nextPos;
-                nextPos = NextPosBack(backPos);
+                nextPos = tileMap.GetInstantiatedObject(nextPos).GetComponent<BasePoint>().InComming(backPos,false);
                 if (nextPos.z == 0)
                 {
                     backPos = currentPos;
+                    tileMap.GetInstantiatedObject(currentPos).GetComponent<BasePoint>().OutComming(false);
                 }
                 else
                 {
@@ -33,6 +36,8 @@ public class Enemy : Character
                 timeleft = 1;
                 nextPos = NextPos();
                 backPos = currentPos;
+                Debug.Log(currentPos);
+                tileMap.GetInstantiatedObject(currentPos).GetComponent<BasePoint>().OutComming(false);
                 isMove = true;
             }
         }
@@ -64,51 +69,6 @@ public class Enemy : Character
         }
         if (tempList.Count == 0) return new Vector3Int(0, 0, 1);
         else return tempList[Random.Range(0, tempList.Count)];
-    }
-
-    protected virtual Vector3Int NextPosBack(Vector3Int backPos)
-    {
-        Vector3Int temp = new Vector3Int(0, 0, 1);
-        var tileMap = ScriptManager.objectManager.tilemap;
-
-        GameObject goTemp;
-        int countCell = 0;
-        for (int i = -1; i <= 1; i += 2)
-        {
-
-            goTemp = tileMap.GetInstantiatedObject(currentPos + new Vector3Int(i, 0, 0));
-            if (goTemp != null)
-            {
-                if (goTemp.GetComponent<BasePoint>())
-                {
-                    countCell++;
-                    if (!backPos.Equals(currentPos + new Vector3Int(i, 0, 0)))
-                    {
-                        temp = currentPos + new Vector3Int(i, 0, 0);
-                    }
-                }
-            }
-
-            goTemp = tileMap.GetInstantiatedObject(currentPos + new Vector3Int(0, i, 0));
-            if (goTemp != null)
-            {
-                if (goTemp.GetComponent<BasePoint>())
-                {
-                    countCell++;
-                    if (!backPos.Equals(currentPos + new Vector3Int(0, i, 0)))
-                    {
-                        temp = currentPos + new Vector3Int(0, i, 0);
-                    }
-                }
-            }
-
-        }
-
-        if (countCell == 2)
-        {
-            return temp;
-        }
-        else return new Vector3Int(0, 0, 1);
     }
 
     void OnTriggerEnter2D(Collider2D collider){

@@ -13,11 +13,11 @@ public class EnemyActiv : Character
             if (transform.position.Equals(nextPos))
             {
                 currentPos = nextPos;
-                nextPos = tileMap.GetInstantiatedObject(nextPos).GetComponent<BasePoint>().InComming(backPos);
+                nextPos = tileMap.GetInstantiatedObject(nextPos).GetComponent<BasePoint>().InComming(backPos,true);
                 if (nextPos.z == 0)
                 {
                     backPos = currentPos;
-                    tileMap.GetInstantiatedObject(currentPos).GetComponent<BasePoint>().OutComming();
+                    tileMap.GetInstantiatedObject(currentPos).GetComponent<BasePoint>().OutComming(true);
                 }
                 else
                 {
@@ -33,7 +33,7 @@ public class EnemyActiv : Character
                 timeleft = 1;
                 nextPos = NextPos();
                 backPos = currentPos;
-                tileMap.GetInstantiatedObject(currentPos).GetComponent<BasePoint>().OutComming();
+                tileMap.GetInstantiatedObject(currentPos).GetComponent<BasePoint>().OutComming(true);
                 isMove = true;
             }
         }

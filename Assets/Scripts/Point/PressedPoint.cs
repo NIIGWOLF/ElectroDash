@@ -15,22 +15,28 @@ public class PressedPoint : EnabledPoint
         tileMap = ScriptManager.objectManager.tilemap;
         tilemapRedWire = ScriptManager.objectManager.tilemapRedWire;
     }
-    public override Vector3Int InComming(Vector3Int backPos)
+    public override Vector3Int InComming(Vector3Int backPos, bool activPoint)
     {
         Debug.Log("In");
-        SetActiv(!activ);
-        spritesRedWire = searchWire(tilemapRedWire);
-        pointEnabledRedWire = searchPoint(spritesRedWire,tileMap);
-        OnOffWire(tilemapRedWire,spritesRedWire,pointEnabledRedWire);
+        if (activPoint)
+        {
+            SetActiv(!activ);
+            spritesRedWire = searchWire(tilemapRedWire);
+            pointEnabledRedWire = searchPoint(spritesRedWire, tileMap);
+            OnOffWire(tilemapRedWire, spritesRedWire, pointEnabledRedWire);
+        }
         return NextPos(backPos);
     }
 
-    public override void OutComming()
+    public override void OutComming(bool activPoint)
     {
-        SetActiv(!activ);
-        spritesRedWire = searchWire(tilemapRedWire);
-        pointEnabledRedWire = searchPoint(spritesRedWire,tileMap);
-        OnOffWire(tilemapRedWire,spritesRedWire,pointEnabledRedWire);
+        if (activPoint)
+        {
+            SetActiv(!activ);
+            spritesRedWire = searchWire(tilemapRedWire);
+            pointEnabledRedWire = searchPoint(spritesRedWire, tileMap);
+            OnOffWire(tilemapRedWire, spritesRedWire, pointEnabledRedWire);
+        }
         Debug.Log("Out");
     }
 }
