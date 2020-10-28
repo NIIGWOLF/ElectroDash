@@ -17,7 +17,7 @@ public class SwitchPoint : EnabledPoint
     }
     public override Vector3Int InComming(Vector3Int backPos, bool activPoint)
     {
-        Debug.Log("In");
+        //Debug.Log("In");
         if (activPoint)
         {
             SetActiv(!activ);

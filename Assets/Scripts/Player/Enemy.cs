@@ -5,8 +5,6 @@ using UnityEngine;
 public class Enemy : Character
 {
 
-    private float timeleft = 1;
-
     // Update is called once per frame
     void Update()
     {
@@ -33,10 +31,9 @@ public class Enemy : Character
             timeleft -= Time.deltaTime;
             if (timeleft < 0)
             {
-                timeleft = 1;
+                timeleft = time;
                 nextPos = NextPos();
                 backPos = currentPos;
-                Debug.Log(currentPos);
                 tileMap.GetInstantiatedObject(currentPos).GetComponent<BasePoint>().OutComming(false);
                 isMove = true;
             }
@@ -71,13 +68,36 @@ public class Enemy : Character
         else return tempList[Random.Range(0, tempList.Count)];
     }
 
-    void OnTriggerEnter2D(Collider2D collider){
+    protected override void  OnTriggerEnter2D(Collider2D collider){
         if (collider.gameObject.GetComponent<Player>()){
             collider.gameObject.GetComponent<Player>().Die();
             return;
         }
-        if (collider.gameObject.GetComponent<Character>()){
-            returnBack();
+        if (isMove)
+        {
+            if (collider.gameObject.GetComponent<Character>())
+            {
+                Vector3 vecChar = (transform.position - collider.transform.position);
+
+                if (Mathf.Abs(vecChar.x) < Mathf.Abs(vecChar.y))
+                {
+                    if ((currentPos - nextPos).y != 0)
+                    {
+                        returnBack();
+                    }
+                }
+                else
+                {
+                    if ((currentPos - nextPos).x != 0)
+                    {
+                        returnBack();
+                    }
+                }
+            }
+        }
+        else
+        {
+            timeleft+=0.2f;
         }
     }
 }

@@ -14,13 +14,13 @@ public class BasePoint : MonoBehaviour
     }
     public virtual Vector3Int InComming(Vector3Int backPos, bool activPoint)
     {
-        Debug.Log("In");
+        //Debug.Log("In");
         return NextPos(backPos);
     }
 
     public virtual void OutComming(bool activPoint)
     {
-        Debug.Log("Out");
+        //Debug.Log("Out");
     }
 
     protected virtual Vector3Int NextPos(Vector3Int backPos)

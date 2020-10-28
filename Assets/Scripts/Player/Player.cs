@@ -86,9 +86,4 @@ public class Player : Character
         }
     }
 
-    void OnTriggerEnter2D(Collider2D collider){
-        if (collider.gameObject.GetComponent<Character>()){
-            returnBack();
-        }
-    }
 }

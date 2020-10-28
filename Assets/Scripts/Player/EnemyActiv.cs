@@ -2,7 +2,6 @@
 using UnityEngine;
 public class EnemyActiv : Character
 {
-    private float timeleft = 1;
 
     // Update is called once per frame
     void Update()
@@ -30,7 +29,7 @@ public class EnemyActiv : Character
             timeleft -= Time.deltaTime;
             if (timeleft < 0)
             {
-                timeleft = 1;
+                timeleft = time;
                 nextPos = NextPos();
                 backPos = currentPos;
                 tileMap.GetInstantiatedObject(currentPos).GetComponent<BasePoint>().OutComming(true);
@@ -67,9 +66,4 @@ public class EnemyActiv : Character
         else return tempList[Random.Range(0, tempList.Count)];
     }
 
-    void OnTriggerEnter2D(Collider2D collider){
-        if (collider.gameObject.GetComponent<Character>()){
-            returnBack();
-        }
-    }
 }
