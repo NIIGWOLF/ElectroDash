@@ -35,7 +35,11 @@ public class TransportationBlock : Character
                     break;
             }
         }
+        StartIn();
     }
+
+    protected virtual void StartIn(){}
+
     void Update()
     {
         if (isMove)
@@ -74,6 +78,7 @@ public class TransportationBlock : Character
                 movePos = nextPos;
                 backPos = currentPos;
                 isMove = true;
+                StartMove();
             }
             else
             {
@@ -103,6 +108,7 @@ public class TransportationBlock : Character
             isMove = false;
             timeleft = time;
             currentPos = nextPos;
+            EndMove();
         }
         else
         {
@@ -110,6 +116,9 @@ public class TransportationBlock : Character
         }
         Debug.Log("Finish Block");
     }
+
+    protected virtual void EndMove(){}
+    protected virtual void StartMove(){}
 
     [System.Serializable]
     public class MoveTurtle
