@@ -25,6 +25,7 @@ public class GenerateWire : MonoBehaviour
             map = Object.FindObjectOfType<Tilemap>();
             CreateWireEdit();
         }
+        RectTransform a;
     }
 
     void CreateWireEdit()

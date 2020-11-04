@@ -6,5 +6,5 @@ using UnityEngine.Tilemaps;
 public class ObjectManager : MonoBehaviour
 {
     public Tilemap tilemap;
-    public Tilemap tilemapRedWire;
+    
 }
