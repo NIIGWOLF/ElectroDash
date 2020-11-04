@@ -9,14 +9,14 @@ public class TransportationWire : TransportationBlock
     TileBase brush;
     TileBase old;
     protected override void StartIn(){
-        wireTilemap = ScriptManager.objectManager.tilemapRedWire;
-        brush = ScriptManager.brushManager.wireRed;
+        //wireTilemap = ScriptManager.objectManager.tilemapRedWire;
+        //brush = ScriptManager.brushManager.wireRed;
     }
     protected override void StartMove(){
-        wireTilemap.SetTile(currentPos,old);
+        //wireTilemap.SetTile(currentPos,old);
     }
     protected override void EndMove(){
-        old = wireTilemap.GetTile(currentPos);
-        wireTilemap.SetTile(currentPos,brush);
+        //old = wireTilemap.GetTile(currentPos);
+        //wireTilemap.SetTile(currentPos,brush);
     }
 }
