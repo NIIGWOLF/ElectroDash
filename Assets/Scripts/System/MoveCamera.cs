@@ -18,7 +18,6 @@ public class MoveCamera : MonoBehaviour
     {
         if (target)
         {
-            Debug.Log(Vector2.Distance(target.transform.position, transform.position));
             if (Vector2.Distance(target.transform.position, transform.position) > 0.1f)
             {
                 transform.position = Vector2.Lerp(transform.position, target.transform.position, Time.deltaTime*4);

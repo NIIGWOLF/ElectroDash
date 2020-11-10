@@ -2,6 +2,8 @@
 
 public class Player : Character
 {
+    public bool invert=false;
+
     void Awake(){
         Camera.main.GetComponent<MoveCamera>().SetTarget(gameObject);
     }
@@ -31,6 +33,10 @@ public class Player : Character
 
     public void Swipe(int rot)
     {
+        if (isMove) return;
+
+        if (invert) rot=(rot+2)%4;
+
         GameObject goTemp;
         Debug.Log("swipe");
         switch (rot)

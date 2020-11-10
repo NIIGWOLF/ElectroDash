@@ -66,7 +66,7 @@ public class TransportationBlock : Character
                         nextPos = currentPos + new Vector3Int(moveList[indexList].blockCount, 0, 0);
                         break;
                 }
-                seq = DOTween.Sequence().Append(transform.DOMove(nextPos, 1));
+                seq = DOTween.Sequence().Append(transform.DOMove(nextPos, 1).SetEase(Ease.InOutCubic));
                 seq.OnComplete(CompliteMove);
                 seq.OnPause(PauseMove);
 

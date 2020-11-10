@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d1514134bc4fbd41bb739b1b9a49231, type: 3}
   m_Name: WireBlock
   m_EditorClassIdentifier: 
-  m_DefaultSprite: {fileID: 21300000, guid: 44ceb6ff50bb3bf4c99d94c0ae800da1, type: 3}
-  m_DefaultGameObject: {fileID: 5532745816543415949, guid: 30e97a2c8331da9409f46b5aeed29dcf,
+  m_DefaultSprite: {fileID: 21300000, guid: b3f26f9a6ae5e61438bc5a14d7d45d41, type: 3}
+  m_DefaultGameObject: {fileID: 3128617043968876785, guid: 30e97a2c8331da9409f46b5aeed29dcf,
     type: 3}
   m_DefaultColliderType: 1
   m_TilingRules: []

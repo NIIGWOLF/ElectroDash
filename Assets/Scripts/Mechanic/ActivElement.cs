@@ -10,7 +10,7 @@ public class ActivElement : MonoBehaviour
     public List<ActivElement> listElements = new List<ActivElement>();
     Vector3Int currentPos;
     int sizeWire = 7;
-    bool activ = false;
+    protected bool activ = false;
 
     protected virtual void Start()
     {
@@ -95,7 +95,7 @@ public class ActivElement : MonoBehaviour
 
     public void WireActivAll(bool activ)
     {
-        this.activ = activ;
+        SetActiv(activ);
         if (gameObject.GetComponent<EnabledPoint>()) gameObject.GetComponent<EnabledPoint>().SetActiv(activ);
         foreach (ActivElement element in listElements)
         {
@@ -121,7 +121,7 @@ public class ActivElement : MonoBehaviour
     {
         foreach (ActivElement element in listElements)
         {
-            activ = activ | element.GetActiv();
+            SetActiv(activ | element.GetActiv());
         }
         WireActivAll(activ);
     }
@@ -160,6 +160,10 @@ public class ActivElement : MonoBehaviour
     public bool GetActiv()
     {
         return activ;
+    }
+
+    public virtual void SetActiv(bool activ){
+        this.activ = activ;
     }
 
     public void RemoveActivElementList(ActivElement element)

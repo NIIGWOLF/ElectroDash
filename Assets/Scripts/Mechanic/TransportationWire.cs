@@ -5,18 +5,16 @@ using UnityEngine.Tilemaps;
 
 public class TransportationWire : TransportationBlock
 {
-    Tilemap wireTilemap;
-    TileBase brush;
+    public TileBase brush;
     TileBase old;
     protected override void StartIn(){
-        //wireTilemap = ScriptManager.objectManager.tilemapRedWire;
-        //brush = ScriptManager.brushManager.wireRed;
+        old = tileMap.GetTile(currentPos);
     }
     protected override void StartMove(){
-        //wireTilemap.SetTile(currentPos,old);
+        tileMap.SetTile(currentPos,old);
     }
     protected override void EndMove(){
-        //old = wireTilemap.GetTile(currentPos);
-        //wireTilemap.SetTile(currentPos,brush);
+        old = tileMap.GetTile(currentPos);
+        tileMap.SetTile(currentPos,brush);
     }
 }
