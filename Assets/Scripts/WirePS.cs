@@ -5,10 +5,16 @@ using UnityEngine;
 public class WirePS : MonoBehaviour
 {
     public GameObject PSCreate;
+    public int orderLayer=0;
     bool exit = false;
-    void Awake()
+    void Start()
     {
-        GameObject ps=Instantiate(PSCreate,transform.position,Quaternion.Euler(transform.eulerAngles));
+        Sprite sp = gameObject.GetComponent<SpriteRenderer>().sprite;
+        GameObject gops=Instantiate(PSCreate,transform.position,Quaternion.Euler(transform.eulerAngles));
+        var ps = gops.GetComponent<ParticleSystem>();
+        ps.GetComponent<ParticleSystemRenderer>().sortingOrder=orderLayer;
+        var shps = ps.shape;
+        shps.sprite=sp;
     }
 
     void OnDestroy(){

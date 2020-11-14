@@ -74,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 9ea7ddb8358e5b84e95c4e59f2b55341, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -99,6 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 7993979266452238734}
+  active: 0
 --- !u!114 &7237085101472419675
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -112,6 +113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   listElements: []
+  isDelete: 0
 --- !u!114 &-7902890381195237716
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -124,6 +126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d94219bc5f45c2047b73a29b20d6ad69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isNew: 0
 --- !u!331 &1986324071386783176
 SpriteMask:
   m_ObjectHideFlags: 0

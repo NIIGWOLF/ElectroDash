@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3339247760217681316}
   - component: {fileID: 7170931689520749388}
   - component: {fileID: -5112846292519762549}
+  - component: {fileID: -512983891801513070}
   m_Layer: 0
   m_Name: StickyBlock
   m_TagString: Untagged
@@ -73,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: a88e0458bb367fb439b76897a6fd88f8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -174,3 +175,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d94219bc5f45c2047b73a29b20d6ad69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isNew: 0
+--- !u!114 &-512983891801513070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9215445429013702226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fbeca92d54b4f54798b3a2093eba941, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PSCreate: {fileID: 8700308325533454150, guid: b460c28ab16986d438b4ed7ccb6aa483,
+    type: 3}
+  orderLayer: 2
