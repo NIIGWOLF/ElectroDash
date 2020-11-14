@@ -9,7 +9,9 @@ public class GenerateWire : MonoBehaviour
     Vector3Int currentPos;
     GameObject wire;
     Tilemap map;
-    public Line line = new Line();
+    Line line = new Line();
+
+    public bool isNew = false;
 
     void Start()
     {
@@ -18,14 +20,14 @@ public class GenerateWire : MonoBehaviour
         if (Application.IsPlaying(gameObject))
         {
             map = ScriptManager.objectManager.tilemap;
-            CreateWirePlay();
+            if (isNew) CreateWireEdit();
+            else CreateWirePlay();
         }
         else
         {
             map = Object.FindObjectOfType<Tilemap>();
             CreateWireEdit();
         }
-        RectTransform a;
     }
 
     void CreateWireEdit()
