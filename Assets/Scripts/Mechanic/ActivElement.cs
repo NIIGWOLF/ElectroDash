@@ -11,6 +11,7 @@ public class ActivElement : MonoBehaviour
     Vector3Int currentPos;
     int sizeWire = 7;
     protected bool activ = false;
+    public bool isDelete;
 
     protected virtual void Start()
     {
@@ -23,6 +24,7 @@ public class ActivElement : MonoBehaviour
 
     protected void RecheckWire()
     {
+        List<ActivElement> oldList = new List<ActivElement>(listElements);
         listElements.Clear();
         for (int i = 1; i < sizeWire; i++) //right
         {
@@ -30,7 +32,9 @@ public class ActivElement : MonoBehaviour
             if (point == null) continue;
             else if (point.GetComponent<ActivElement>())
             {
-                AddActivElementList(point.GetComponent<ActivElement>());
+                ActivElement activElement=point.GetComponent<ActivElement>();
+                if (activElement.isDelete) break;
+                AddActivElementList(activElement);
                 point.GetComponent<ActivElement>().AddActivElementList(this);
             }
             break;
@@ -41,7 +45,9 @@ public class ActivElement : MonoBehaviour
             if (point == null) continue;
             else if (point.GetComponent<ActivElement>())
             {
-                AddActivElementList(point.GetComponent<ActivElement>());
+                ActivElement activElement=point.GetComponent<ActivElement>();
+                if (activElement.isDelete) break;
+                AddActivElementList(activElement);
                 point.GetComponent<ActivElement>().AddActivElementList(this);
             }
             break;
@@ -52,7 +58,9 @@ public class ActivElement : MonoBehaviour
             if (point == null) continue;
             else if (point.GetComponent<ActivElement>())
             {
-                AddActivElementList(point.GetComponent<ActivElement>());
+                ActivElement activElement=point.GetComponent<ActivElement>();
+                if (activElement.isDelete) break;
+                AddActivElementList(activElement);
                 point.GetComponent<ActivElement>().AddActivElementList(this);
             }
             break;
@@ -63,10 +71,18 @@ public class ActivElement : MonoBehaviour
             if (point == null) continue;
             else if (point.GetComponent<ActivElement>())
             {
-                AddActivElementList(point.GetComponent<ActivElement>());
+                ActivElement activElement=point.GetComponent<ActivElement>();
+                if (activElement.isDelete) break;
+                AddActivElementList(activElement);
                 point.GetComponent<ActivElement>().AddActivElementList(this);
             }
             break;
+        }
+
+        foreach(ActivElement ae in oldList){
+            if (!listElements.Contains(ae)){
+                DeleteWire(ae);
+            }
         }
     }
 
@@ -180,6 +196,7 @@ public class ActivElement : MonoBehaviour
     void OnDisable()
     {
         if ( exit ) return;
+        isDelete=true;
         foreach (ActivElement element in listElements)
         {
             if (element == null) return;
