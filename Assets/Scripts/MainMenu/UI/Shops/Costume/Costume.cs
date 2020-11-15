@@ -32,6 +32,8 @@ public class Costume : MonoBehaviour
         MainMenuManager.makePlayer.Player(costume);
         if (MainMenuManager.menuData.shopsData.openCostumes.Contains(costume))
         {
+            MainMenuManager.uiMainMenuManager.buyCostumeButton.SetActive(false);
+
             MainMenuManager.playerData.playerContent.costume = costume;
 
             MainMenuManager.playerData.costumeSelectedText.text = "Select";
