@@ -6,7 +6,6 @@ public class Costume : MonoBehaviour
 {
     public Text buttonText;
     public MenuData.ShopsData.COSTUME costume;
-
     void Start()
     {
         gameObject.GetComponent<Button>().onClick.AddListener(() => ChangePreview());

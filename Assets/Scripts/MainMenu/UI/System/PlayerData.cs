@@ -8,6 +8,8 @@ public class PlayerData : MonoBehaviour
 {
     public PlayerContent playerContent;
     public Text costumeSelectedText;
+    public Text trailsSelectedText;
+    public Text enemiesSelectedText;
     void Awake()
     {
         LoadData();

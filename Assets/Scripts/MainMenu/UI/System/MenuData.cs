@@ -44,27 +44,27 @@ public class MenuData : MonoBehaviour
         public List<COSTUME> openCostumes = new List<COSTUME>(){COSTUME.Classic};
         public List<int> pricesCostume = new List<int>(){0,1,1};
 
+        // Eyes data
+        public List<COSTUME> openEyes = new List<COSTUME>(){COSTUME.Classic};
 
         // Trails data
-        public List<int> openTrails = new List<int>();
-        public List<int> pricesTrails = new List<int>();
+        public List<TRAILS> openTrails = new List<TRAILS>(){TRAILS.Classic};
+        public List<int> pricesTrails = new List<int>(){0,1,1};
         public enum TRAILS
         {
             Classic = 0,
-            Bubble = 1,
-            Star = 2,
-            Grass = 3
+            Blue = 1,
+            Rose = 2,
         }
 
         // Enemyies data
-        public List<int> openEnemyies = new List<int>();
-        public List<int> pricesEnemyies = new List<int>();
+        public List<ENEMYIES> openEnemyies = new List<ENEMYIES>(){ENEMYIES.Classic};
+        public List<int> pricesEnemyies = new List<int>(){0,1,1};
         public enum ENEMYIES
         {
             Classic = 0,
-            Bubble = 1,
-            Star = 2,
-            Grass = 3
+            Glamur = 1,
+            Tarakan = 2,
         }
 
         // Bots data

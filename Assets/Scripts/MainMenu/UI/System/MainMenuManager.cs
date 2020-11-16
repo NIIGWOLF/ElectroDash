@@ -5,7 +5,7 @@ using UnityEngine;
 public class MainMenuManager : MonoBehaviour
 {
     public static UIMainMenuManager uiMainMenuManager; //загрузка класса 
-    public static PlayerData playerData;
+    public static PlayerData playerData; 
     public static MenuData menuData;
     public static CountData countData;
     public static MakePlayer makePlayer;
