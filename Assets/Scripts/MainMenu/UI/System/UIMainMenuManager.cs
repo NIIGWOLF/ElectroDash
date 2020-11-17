@@ -12,6 +12,7 @@ public class UIMainMenuManager : MonoBehaviour
     public BuyCostumeButton buyCostumeButton;
     public BuyPs_TrailsButton BuyPs_TrailsButton;
     public BuyEnemiesButton buyEnemiesButton;
+    public BuyBotsButton buyBotsButton;
     public Dictionary<string, GameObject> costumePrefabs;
     public Dictionary<string, GameObject> eyesPrefabs;
      public Dictionary<string, GameObject> psPrefabs;
@@ -47,6 +48,12 @@ public class UIMainMenuManager : MonoBehaviour
         foreach (GameObject enemy in Resources.LoadAll("Shops/Enemy"))
         {
             enemyPrefabs.Add(enemy.name, enemy);
+        }
+
+        botPrefabs = new Dictionary<string, GameObject>();
+        foreach (GameObject bot in Resources.LoadAll("Shops/Bot"))
+        {
+            botPrefabs.Add(bot.name, bot);
         }
         
     }

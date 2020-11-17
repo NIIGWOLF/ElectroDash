@@ -10,6 +10,7 @@ public class PlayerData : MonoBehaviour
     public Text costumeSelectedText;
     public Text trailsSelectedText;
     public Text enemiesSelectedText;
+    public Text botSelectedText;
     void Awake()
     {
         LoadData();

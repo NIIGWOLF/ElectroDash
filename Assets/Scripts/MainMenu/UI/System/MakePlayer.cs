@@ -9,6 +9,7 @@ public class MakePlayer : MonoBehaviour
     {
         Player();
         Enemy();
+        Bot();
     }
     public void Player()
     {
@@ -38,6 +39,12 @@ public class MakePlayer : MonoBehaviour
             Destroy(MainMenuManager.uiMainMenuManager.Enemy.transform.GetChild(0).gameObject);
         }
         Instantiate(MainMenuManager.uiMainMenuManager.enemyPrefabs[MainMenuManager.playerData.playerContent.enemyies.ToString()], MainMenuManager.uiMainMenuManager.Enemy.transform);
+    }
+    public void Bot(){
+        if (MainMenuManager.uiMainMenuManager.Bot.transform.childCount!=0){
+            Destroy(MainMenuManager.uiMainMenuManager.Bot.transform.GetChild(0).gameObject);
+        }
+        Instantiate(MainMenuManager.uiMainMenuManager.botPrefabs[MainMenuManager.playerData.playerContent.bots.ToString()], MainMenuManager.uiMainMenuManager.Bot.transform);
     }
     public void Player(MenuData.ShopsData.COSTUME costume)
     {
@@ -76,6 +83,12 @@ public class MakePlayer : MonoBehaviour
             Destroy(MainMenuManager.uiMainMenuManager.Enemy.transform.GetChild(0).gameObject);
         }
         Instantiate(MainMenuManager.uiMainMenuManager.enemyPrefabs[enemy.ToString()], MainMenuManager.uiMainMenuManager.Enemy.transform);
+    }
+    public void Player(MenuData.ShopsData.BOTS bots){
+        if (MainMenuManager.uiMainMenuManager.Bot.transform.childCount!=0){
+            Destroy(MainMenuManager.uiMainMenuManager.Bot.transform.GetChild(0).gameObject);
+        }
+        Instantiate(MainMenuManager.uiMainMenuManager.botPrefabs[bots.ToString()], MainMenuManager.uiMainMenuManager.Bot.transform);
     }
 
 }

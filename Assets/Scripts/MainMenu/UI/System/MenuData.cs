@@ -68,14 +68,13 @@ public class MenuData : MonoBehaviour
         }
 
         // Bots data
-        public List<int> openBots = new List<int>();
-        public List<int> pricesBots = new List<int>();
+        public List<BOTS> openBots = new List<BOTS>(){BOTS.Classic};
+        public List<int> pricesBots = new List<int>(){0,1,1};
         public enum BOTS
         {
             Classic = 0,
-            Bubble = 1,
-            Star = 2,
-            Grass = 3
+            Blue = 1,
+            Rose = 2,
         }
 
     }
