@@ -19,7 +19,12 @@ public class WirePS : MonoBehaviour
 
     void OnDestroy(){
         if (!exit){
-        GameObject ps=Instantiate(PSCreate,transform.position,Quaternion.Euler(transform.eulerAngles));
+        Sprite sp = gameObject.GetComponent<SpriteRenderer>().sprite;
+        GameObject gops=Instantiate(PSCreate,transform.position,Quaternion.Euler(transform.eulerAngles));
+        var ps = gops.GetComponent<ParticleSystem>();
+        ps.GetComponent<ParticleSystemRenderer>().sortingOrder=orderLayer;
+        var shps = ps.shape;
+        shps.sprite=sp;
         }
     }
 
