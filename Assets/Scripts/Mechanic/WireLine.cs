@@ -53,6 +53,21 @@ public class WireLine : MonoBehaviour
         }
     }
 
+    public void FastDeleteWire()
+    {
+        if (activ)
+        {
+            sequence.Kill();
+            sequence = DOTween.Sequence();
+            sequence.Append(transform.DOScaleY(0, 0.15f));
+            sequence.OnComplete(CompleteDelete);
+        }
+        else
+        {
+            CompleteDelete();
+        }
+    }
+
     public void CompleteDelete()
     {
         ScriptManager.wireManager.Wires.Remove(ScriptManager.wireManager.getKey(element1,element2));

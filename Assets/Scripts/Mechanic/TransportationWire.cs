@@ -7,8 +7,10 @@ public class TransportationWire : TransportationBlock
 {
     public TileBase brush;
     TileBase old;
+    public GameObject block;
     protected override void StartIn()
     {
+        block.GetComponent<SpriteRenderer>().sprite = ((RuleTile)brush).m_DefaultSprite;
         old = tileMap.GetTile(currentPos);
     }
     protected override void StartMove()
@@ -27,9 +29,15 @@ public class TransportationWire : TransportationBlock
         tileMap.SetTile(currentPos, brush);
         GameObject go = tileMap.GetInstantiatedObject(currentPos);
         if (go)
+        {
             if (go.GetComponent<GenerateWire>())
             {
                 go.GetComponent<GenerateWire>().isNew=true;
             }
+            if (go.GetComponent<ActivElement>())
+            {
+                go.GetComponent<ActivElement>().fastDeleteWire=true;
+            }
+        }
     }
 }

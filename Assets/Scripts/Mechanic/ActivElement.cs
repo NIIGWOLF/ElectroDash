@@ -12,6 +12,7 @@ public class ActivElement : MonoBehaviour
     int sizeWire = 7;
     protected bool activ = false;
     public bool isDelete;
+    public bool fastDeleteWire;
 
     protected virtual void Start()
     {
@@ -32,7 +33,7 @@ public class ActivElement : MonoBehaviour
             if (point == null) continue;
             else if (point.GetComponent<ActivElement>())
             {
-                ActivElement activElement=point.GetComponent<ActivElement>();
+                ActivElement activElement = point.GetComponent<ActivElement>();
                 if (activElement.isDelete) break;
                 AddActivElementList(activElement);
                 point.GetComponent<ActivElement>().AddActivElementList(this);
@@ -45,7 +46,7 @@ public class ActivElement : MonoBehaviour
             if (point == null) continue;
             else if (point.GetComponent<ActivElement>())
             {
-                ActivElement activElement=point.GetComponent<ActivElement>();
+                ActivElement activElement = point.GetComponent<ActivElement>();
                 if (activElement.isDelete) break;
                 AddActivElementList(activElement);
                 point.GetComponent<ActivElement>().AddActivElementList(this);
@@ -58,7 +59,7 @@ public class ActivElement : MonoBehaviour
             if (point == null) continue;
             else if (point.GetComponent<ActivElement>())
             {
-                ActivElement activElement=point.GetComponent<ActivElement>();
+                ActivElement activElement = point.GetComponent<ActivElement>();
                 if (activElement.isDelete) break;
                 AddActivElementList(activElement);
                 point.GetComponent<ActivElement>().AddActivElementList(this);
@@ -71,7 +72,7 @@ public class ActivElement : MonoBehaviour
             if (point == null) continue;
             else if (point.GetComponent<ActivElement>())
             {
-                ActivElement activElement=point.GetComponent<ActivElement>();
+                ActivElement activElement = point.GetComponent<ActivElement>();
                 if (activElement.isDelete) break;
                 AddActivElementList(activElement);
                 point.GetComponent<ActivElement>().AddActivElementList(this);
@@ -79,8 +80,10 @@ public class ActivElement : MonoBehaviour
             break;
         }
 
-        foreach(ActivElement ae in oldList){
-            if (!listElements.Contains(ae)){
+        foreach (ActivElement ae in oldList)
+        {
+            if (!listElements.Contains(ae))
+            {
                 DeleteWire(ae);
             }
         }
@@ -106,7 +109,18 @@ public class ActivElement : MonoBehaviour
     {
         var key = ScriptManager.wireManager.getKey(this, element);
         if (ScriptManager.wireManager.Wires.ContainsKey(key))
+        {
             ScriptManager.wireManager.Wires[key].wire.GetComponent<WireLine>().DeleteWire();
+        }
+    }
+
+    protected void FastDeleteWire(ActivElement element)
+    {
+        var key = ScriptManager.wireManager.getKey(this, element);
+        if (ScriptManager.wireManager.Wires.ContainsKey(key))
+        {
+            ScriptManager.wireManager.Wires[key].wire.GetComponent<WireLine>().FastDeleteWire();
+        }
     }
 
     public void WireActivAll(bool activ)
@@ -178,7 +192,8 @@ public class ActivElement : MonoBehaviour
         return activ;
     }
 
-    public virtual void SetActiv(bool activ){
+    public virtual void SetActiv(bool activ)
+    {
         this.activ = activ;
     }
 
@@ -195,13 +210,16 @@ public class ActivElement : MonoBehaviour
 
     void OnDisable()
     {
-        if ( exit ) return;
-        isDelete=true;
+        if (exit) return;
+        isDelete = true;
         foreach (ActivElement element in listElements)
         {
             if (element == null) return;
             element.RemoveActivElementList(this);
-            element.DeleteWire(this);
+            if (fastDeleteWire)
+                element.FastDeleteWire(this);
+                else
+                element.DeleteWire(this);
         }
         foreach (ActivElement element in listElements)
         {
@@ -210,7 +228,8 @@ public class ActivElement : MonoBehaviour
     }
 
     private bool exit;
-    void OnApplicationQuit(){
-        exit=true;
+    void OnApplicationQuit()
+    {
+        exit = true;
     }
 }
