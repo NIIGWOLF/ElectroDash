@@ -60,6 +60,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d94219bc5f45c2047b73a29b20d6ad69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isNew: 0
 --- !u!1 &4061743147849809352
 GameObject:
   m_ObjectHideFlags: 0
@@ -71,6 +72,7 @@ GameObject:
   - component: {fileID: 3423081616516365493}
   - component: {fileID: 4907094090426789349}
   - component: {fileID: 3295812415864719352}
+  - component: {fileID: 2669335284735132508}
   m_Layer: 0
   m_Name: GlassBlock
   m_TagString: Untagged
@@ -191,3 +193,18 @@ SpriteMask:
   m_BackSortingOrder: 0
   m_IsCustomRangeActive: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2669335284735132508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4061743147849809352}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 048295e13724f654994fae67d833d7fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PSCreate: {fileID: 8700308325533454150, guid: b460c28ab16986d438b4ed7ccb6aa483,
+    type: 3}
+  orderLayer: 0

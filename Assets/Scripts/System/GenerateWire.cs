@@ -39,9 +39,9 @@ public class GenerateWire : MonoBehaviour
             if (go.GetComponent<BasePoint>())
             {
                 if (line.GetLine(Vector3Int.right) == (null))
-                    line.CreateLine(Vector3Int.right, wire, transform);
+                    line.CreateLine(Vector3Int.right, wire, transform,true);
                 if (go.GetComponent<GenerateWire>().line.GetLine(Vector3Int.left) == (null))
-                    go.GetComponent<GenerateWire>().line.CreateLine(Vector3Int.left, wire, go.transform);
+                    go.GetComponent<GenerateWire>().line.CreateLine(Vector3Int.left, wire, go.transform,true);
             }
         //down
         go = map.GetInstantiatedObject(currentPos + Vector3Int.down);
@@ -49,9 +49,9 @@ public class GenerateWire : MonoBehaviour
             if (go.GetComponent<BasePoint>())
             {
                 if (line.GetLine(Vector3Int.down) == (null))
-                    line.CreateLine(Vector3Int.down, wire, transform);
+                    line.CreateLine(Vector3Int.down, wire, transform,true);
                 if (go.GetComponent<GenerateWire>().line.GetLine(Vector3Int.up) == (null))
-                    go.GetComponent<GenerateWire>().line.CreateLine(Vector3Int.up, wire, go.transform);
+                    go.GetComponent<GenerateWire>().line.CreateLine(Vector3Int.up, wire, go.transform,true);
             }
         //left
         go = map.GetInstantiatedObject(currentPos + Vector3Int.left);
@@ -59,9 +59,9 @@ public class GenerateWire : MonoBehaviour
             if (go.GetComponent<BasePoint>())
             {
                 if (line.GetLine(Vector3Int.left) == (null))
-                    line.CreateLine(Vector3Int.left, wire, transform);
+                    line.CreateLine(Vector3Int.left, wire, transform,true);
                 if (go.GetComponent<GenerateWire>().line.GetLine(Vector3Int.right) == (null))
-                    go.GetComponent<GenerateWire>().line.CreateLine(Vector3Int.right, wire, go.transform);
+                    go.GetComponent<GenerateWire>().line.CreateLine(Vector3Int.right, wire, go.transform,true);
             }
         //up
         go = map.GetInstantiatedObject(currentPos + Vector3Int.up);
@@ -69,9 +69,9 @@ public class GenerateWire : MonoBehaviour
             if (go.GetComponent<BasePoint>())
             {
                 if (line.GetLine(Vector3Int.up) == (null))
-                    line.CreateLine(Vector3Int.up, wire, transform);
+                    line.CreateLine(Vector3Int.up, wire, transform,true);
                 if (go.GetComponent<GenerateWire>().line.GetLine(Vector3Int.down) == (null))
-                    go.GetComponent<GenerateWire>().line.CreateLine(Vector3Int.down, wire, go.transform);
+                    go.GetComponent<GenerateWire>().line.CreateLine(Vector3Int.down, wire, go.transform,true);
             }
     }
 
@@ -84,7 +84,7 @@ public class GenerateWire : MonoBehaviour
             if (go.GetComponent<BasePoint>())
             {
                 if (line.GetLine(Vector3Int.right) == (null))
-                    line.CreateLine(Vector3Int.right, wire, transform);
+                    line.CreateLine(Vector3Int.right, wire, transform,false);
             }
         //down
         go = map.GetInstantiatedObject(currentPos + Vector3Int.down);
@@ -92,7 +92,7 @@ public class GenerateWire : MonoBehaviour
             if (go.GetComponent<BasePoint>())
             {
                 if (line.GetLine(Vector3Int.down) == (null))
-                    line.CreateLine(Vector3Int.down, wire, transform);
+                    line.CreateLine(Vector3Int.down, wire, transform,false);
             }
         //left
         go = map.GetInstantiatedObject(currentPos + Vector3Int.left);
@@ -100,7 +100,7 @@ public class GenerateWire : MonoBehaviour
             if (go.GetComponent<BasePoint>())
             {
                 if (line.GetLine(Vector3Int.left) == (null))
-                    line.CreateLine(Vector3Int.left, wire, transform);
+                    line.CreateLine(Vector3Int.left, wire, transform,false);
             }
         //up
         go = map.GetInstantiatedObject(currentPos + Vector3Int.up);
@@ -108,7 +108,7 @@ public class GenerateWire : MonoBehaviour
             if (go.GetComponent<BasePoint>())
             {
                 if (line.GetLine(Vector3Int.up) == (null))
-                    line.CreateLine(Vector3Int.up, wire, transform);
+                    line.CreateLine(Vector3Int.up, wire, transform,false);
             }
     }
 
@@ -139,27 +139,31 @@ public class GenerateWire : MonoBehaviour
         GameObject down = null;
         GameObject left = null;
 
-        public void CreateLine(Vector3Int direction, GameObject line, Transform parent)
+        public void CreateLine(Vector3Int direction, GameObject line, Transform parent, bool activPS)
         {
             if (direction.Equals(Vector3Int.up))
             {
                 up = Instantiate(line, parent);
                 up.transform.eulerAngles = new Vector3(0, 0, 0);
+                up.GetComponent<StartDeathPS>().enabled=activPS;
             }
             if (direction.Equals(Vector3Int.right))
             {
                 right = Instantiate(line, parent);
                 right.transform.eulerAngles = new Vector3(0, 0, -90);
+                right.GetComponent<StartDeathPS>().enabled=activPS;
             }
             if (direction.Equals(Vector3Int.down))
             {
                 down = Instantiate(line, parent);
                 down.transform.eulerAngles = new Vector3(0, 0, -180);
+                down.GetComponent<StartDeathPS>().enabled=activPS;
             }
             if (direction.Equals(Vector3Int.left))
             {
                 left = Instantiate(line, parent);
                 left.transform.eulerAngles = new Vector3(0, 0, -270);
+                left.GetComponent<StartDeathPS>().enabled=activPS;
             }
         }
 

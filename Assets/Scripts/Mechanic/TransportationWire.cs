@@ -30,6 +30,9 @@ public class TransportationWire : TransportationBlock
         GameObject go = tileMap.GetInstantiatedObject(currentPos);
         if (go)
         {
+            if (go.GetComponent<StartDeathPS>()){
+                go.GetComponent<StartDeathPS>().enabled=true;
+            }
             if (go.GetComponent<GenerateWire>())
             {
                 go.GetComponent<GenerateWire>().isNew=true;

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1476936467858225722}
   - component: {fileID: 126011584935603952}
   - component: {fileID: 15431237154126646}
+  - component: {fileID: -2963711725634857329}
   m_Layer: 0
   m_Name: WireBlock
   m_TagString: Untagged
@@ -96,3 +97,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   listElements: []
   isDelete: 0
+  fastDeleteWire: 0
+--- !u!114 &-2963711725634857329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3128617043968876785}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 048295e13724f654994fae67d833d7fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PSCreate: {fileID: 8700308325533454150, guid: b460c28ab16986d438b4ed7ccb6aa483,
+    type: 3}
+  orderLayer: 0

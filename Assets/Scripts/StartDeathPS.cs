@@ -1,16 +1,15 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class WirePS : MonoBehaviour
+public class StartDeathPS : MonoBehaviour
 {
     public GameObject PSCreate;
     public int orderLayer=0;
     bool exit = false;
-    void Start()
+    void OnEnable()
     {
         Sprite sp = gameObject.GetComponent<SpriteRenderer>().sprite;
         GameObject gops=Instantiate(PSCreate,transform.position,Quaternion.Euler(transform.eulerAngles));
+        gops.GetComponent<ParentPS>().parent=gameObject;
         var ps = gops.GetComponent<ParticleSystem>();
         ps.GetComponent<ParticleSystemRenderer>().sortingOrder=orderLayer;
         var shps = ps.shape;
@@ -21,6 +20,7 @@ public class WirePS : MonoBehaviour
         if (!exit){
         Sprite sp = gameObject.GetComponent<SpriteRenderer>().sprite;
         GameObject gops=Instantiate(PSCreate,transform.position,Quaternion.Euler(transform.eulerAngles));
+        gops.GetComponent<ParentPS>().parent=gameObject;
         var ps = gops.GetComponent<ParticleSystem>();
         ps.GetComponent<ParticleSystemRenderer>().sortingOrder=orderLayer;
         var shps = ps.shape;

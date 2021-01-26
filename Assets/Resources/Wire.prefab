@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2736588555223327816}
   - component: {fileID: 1712490553948194795}
-  - component: {fileID: 700429509409626072}
+  - component: {fileID: 6303333130927248417}
   m_Layer: 0
   m_Name: Wire
   m_TagString: Wire
@@ -82,17 +82,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 2
   m_SpriteSortPoint: 0
---- !u!114 &700429509409626072
+--- !u!114 &6303333130927248417
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4535806584233704028}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fbeca92d54b4f54798b3a2093eba941, type: 3}
+  m_Script: {fileID: 11500000, guid: 048295e13724f654994fae67d833d7fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   PSCreate: {fileID: 8700308325533454150, guid: b460c28ab16986d438b4ed7ccb6aa483,
     type: 3}
+  orderLayer: 0

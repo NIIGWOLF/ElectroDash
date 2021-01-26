@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 661673043087177944}
   - component: {fileID: -2039478122550641246}
   - component: {fileID: 8208617973670190865}
+  - component: {fileID: 9040345872784926312}
   m_Layer: 0
   m_Name: BasePoint
   m_TagString: Untagged
@@ -158,3 +159,18 @@ SpriteMask:
   m_BackSortingOrder: 0
   m_IsCustomRangeActive: 0
   m_SpriteSortPoint: 0
+--- !u!114 &9040345872784926312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3149203263218562172}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 048295e13724f654994fae67d833d7fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PSCreate: {fileID: 8700308325533454150, guid: b460c28ab16986d438b4ed7ccb6aa483,
+    type: 3}
+  orderLayer: 0
