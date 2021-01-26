@@ -272,7 +272,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 9115822959957872615}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4605475637694689736}
+        m_MethodName: LoadLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &4605475637694689736
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -285,9 +296,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cde317be06c8ce4b912324c259c50d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leftCoin: {fileID: 9115822960516171061}
+  leftCoin: {fileID: 9115822960858406055}
   centreCoin: {fileID: 9115822959714677135}
-  rightCoin: {fileID: 9115822960858406055}
+  rightCoin: {fileID: 9115822960516171061}
   noCoin: {r: 0.3962264, g: 0.3962264, b: 0.3962264, a: 1}
 --- !u!1 &9115822960516171061
 GameObject:
@@ -301,7 +312,7 @@ GameObject:
   - component: {fileID: 9115822960516171058}
   - component: {fileID: 9115822960516171059}
   m_Layer: 5
-  m_Name: CoinLeft
+  m_Name: CoinRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -413,7 +424,7 @@ GameObject:
   - component: {fileID: 9115822960858406052}
   - component: {fileID: 9115822960858406053}
   m_Layer: 5
-  m_Name: CoinRight
+  m_Name: CoinLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
