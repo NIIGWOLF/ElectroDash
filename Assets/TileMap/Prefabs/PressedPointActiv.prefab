@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 7402648214788054781}
   - component: {fileID: 9058885999292811168}
   - component: {fileID: 3330583650084032497}
+  - component: {fileID: -4651815453176564125}
   m_Layer: 0
   m_Name: PressedPointActiv
   m_TagString: Untagged
@@ -195,6 +196,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   listElements: []
   isDelete: 0
+  fastDeleteWire: 0
 --- !u!114 &9058885999292811168
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -257,3 +259,18 @@ SpriteMask:
   m_BackSortingOrder: 0
   m_IsCustomRangeActive: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-4651815453176564125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8449478389846807121}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 048295e13724f654994fae67d833d7fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PSCreate: {fileID: 8700308325533454150, guid: b460c28ab16986d438b4ed7ccb6aa483,
+    type: 3}
+  orderLayer: 0

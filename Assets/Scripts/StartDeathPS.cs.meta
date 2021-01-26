@@ -1,9 +1,11 @@
 fileFormatVersion: 2
-guid: 5fbeca92d54b4f54798b3a2093eba941
+guid: 048295e13724f654994fae67d833d7fa
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - PSCreate: {fileID: 8700308325533454150, guid: b460c28ab16986d438b4ed7ccb6aa483,
+      type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

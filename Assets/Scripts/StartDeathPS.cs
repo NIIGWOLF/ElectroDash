@@ -1,8 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class WirePS : MonoBehaviour
+public class StartDeathPS : MonoBehaviour
 {
     public GameObject PSCreate;
     public int orderLayer=0;

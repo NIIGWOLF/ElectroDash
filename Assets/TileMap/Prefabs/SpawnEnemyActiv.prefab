@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7033384430176339488}
   - component: {fileID: 8197349829695789735}
   - component: {fileID: -5999075929823690234}
+  - component: {fileID: 7615857877900022797}
   m_Layer: 0
   m_Name: SpawnEnemyActiv
   m_TagString: Untagged
@@ -173,3 +174,18 @@ SpriteMask:
   m_BackSortingOrder: 0
   m_IsCustomRangeActive: 0
   m_SpriteSortPoint: 0
+--- !u!114 &7615857877900022797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5834087204627317833}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 048295e13724f654994fae67d833d7fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PSCreate: {fileID: 8700308325533454150, guid: b460c28ab16986d438b4ed7ccb6aa483,
+    type: 3}
+  orderLayer: 0
