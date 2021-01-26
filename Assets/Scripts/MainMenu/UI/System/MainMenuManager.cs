@@ -9,6 +9,7 @@ public class MainMenuManager : MonoBehaviour
     public static MenuData menuData;
     public static CountData countData;
     public static MakePlayer makePlayer;
+    public static LevelData levelData;
     void Awake()
     {
         uiMainMenuManager = Object.FindObjectsOfType<UIMainMenuManager>()[0];
@@ -16,6 +17,7 @@ public class MainMenuManager : MonoBehaviour
         playerData = Object.FindObjectOfType<PlayerData>();
         countData = Object.FindObjectOfType<CountData>();
         makePlayer = Object.FindObjectOfType<MakePlayer>();
+        levelData = Object.FindObjectOfType<LevelData>();
 
     }
 
