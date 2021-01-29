@@ -43,3 +43,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: psUP
+    uniqueID: 742542795
+    locked: 0
+  - name: player
+    uniqueID: 4280241743
+    locked: 0
+  - name: ui
+    uniqueID: 3546755791
+    locked: 0
