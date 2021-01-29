@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 public class LevelButton : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -16,11 +16,6 @@ public class LevelButton : MonoBehaviour
     void Start()
     {
         levelNumber = int.Parse(gameObject.GetComponentInChildren<Text>().text.Split(' ')[1]);
-        print(MainMenuManager.levelData.levelInfo.levelStars.Count);
-        print("Begin");
-        for (int i=0; i<MainMenuManager.levelData.levelInfo.levelStars.Count; i++){
-            print(MainMenuManager.levelData.levelInfo.levelStars[i]);
-        }
         levelOpenCoins = MainMenuManager.levelData.levelInfo.levelStars[levelNumber];
          switch(levelOpenCoins){
              case 0:
@@ -44,6 +39,18 @@ public class LevelButton : MonoBehaviour
                 rightCoin.gameObject.GetComponent<Image>().color = Color.white;
                 break;
          }
+    }
+    public void LoadLevel()
+    {
+        int level = int.Parse(gameObject.GetComponentInChildren<Text>().text.Split(' ')[1]);
+        string levelName = "level_" + level;
+        if (Application.CanStreamedLevelBeLoaded(levelName)) {
+            SceneManager.LoadScene(levelName);
+        }
+        else
+        {
+            Debug.Log("no Scene");
+        }
     }
 
     // Update is called once per frame
