@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 766233890}
   - component: {fileID: 766233889}
   - component: {fileID: 766233888}
-  - component: {fileID: 766233887}
+  - component: {fileID: 2741774243375367374}
   m_Layer: 0
   m_Name: Barier
   m_TagString: Untagged
@@ -108,7 +108,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.5, y: 1.5}
   m_EdgeRadius: 0
 --- !u!50 &766233888
 Rigidbody2D:
@@ -131,7 +131,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &766233887
+--- !u!114 &2741774243375367374
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -140,7 +140,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 766233886}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0de81763d83aabf4daebb0911bc463ce, type: 3}
+  m_Script: {fileID: 11500000, guid: 99b30a0c9bcdae84bb8f2f9f82f09bd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &6296875309824502129
