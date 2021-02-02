@@ -6,6 +6,7 @@ using DG.Tweening;
 public class DinamitPoint : BasePoint
 {
     public GameObject block;
+    public GameObject PSDestroy;
     public override void OutComming(bool activPoint)
     {
         DeletePoint();
@@ -21,6 +22,7 @@ public class DinamitPoint : BasePoint
 
     void Complete()
     {
+        Instantiate(PSDestroy,transform.position,Quaternion.identity);
         tileMap.SetTile(pos, null);
         tileMap.SetTile(pos + Vector3Int.up, null);
         tileMap.SetTile(pos + Vector3Int.down, null);
@@ -52,7 +54,6 @@ public class DinamitPoint : BasePoint
             tileMap.SetTile(pos + new Vector3Int(0, i, 0), null);
 
         }
-
         Destroy(gameObject);
     }
 }

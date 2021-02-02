@@ -8,6 +8,7 @@ public class GlassPoint : BasePoint
     public GameObject block;
     public Sprite destroy1;
     public Sprite destroy2;
+    public GameObject PSDestroy;
     public override void OutComming(bool activPoint)
     {
         DeletePoint();
@@ -35,6 +36,7 @@ public class GlassPoint : BasePoint
     }
 
     void stage3(){
+        Instantiate(PSDestroy,transform.position,Quaternion.identity);
         tileMap.SetTile(pos,null);
         Destroy(gameObject);
     }

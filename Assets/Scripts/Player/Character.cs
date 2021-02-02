@@ -23,9 +23,12 @@ public class Character : MonoBehaviour
 
     public virtual void returnBack()
     {
-        Vector3Int temp = backPos;
-        backPos = nextPos;
-        nextPos = temp;
+        if (isMove)
+        {
+            Vector3Int temp = backPos;
+            backPos = nextPos;
+            nextPos = temp;
+        }
     }
 
     public virtual void Die()
@@ -59,7 +62,7 @@ public class Character : MonoBehaviour
         }
         else
         {
-            timeleft+=0.1f;
+            timeleft += 0.1f;
         }
     }
 }
