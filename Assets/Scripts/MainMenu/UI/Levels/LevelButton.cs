@@ -12,7 +12,6 @@ public class LevelButton : MonoBehaviour
     public GameObject centreCoin;
     public GameObject rightCoin;
     public Color noCoin;
-
     void Start()
     {
         levelNumber = int.Parse(gameObject.GetComponentInChildren<Text>().text.Split(' ')[1]);
@@ -45,12 +44,18 @@ public class LevelButton : MonoBehaviour
         int level = int.Parse(gameObject.GetComponentInChildren<Text>().text.Split(' ')[1]);
         string levelName = "level_" + level;
         if (Application.CanStreamedLevelBeLoaded(levelName)) {
-            SceneManager.LoadScene(levelName);
+            MainMenuManager.loadScene.BeforeNewScene();
+            Invoke("LoadLevelScene",0.61f);
         }
         else
         {
             Debug.Log("no Scene");
         }
+    }
+    void LoadLevelScene(){
+        int level = int.Parse(gameObject.GetComponentInChildren<Text>().text.Split(' ')[1]);
+        string levelName = "level_" + level;
+        SceneManager.LoadScene(levelName);
     }
 
     // Update is called once per frame

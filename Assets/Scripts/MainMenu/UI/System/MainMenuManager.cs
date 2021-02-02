@@ -10,6 +10,7 @@ public class MainMenuManager : MonoBehaviour
     public static CountData countData;
     public static MakePlayer makePlayer;
     public static LevelData levelData;
+    public static LoadScene loadScene;
     void Awake()
     {
         uiMainMenuManager = Object.FindObjectsOfType<UIMainMenuManager>()[0];
@@ -18,6 +19,7 @@ public class MainMenuManager : MonoBehaviour
         countData = Object.FindObjectOfType<CountData>();
         makePlayer = Object.FindObjectOfType<MakePlayer>();
         levelData = Object.FindObjectOfType<LevelData>();
+        loadScene = Object.FindObjectOfType<LoadScene>();
 
     }
 
