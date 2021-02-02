@@ -46,6 +46,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   block: {fileID: 880670506571701574}
+  PSDestroy: {fileID: 8789141295440745944, guid: 60b2e71e9b2e23d45b5e5c3a8b4b03a0,
+    type: 3}
 --- !u!114 &5601439986993223028
 MonoBehaviour:
   m_ObjectHideFlags: 0
