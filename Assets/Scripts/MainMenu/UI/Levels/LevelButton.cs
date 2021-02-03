@@ -58,9 +58,4 @@ public class LevelButton : MonoBehaviour
         SceneManager.LoadScene(levelName);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
