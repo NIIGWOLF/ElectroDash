@@ -4844,7 +4844,7 @@ Transform:
   - {fileID: 7746270736759573262}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!198 &2889148179509017057
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -4854,7 +4854,7 @@ ParticleSystem:
   m_GameObject: {fileID: 2676966683830373038}
   serializedVersion: 6
   lengthInSec: 2
-  simulationSpeed: 1
+  simulationSpeed: 2.5
   stopAction: 0
   cullingMode: 0
   ringBufferMode: 0
@@ -5097,7 +5097,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0.1
+      scalar: 0.3
       minScalar: 0.03
       maxCurve:
         serializedVersion: 2
