@@ -68,10 +68,12 @@ public class Enemy : Character
             }
         }
         if (tempList.Count == 0) {
-            AnimatedStartMove();
             return new Vector3Int(0, 0, 1);
         }
-        else return tempList[Random.Range(0, tempList.Count)];
+        else {
+            AnimatedStartMove();
+            return tempList[Random.Range(0, tempList.Count)];
+        }
     }
 
     protected override void  OnTriggerEnter2D(Collider2D collider){

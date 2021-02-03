@@ -21,7 +21,10 @@ public class ActivElement : MonoBehaviour
         RecheckWire();
         CreateAllWire();
         ActivDetection();
+        AfterStart();
     }
+
+    protected virtual void AfterStart(){}
 
     protected void RecheckWire()
     {
