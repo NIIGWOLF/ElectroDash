@@ -19,10 +19,12 @@ public class Enemy : Character
                 {
                     backPos = currentPos;
                     tileMap.GetInstantiatedObject(currentPos).GetComponent<BasePoint>().OutComming(false);
+                    AnimatedEye();
                 }
                 else
                 {
                     isMove = false;
+                    AnimatedStopMove();
                 }
             }
         }
@@ -35,6 +37,7 @@ public class Enemy : Character
                 nextPos = NextPos();
                 backPos = currentPos;
                 tileMap.GetInstantiatedObject(currentPos).GetComponent<BasePoint>().OutComming(false);
+                AnimatedEye();
                 isMove = true;
             }
         }
@@ -64,7 +67,10 @@ public class Enemy : Character
                 }
             }
         }
-        if (tempList.Count == 0) return new Vector3Int(0, 0, 1);
+        if (tempList.Count == 0) {
+            AnimatedStartMove();
+            return new Vector3Int(0, 0, 1);
+        }
         else return tempList[Random.Range(0, tempList.Count)];
     }
 

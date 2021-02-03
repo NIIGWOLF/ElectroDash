@@ -100,6 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   time: 1
+  Eye: {fileID: 8574092601688566658}
 --- !u!50 &6369044257471708874
 Rigidbody2D:
   serializedVersion: 4
