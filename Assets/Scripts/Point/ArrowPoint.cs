@@ -8,7 +8,7 @@ public class ArrowPoint : EnabledPoint
     public SpriteRenderer button;
 
     void Awake(){
-        button.color = new Color(1,1,1,0.3f);
+        button.color = new Color(1,1,1,1f);
     }
 
     public override Vector3Int InComming(Vector3Int backPos, bool activPoint)
@@ -32,8 +32,8 @@ public class ArrowPoint : EnabledPoint
         if (this.activ==activ) return;
         this.activ=activ;
         gameObject.GetComponent<ActivElement>().WireActivAll(activ);
-        if (activ) button.color = new Color(1,1,1,1);
-        else button.color = new Color(1,1,1,0.3f);
+        if (activ) button.color = new Color(1,0,0,1);
+        else button.color = new Color(1,1,1,1f);
     }
 
 }
