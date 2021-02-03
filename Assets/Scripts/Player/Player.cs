@@ -22,10 +22,12 @@ public class Player : Character
                 {
                     backPos = currentPos;
                     tileMap.GetInstantiatedObject(currentPos).GetComponent<BasePoint>().OutComming(true);
+                    AnimatedEye();
                 }
                 else
                 {
                     isMove = false;
+                    AnimatedStopMove();
                 }
             }
         }
@@ -50,6 +52,8 @@ public class Player : Character
                         backPos = currentPos;
                         nextPos = currentPos + new Vector3Int(0, 1, 0);
                         tileMap.GetInstantiatedObject(currentPos).GetComponent<BasePoint>().OutComming(true);
+                        AnimatedStartMove();
+                        AnimatedEye();
                         isMove = true;
                     }
                 }
@@ -63,6 +67,8 @@ public class Player : Character
                         backPos = currentPos;
                         nextPos = currentPos + new Vector3Int(1, 0, 0);
                         tileMap.GetInstantiatedObject(currentPos).GetComponent<BasePoint>().OutComming(true);
+                        AnimatedStartMove();
+                        AnimatedEye();
                         isMove = true;
                     }
                 }
@@ -76,6 +82,8 @@ public class Player : Character
                         backPos = currentPos;
                         nextPos = currentPos + new Vector3Int(0, -1, 0);
                         tileMap.GetInstantiatedObject(currentPos).GetComponent<BasePoint>().OutComming(true);
+                        AnimatedStartMove();
+                        AnimatedEye();
                         isMove = true;
                     }
                 }
@@ -89,6 +97,8 @@ public class Player : Character
                         backPos = currentPos;
                         nextPos = currentPos + new Vector3Int(-1, 0, 0);
                         tileMap.GetInstantiatedObject(currentPos).GetComponent<BasePoint>().OutComming(true);
+                        AnimatedStartMove();
+                        AnimatedEye();
                         isMove = true;
                     }
                 }

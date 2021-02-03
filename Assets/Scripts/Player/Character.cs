@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using DG.Tweening;
 
 public class Character : MonoBehaviour
 {
@@ -14,8 +15,13 @@ public class Character : MonoBehaviour
     protected float timeleft = 1;
     public float time = 1;
 
+    private Vector3 scale;
+
+    public GameObject Eye;
+
     protected virtual void Start()
     {
+        scale = gameObject.transform.localScale;
         backPos = Vector3Int.CeilToInt(transform.position);
         tileMap = ScriptManager.objectManager.tilemap;
         currentPos = Vector3Int.CeilToInt(transform.position);
@@ -35,6 +41,23 @@ public class Character : MonoBehaviour
     {
         Destroy(gameObject);
     }
+
+    public virtual void AnimatedStartMove(){
+        gameObject.transform.localScale = scale;
+        gameObject.transform.DOShakeScale(0.2f,0.2f,15,90,true);
+    }
+
+    public virtual void AnimatedStopMove(){
+        gameObject.transform.localScale = scale;
+        Eye.transform.DOLocalMove(Vector3.zero,0.1f);
+    }
+
+    public virtual void AnimatedEye(){
+        var pos = (Vector3)(nextPos-currentPos)*0.03f;
+        if (Eye.transform.localPosition!=pos)
+            Eye.transform.DOLocalMove(pos,0.2f);
+    }
+
 
     protected virtual void OnTriggerEnter2D(Collider2D collider)
     {
