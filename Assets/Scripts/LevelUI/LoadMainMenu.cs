@@ -15,6 +15,7 @@ public class LoadMainMenu : MonoBehaviour
     public void MainMenu()
     {
         if (Application.CanStreamedLevelBeLoaded("MainMenu")) {
+            StaticManager.nameLevel.LoadMainMenu();
             StaticManager.loadScene.BeforeNewScene();
             Invoke("LoadNewScene",0.59f);
         }

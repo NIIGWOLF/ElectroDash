@@ -44,6 +44,7 @@ public class LevelButton : MonoBehaviour
         int level = int.Parse(gameObject.GetComponentInChildren<Text>().text.Split(' ')[1]);
         string levelName = "level_" + level;
         if (Application.CanStreamedLevelBeLoaded(levelName)) {
+            MainMenuManager.nameLevel.LoadLevel(level);
             MainMenuManager.loadScene.BeforeNewScene();
             Invoke("LoadLevelScene",0.61f);
         }
