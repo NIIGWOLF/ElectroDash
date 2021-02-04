@@ -15,10 +15,13 @@ public class UIMainMenuManager : MonoBehaviour
     public BuyBotsButton buyBotsButton;
     public Dictionary<string, GameObject> costumePrefabs;
     public Dictionary<string, GameObject> eyesPrefabs;
-     public Dictionary<string, GameObject> psPrefabs;
+    public Dictionary<string, GameObject> psPrefabs;
     public Dictionary<string, GameObject> trailsPrefabs;
     public Dictionary<string, GameObject> enemyPrefabs;
     public Dictionary<string, GameObject> botPrefabs;
+    public GameObject simpleHintCount;
+    public GameObject mapHintCount;
+
      void Awake(){
         costumePrefabs = new Dictionary<string, GameObject>(); //создаем словарь costume, с помощью имени можем получить префаб
         foreach (GameObject costume in Resources.LoadAll("Shops/Costume")) //выгружаем в него все из ресурсов из папки costume
@@ -59,5 +62,7 @@ public class UIMainMenuManager : MonoBehaviour
     }
     void Start(){
         coins.text = MainMenuManager.countData.amountData.coins.ToString();
+        simpleHintCount.GetComponentInChildren<Text>().text = MainMenuManager.hintData.hint.simpleHint.ToString();
+        mapHintCount.GetComponentInChildren<Text>().text = MainMenuManager.hintData.hint.mapHint.ToString();
     }
 }

@@ -1,18 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BuyHint : MonoBehaviour
 {
     public void BuySimpleHint(){
          MainMenuManager.hintData.hint.simpleHint++;
          MainMenuManager.hintData.SaveData();
-         print("simple + 1");
-         print(MainMenuManager.hintData.hint.simpleHint);
+         MainMenuManager.uiMainMenuManager.simpleHintCount.GetComponentInChildren<Text>().text = MainMenuManager.hintData.hint.simpleHint.ToString();
+        
     }
     public void BuyMapHint(){
          MainMenuManager.hintData.hint.mapHint++;
          MainMenuManager.hintData.SaveData();
-         print("map + 1");
+         MainMenuManager.uiMainMenuManager.mapHintCount.GetComponentInChildren<Text>().text = MainMenuManager.hintData.hint.mapHint.ToString();
     }
 }

@@ -169,6 +169,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b06755fbe73477b40ad577534983b825, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &445832152 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5068902984806706322, guid: 8dcaa30741541744c96838865829e2de,
+    type: 3}
+  m_PrefabInstance: {fileID: 2305692196083851728}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &549065844
 GameObject:
   m_ObjectHideFlags: 0
@@ -453,6 +459,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1284428605 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9192625977546116238, guid: 8dcaa30741541744c96838865829e2de,
+    type: 3}
+  m_PrefabInstance: {fileID: 2305692196083851728}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1803509009 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2305692197871729857, guid: 8dcaa30741541744c96838865829e2de,
@@ -783,11 +795,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2305692196539419628, guid: 8dcaa30741541744c96838865829e2de,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2305692196674026417, guid: 8dcaa30741541744c96838865829e2de,
         type: 3}
@@ -1329,6 +1336,16 @@ PrefabInstance:
       propertyPath: buyBotsButton
       value: 
       objectReference: {fileID: 971054008}
+    - target: {fileID: 6620257595742111699, guid: 04253d7e1fe1a6f49895ad2651b2e2d4,
+        type: 3}
+      propertyPath: mapHintCount
+      value: 
+      objectReference: {fileID: 445832152}
+    - target: {fileID: 6620257595742111699, guid: 04253d7e1fe1a6f49895ad2651b2e2d4,
+        type: 3}
+      propertyPath: simpleHintCount
+      value: 
+      objectReference: {fileID: 1284428605}
     - target: {fileID: 6620257595742111701, guid: 04253d7e1fe1a6f49895ad2651b2e2d4,
         type: 3}
       propertyPath: m_LocalPosition.x
