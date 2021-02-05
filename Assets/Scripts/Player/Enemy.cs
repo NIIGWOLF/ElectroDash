@@ -35,6 +35,7 @@ public class Enemy : Character
             {
                 timeleft = time;
                 nextPos = NextPos();
+                if (nextPos==new Vector3Int(0, 0, 1)) return;
                 backPos = currentPos;
                 tileMap.GetInstantiatedObject(currentPos).GetComponent<BasePoint>().OutComming(false);
                 AnimatedEye();
