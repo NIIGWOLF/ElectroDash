@@ -5,7 +5,12 @@ using UnityEngine;
 public class Enemy : Character
 {
 
-    // Update is called once per frame
+    public override void Die()
+    {
+        Instantiate(deathPS,transform.position,Quaternion.identity);
+        ScriptManager.objectManager.AllCharacter.Remove(gameObject);
+        Destroy(gameObject);
+    }
     void Update()
     {
         if (isMove)

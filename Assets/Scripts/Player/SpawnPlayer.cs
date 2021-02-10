@@ -7,6 +7,7 @@ public class SpawnPlayer : MonoBehaviour
     public GameObject player;
     void Start()
     {
-        Instantiate(player,transform.position,Quaternion.identity);
+        var go = Instantiate(player,transform.position,Quaternion.identity);
+        ScriptManager.objectManager.AllCharacter.Add(go);
     }
 }

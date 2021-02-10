@@ -14,10 +14,18 @@ public class Character : MonoBehaviour
     protected Tilemap tileMap;
     protected float timeleft = 1;
     public float time = 1;
+    public GameObject deathPS;
+
+    protected Vector3Int diePos;
 
     private Vector3 scale;
 
     public GameObject Eye;
+
+
+
+    public Vector3Int NextPos { get => nextPos; set => nextPos = value; }
+    public Vector3Int CurrentPos { get => currentPos; set => currentPos = value; }
 
     protected virtual void Start()
     {
@@ -39,7 +47,25 @@ public class Character : MonoBehaviour
 
     public virtual void Die()
     {
+        ScriptManager.objectManager.AllCharacter.Remove(gameObject);
         Destroy(gameObject);
+    }
+
+    public virtual void Die(Vector3Int pos){
+        diePos=pos;
+        Invoke("isDie",0.02f);
+    }
+
+    public virtual void isDie(){
+        if (currentPos==diePos || nextPos==diePos) {
+            var go = tileMap.GetInstantiatedObject(diePos);
+            BasePoint bp = null;
+            if (go!=null)
+                bp = go.GetComponent<BasePoint>();
+            if (bp==null)
+                Die();
+            
+        }
     }
 
     public virtual void AnimatedStartMove(){

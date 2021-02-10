@@ -7,6 +7,7 @@ public class SpawnEnemy : MonoBehaviour
     public GameObject enemy;
     void Start()
     {
-        Instantiate(enemy,transform.position,Quaternion.identity);
+        var go = Instantiate(enemy,transform.position,Quaternion.identity);
+        ScriptManager.objectManager.AllCharacter.Add(go);
     }
 }

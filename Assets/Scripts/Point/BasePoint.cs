@@ -68,4 +68,21 @@ public class BasePoint : MonoBehaviour
         else return new Vector3Int(0, 0, 1);
     }
 
+    void OnDestroy(){
+        if (exit) return;
+        foreach(GameObject go in ScriptManager.objectManager.AllCharacter){
+            var character = go.GetComponent<Character>();
+            if (character.CurrentPos==pos || character.NextPos==pos){
+                character.Die(pos);
+                Debug.Log("isDie");
+            }
+        }
+    }
+
+    private bool exit;
+    void OnApplicationQuit()
+    {
+        exit = true;
+    }
+
 }

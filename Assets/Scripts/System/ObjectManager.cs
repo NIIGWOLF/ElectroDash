@@ -7,4 +7,5 @@ public class ObjectManager : MonoBehaviour
 {
     public Tilemap tilemap;    
     public GameObject BlackBarier;
+    public List<GameObject> AllCharacter = new List<GameObject>();
 }

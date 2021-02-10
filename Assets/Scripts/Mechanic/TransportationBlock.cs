@@ -114,7 +114,7 @@ public class TransportationBlock : Character
         {
             PauseMove();
         }
-        Debug.Log("Finish Block");
+        //Debug.Log("Finish Block");
     }
 
     protected virtual void EndMove(){}

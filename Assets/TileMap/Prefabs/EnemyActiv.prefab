@@ -100,6 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   time: 1
+  deathPS: {fileID: 8727436068469238738, guid: a7f42a0bc61e1904ab2f3efd53ccb44c, type: 3}
   Eye: {fileID: 8574092601688566658}
 --- !u!50 &6369044257471708874
 Rigidbody2D:
