@@ -4,15 +4,14 @@ using UnityEngine;
 using System.IO;
 using UnityEngine.UI;
 
-public class PlayerData : MonoBehaviour
+public class PlayerData : Singleton<PlayerData>
 {
     public PlayerContent playerContent;
     public Text costumeSelectedText;
     public Text trailsSelectedText;
     public Text enemiesSelectedText;
     public Text botSelectedText;
-    void Awake()
-    {
+    public void Awake(){
         LoadData();
     }
     public void SaveData()

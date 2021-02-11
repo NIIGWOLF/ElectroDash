@@ -213,7 +213,7 @@ public class ActivElement : MonoBehaviour
 
     void OnDisable()
     {
-        if (exit) return;
+        if (!ScriptManager.objectManager.activStartDaethPS) return;
         isDelete = true;
         foreach (ActivElement element in listElements)
         {
@@ -228,11 +228,5 @@ public class ActivElement : MonoBehaviour
         {
             element.WireActivAll(element.SearchEnabledPoint());
         }
-    }
-
-    private bool exit;
-    void OnApplicationQuit()
-    {
-        exit = true;
     }
 }

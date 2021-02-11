@@ -4,14 +4,14 @@ using UnityEngine;
 using System.IO;
 
 
-public class LevelData : MonoBehaviour
+public class LevelData : Singleton<LevelData>
 {
     // Start is called before the first frame update
    public LevelInfo levelInfo;
-   public void Awake()
-    {
+    public void Awake(){
         LoadData();
     }
+
     public void SaveData()
     {
         string json = JsonUtility.ToJson(levelInfo);
@@ -37,6 +37,7 @@ public class LevelData : MonoBehaviour
     public class LevelInfo{
         public int levelCount = 2;
         public int lastOpenLevel = 1;
+        public List<string> levelActivStars = new List<string>(){"000","000","000"};
         public List<int> levelStars = new List<int>(){0,1,2};
     }
 }

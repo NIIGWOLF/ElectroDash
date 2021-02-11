@@ -17,9 +17,11 @@ public class Coin : MonoBehaviour
         transform.DORotate(new Vector3(0,360,0),5,RotateMode.FastBeyond360).SetEase(Ease.Linear).OnComplete(Visual);
     }
 
-    // Update is called once per frame
-    void Update()
+    void OnTriggerEnter2D(Collider2D other)
     {
-        
+        Debug.Log("Coin");
+        CountData.Instance.amountData.coins+=1;
+        Debug.Log(CountData.Instance.amountData.coins);
+        gameObject.active=false;
     }
 }

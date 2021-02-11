@@ -69,7 +69,7 @@ public class BasePoint : MonoBehaviour
     }
 
     void OnDestroy(){
-        if (exit) return;
+        if (!ScriptManager.objectManager.activStartDaethPS) return;
         foreach(GameObject go in ScriptManager.objectManager.AllCharacter){
             var character = go.GetComponent<Character>();
             if (character.CurrentPos==pos || character.NextPos==pos){
@@ -77,12 +77,6 @@ public class BasePoint : MonoBehaviour
                 Debug.Log("isDie");
             }
         }
-    }
-
-    private bool exit;
-    void OnApplicationQuit()
-    {
-        exit = true;
     }
 
 }

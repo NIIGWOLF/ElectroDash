@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class StartDeathPS : MonoBehaviour
 {
@@ -17,7 +18,7 @@ public class StartDeathPS : MonoBehaviour
     }
 
     void OnDestroy(){
-        if (!exit){
+        if (!ScriptManager.objectManager.activStartDaethPS) return;
         Sprite sp = gameObject.GetComponent<SpriteRenderer>().sprite;
         GameObject gops=Instantiate(PSCreate,transform.position,Quaternion.Euler(transform.eulerAngles));
         gops.GetComponent<ParentPS>().parent=gameObject;
@@ -25,10 +26,6 @@ public class StartDeathPS : MonoBehaviour
         ps.GetComponent<ParticleSystemRenderer>().sortingOrder=orderLayer;
         var shps = ps.shape;
         shps.sprite=sp;
-        }
-    }
-
-    void OnApplicationQuit(){
-        exit=true;
+        
     }
 }

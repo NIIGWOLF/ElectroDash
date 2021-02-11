@@ -7,6 +7,7 @@ public class LevelManager : MonoBehaviour
 {
     public  GameObject countSimpleHint;
     public  GameObject countMapHint;
+    public GameObject levelCompleteCanvas;
     
    
     // Start is called before the first frame update

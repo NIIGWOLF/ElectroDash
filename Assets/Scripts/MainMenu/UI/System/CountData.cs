@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 
-public class CountData : MonoBehaviour
+public class CountData : Singleton<CountData>
 {
     public AmountData amountData;
     public void Awake(){
