@@ -185,8 +185,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   time: 1
+  deathPS: {fileID: 5166278959815639723, guid: 0f959783c80b049419e151a5a0014806, type: 3}
   Eye: {fileID: 6297955445046479893}
   invert: 0
+  deathPlayer: {fileID: 6513427145400265795, guid: 1e483c5733aa7814b9177fa0a773a2e6,
+    type: 3}
 --- !u!114 &-5769348320445789303
 MonoBehaviour:
   m_ObjectHideFlags: 0

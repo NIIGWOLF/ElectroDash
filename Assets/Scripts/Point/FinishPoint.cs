@@ -6,7 +6,25 @@ public class FinishPoint : BasePoint
 {
     public override Vector3Int InComming(Vector3Int backPos, bool activPoint)
     {
-        StaticManager.levelManager.levelCompleteCanvas.active=true;
+        foreach (GameObject ch in ScriptManager.objectManager.AllCharacter)
+        {
+            if (ch.GetComponent<Player>())
+                if (ch.transform.position == pos)
+                {
+                    StaticManager.levelManager.levelCompleteCanvas.GetComponent<PanelAnimation>().GoToTarget();
+                    for (int i = ScriptManager.objectManager.AllCharacter.Count - 1; i >= 0; i--)
+                    {
+                        if (!ScriptManager.objectManager.AllCharacter[i].GetComponent<Player>())
+                        {
+                            GameObject go = ScriptManager.objectManager.AllCharacter[i];
+                            ScriptManager.objectManager.AllCharacter.Remove(go);
+                            Destroy(go);
+                        }
+                    }
+                    break;
+                }
+
+        }
         return NextPos(backPos);
     }
 }

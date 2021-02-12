@@ -12,6 +12,7 @@ public class MoveCamera : MonoBehaviour
     public void SetTarget(GameObject target)
     {
         this.target = target;
+        transform.position=new Vector3(target.transform.position.x,target.transform.position.y,addPos.z);
     }
 
     void Update()

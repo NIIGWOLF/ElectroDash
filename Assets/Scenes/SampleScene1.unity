@@ -772,6 +772,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 293197619232089643, guid: a0ccbae6b3b0fef4eb8fd7fe819b03bc,
+        type: 3}
+      propertyPath: timeScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2952274265668294950, guid: a0ccbae6b3b0fef4eb8fd7fe819b03bc,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -2112,6 +2117,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: TransportationBlock
+      objectReference: {fileID: 0}
+    - target: {fileID: 3261957420449014121, guid: 91616fec9cfc17249999a0cd0754e4c2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3261957420449014122, guid: 91616fec9cfc17249999a0cd0754e4c2,
         type: 3}

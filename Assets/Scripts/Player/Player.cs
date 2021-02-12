@@ -1,8 +1,10 @@
 ﻿using UnityEngine;
 
+
 public class Player : Character
 {
     public bool invert=false;
+    public GameObject deathPlayer;
 
     void Awake(){
         Camera.main.GetComponent<MoveCamera>().SetTarget(gameObject);
@@ -106,4 +108,12 @@ public class Player : Character
         }
     }
 
+    public override void Die()
+    {
+        ScriptManager.objectManager.AllCharacter.Remove(gameObject);
+        var go = Instantiate(deathPlayer,transform.position,Quaternion.identity);
+        Instantiate(deathPS,transform.position,Quaternion.identity);
+        go.AddComponent<RestartAfterDeath>();
+        Destroy(gameObject);
+    }
 }
