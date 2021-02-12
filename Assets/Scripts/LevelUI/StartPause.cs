@@ -4,16 +4,8 @@ using UnityEngine;
 
 public class StartPause : MonoBehaviour
 {
-    
+    [Range(0,1f)] public float timeScale=0;  
     public void pause(){
-        Invoke("method",0.5f);
-    }
-    public void method(){
-        if (Time.timeScale != 0 ) {
-            Time.timeScale = 0;
-           }
-        else {
-            Time.timeScale = 1;
-        }
+        Time.timeScale = timeScale;
     }
 }

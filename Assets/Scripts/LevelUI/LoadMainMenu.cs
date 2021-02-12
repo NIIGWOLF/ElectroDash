@@ -25,6 +25,7 @@ public class LoadMainMenu : MonoBehaviour
         }
     }
     void LoadNewScene(){
+        ScriptManager.objectManager.activStartDaethPS=false;
         SceneManager.LoadScene("MainMenu");
     }
 }
