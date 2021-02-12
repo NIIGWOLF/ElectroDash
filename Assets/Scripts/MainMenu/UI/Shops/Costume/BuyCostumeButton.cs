@@ -26,7 +26,7 @@ public class BuyCostumeButton : MonoBehaviour
             MainMenuManager.countData.amountData.coins -= price;
             MainMenuManager.uiMainMenuManager.coins.GetComponentInChildren<ParticleSystem>().Play();
             MainMenuManager.uiMainMenuManager.coins.text = MainMenuManager.countData.amountData.coins.ToString();
-
+            MainMenuManager.uiMainMenuManager.coins.GetComponent<AudioSource>().Play();
 
             MainMenuManager.playerData.SaveData();
             MainMenuManager.menuData.SaveData();
