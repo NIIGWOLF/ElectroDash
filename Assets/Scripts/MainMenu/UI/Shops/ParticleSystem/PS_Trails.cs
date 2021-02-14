@@ -44,10 +44,20 @@ public class PS_Trails : MonoBehaviour
         }
         else
         {
+            int price =  MainMenuManager.menuData.shopsData.pricesTrails[(int)trails];
+            if (price <= MainMenuManager.countData.amountData.coins) {
+            MainMenuManager.uiMainMenuManager.BuyPs_TrailsButton.GetComponentInChildren<Text>().text="Buy";
+             MainMenuManager.uiMainMenuManager.BuyPs_TrailsButton.GetComponent<Button>().interactable = true;
             MainMenuManager.uiMainMenuManager.BuyPs_TrailsButton.SetActive(true);
             var buy = MainMenuManager.uiMainMenuManager.BuyPs_TrailsButton;
             buy.trails = trails;
             buy.buttonText = buttonText;
+            }
+            else {
+                MainMenuManager.uiMainMenuManager.BuyPs_TrailsButton.GetComponentInChildren<Text>().text="Not enough money";
+                MainMenuManager.uiMainMenuManager.BuyPs_TrailsButton.SetActive(true);
+                MainMenuManager.uiMainMenuManager.BuyPs_TrailsButton.GetComponent<Button>().interactable = false;
+            }
 
             
 

@@ -13,6 +13,7 @@ public class MainMenuManager : MonoBehaviour
     public static LoadScene loadScene;
     public static HintData hintData;
     public static NameLevel nameLevel;
+    public static AudioData audioData;
     void Awake()
     {
         uiMainMenuManager = Object.FindObjectsOfType<UIMainMenuManager>()[0];
@@ -24,6 +25,7 @@ public class MainMenuManager : MonoBehaviour
         loadScene = Object.FindObjectOfType<LoadScene>();
         hintData = Object.FindObjectOfType<HintData>();
         nameLevel = Object.FindObjectOfType<NameLevel>();
+        audioData = Object.FindObjectOfType<AudioData>();
 
     }
 

@@ -21,6 +21,8 @@ public class UIMainMenuManager : MonoBehaviour
     public Dictionary<string, GameObject> botPrefabs;
     public GameObject simpleHintCount;
     public GameObject mapHintCount;
+    public GameObject audioSource;
+    public GameObject buttonSaveData;
 
      void Awake(){
         costumePrefabs = new Dictionary<string, GameObject>(); //создаем словарь costume, с помощью имени можем получить префаб

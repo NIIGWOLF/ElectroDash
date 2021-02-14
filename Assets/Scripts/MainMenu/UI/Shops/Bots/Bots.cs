@@ -45,11 +45,20 @@ public class Bots : MonoBehaviour
         }
         else
         {
+            int price =  MainMenuManager.menuData.shopsData.pricesTrails[(int)bots];
+            if (price <= MainMenuManager.countData.amountData.coins) {
+            MainMenuManager.uiMainMenuManager.buyBotsButton.GetComponentInChildren<Text>().text="Buy";
+            MainMenuManager.uiMainMenuManager.buyBotsButton.GetComponent<Button>().interactable = true;
             MainMenuManager.uiMainMenuManager.buyBotsButton.SetActive(true);
             var buy = MainMenuManager.uiMainMenuManager.buyBotsButton;
             buy.bots = bots;
             buy.buttonText = buttonText;
-
+            }
+             else {
+                MainMenuManager.uiMainMenuManager.buyBotsButton.GetComponentInChildren<Text>().text="Not enough money";
+                MainMenuManager.uiMainMenuManager.buyBotsButton.SetActive(true);
+                MainMenuManager.uiMainMenuManager.buyBotsButton.GetComponent<Button>().interactable = false;
+            }
 
 
 
