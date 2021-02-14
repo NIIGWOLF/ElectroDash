@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,8 +12,8 @@ public class MainMenuManager : MonoBehaviour
     public static LevelData levelData;
     public static LoadScene loadScene;
     public static HintData hintData;
-    public static NameLevel nameLevel;
-    public static AudioData audioData;
+    public static NameLevel nameLevel; 
+   
     void Awake()
     {
         uiMainMenuManager = Object.FindObjectsOfType<UIMainMenuManager>()[0];
@@ -25,7 +25,7 @@ public class MainMenuManager : MonoBehaviour
         loadScene = Object.FindObjectOfType<LoadScene>();
         hintData = Object.FindObjectOfType<HintData>();
         nameLevel = Object.FindObjectOfType<NameLevel>();
-        audioData = Object.FindObjectOfType<AudioData>();
+      
 
     }
 

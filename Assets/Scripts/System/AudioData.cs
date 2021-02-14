@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
-public class AudioData : MonoBehaviour
+public class AudioData : Singleton<AudioData>
 {
     public Audio audio;
      public void Awake()

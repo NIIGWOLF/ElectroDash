@@ -8,7 +8,7 @@ public class LoadSoundData : MonoBehaviour
     void Start()
     {
         foreach (var audio in gameObject.GetComponentsInChildren<AudioSource>()){
-            audio.volume = MainMenuManager.audioData.audio.soundsVolume; }
+            audio.volume = AudioData.Instance.audio.soundsVolume; }
         
     }
 
