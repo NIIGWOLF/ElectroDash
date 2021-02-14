@@ -23,6 +23,7 @@ public class UIMainMenuManager : MonoBehaviour
     public GameObject mapHintCount;
     public GameObject audioSource;
     public GameObject buttonSaveData;
+    public GameObject music;
 
      void Awake(){
         costumePrefabs = new Dictionary<string, GameObject>(); //создаем словарь costume, с помощью имени можем получить префаб

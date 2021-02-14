@@ -31,7 +31,7 @@ public class AudioData : MonoBehaviour
         }
     }
     public class Audio{
-        float musicVolume = 1;
-        float soundsVolume = 1;
+        public float musicVolume = 1;
+        public float soundsVolume = 1;
     }
 }
