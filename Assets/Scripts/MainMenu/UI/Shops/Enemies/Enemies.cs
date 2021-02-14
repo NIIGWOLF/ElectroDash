@@ -45,11 +45,20 @@ public class Enemies : MonoBehaviour
         }
         else
         {
+            int price =  MainMenuManager.menuData.shopsData.pricesTrails[(int)enemies];
+            if (price <= MainMenuManager.countData.amountData.coins) {
+            MainMenuManager.uiMainMenuManager.buyEnemiesButton.GetComponentInChildren<Text>().text="Buy";
+            MainMenuManager.uiMainMenuManager.buyEnemiesButton.GetComponent<Button>().interactable = true;
             MainMenuManager.uiMainMenuManager.buyEnemiesButton.SetActive(true);
             var buy = MainMenuManager.uiMainMenuManager.buyEnemiesButton;
             buy.enemies = enemies;
             buy.buttonText = buttonText;
-
+            }
+            else {
+                MainMenuManager.uiMainMenuManager.buyEnemiesButton.GetComponentInChildren<Text>().text="Not enough money";
+                MainMenuManager.uiMainMenuManager.buyEnemiesButton.SetActive(true);
+                MainMenuManager.uiMainMenuManager.buyEnemiesButton.GetComponent<Button>().interactable = false;
+            }
 
 
 

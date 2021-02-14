@@ -43,11 +43,20 @@ public class Costume : MonoBehaviour
         }
         else
         {
+            int price =  MainMenuManager.menuData.shopsData.pricesTrails[(int)costume];
+            if (price <= MainMenuManager.countData.amountData.coins) {
+            MainMenuManager.uiMainMenuManager.buyCostumeButton.GetComponentInChildren<Text>().text="Buy";
+            MainMenuManager.uiMainMenuManager.buyCostumeButton.GetComponent<Button>().interactable = true;
             MainMenuManager.uiMainMenuManager.buyCostumeButton.SetActive(true);
             var buy = MainMenuManager.uiMainMenuManager.buyCostumeButton;
             buy.costume = costume;
             buy.buttonText = buttonText;
-
+            }
+             else {
+                MainMenuManager.uiMainMenuManager.buyCostumeButton.GetComponentInChildren<Text>().text="Not enough money";
+                MainMenuManager.uiMainMenuManager.buyCostumeButton.SetActive(true);
+                MainMenuManager.uiMainMenuManager.buyCostumeButton.GetComponent<Button>().interactable = false;
+            }
             
 
 

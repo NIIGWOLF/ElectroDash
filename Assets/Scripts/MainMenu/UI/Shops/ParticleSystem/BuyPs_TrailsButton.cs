@@ -26,7 +26,7 @@ public class BuyPs_TrailsButton : MonoBehaviour
             MainMenuManager.countData.amountData.coins -= price;
             MainMenuManager.uiMainMenuManager.coins.GetComponentInChildren<ParticleSystem>().Play();
             MainMenuManager.uiMainMenuManager.coins.text = MainMenuManager.countData.amountData.coins.ToString();
-
+            
 
             MainMenuManager.playerData.SaveData();
             MainMenuManager.menuData.SaveData();
