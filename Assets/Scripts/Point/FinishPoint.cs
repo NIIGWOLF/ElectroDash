@@ -12,6 +12,10 @@ public class FinishPoint : BasePoint
                 if (ch.transform.position == pos)
                 {
                     StaticManager.levelManager.levelCompleteCanvas.GetComponent<PanelAnimation>().GoToTarget();
+                    
+                    StaticManager.levelManager.coinManager.ActivUI();
+                    StaticManager.levelManager.coinManager.SaveActivStars();
+
                     for (int i = ScriptManager.objectManager.AllCharacter.Count - 1; i >= 0; i--)
                     {
                         if (!ScriptManager.objectManager.AllCharacter[i].GetComponent<Player>())
