@@ -13,6 +13,7 @@ public class CoinManager : MonoBehaviour
     public GameObject uiCoin3;
 
     public int countCoin = 0;
+    public int oldCountCoin = 0;
     private int nLevel;
     void Awake()
     {
@@ -25,16 +26,19 @@ public class CoinManager : MonoBehaviour
             if (strCoin[0] == '1')
             {
                 countCoin++;
+                oldCountCoin++;
                 coin1.SetActive(false);
             }
             if (strCoin[1] == '1')
             {
                 countCoin++;
+                oldCountCoin++;
                 coin2.SetActive(false);
             }
             if (strCoin[2] == '1')
             {
                 countCoin++;
+                oldCountCoin++;
                 coin3.SetActive(false);
             }
 
@@ -90,5 +94,7 @@ public class CoinManager : MonoBehaviour
         if (LevelData.Instance.levelInfo.lastOpenLevel<=nLevel)
             LevelData.Instance.levelInfo.lastOpenLevel=nLevel+1;
         LevelData.Instance.SaveData();
+        CountData.Instance.amountData.coins +=countCoin-oldCountCoin;
+        CountData.Instance.SaveData();
     }
 }
