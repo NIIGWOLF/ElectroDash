@@ -10,12 +10,12 @@ public class Enemies : MonoBehaviour
     void Start()
     {
         gameObject.GetComponent<Button>().onClick.AddListener(() => ChangePreview());
-        if (MainMenuManager.menuData.shopsData.openEnemyies.Contains(enemies))
+        if (MenuData.Instance.shopsData.openEnemyies.Contains(enemies))
         {
-            if ((int)MainMenuManager.playerData.playerContent.enemyies == (int)enemies)
+            if ((int)PlayerData.Instance.playerContent.enemyies == (int)enemies)
             {
                 buttonText.text = "Selected";
-                MainMenuManager.playerData.enemiesSelectedText = buttonText;
+                PlayerData.Instance.enemiesSelectedText = buttonText;
             }
             else
             {
@@ -25,28 +25,28 @@ public class Enemies : MonoBehaviour
         else
         {
             print((int)enemies);
-            buttonText.text = MainMenuManager.menuData.shopsData.pricesEnemyies[(int)enemies].ToString();
+            buttonText.text = MenuData.Instance.shopsData.pricesEnemyies[(int)enemies].ToString();
         }
     }
     private void ChangePreview()
     {
         MainMenuManager.makePlayer.Player(enemies);
-        if (MainMenuManager.menuData.shopsData.openEnemyies.Contains(enemies))
+        if (MenuData.Instance.shopsData.openEnemyies.Contains(enemies))
         {
             MainMenuManager.uiMainMenuManager.buyEnemiesButton.SetActive(false);
 
-            MainMenuManager.playerData.playerContent.enemyies = enemies;
+            PlayerData.Instance.playerContent.enemyies = enemies;
 
-            MainMenuManager.playerData.enemiesSelectedText.text = "Select";
-            MainMenuManager.playerData.enemiesSelectedText = buttonText;
+            PlayerData.Instance.enemiesSelectedText.text = "Select";
+            PlayerData.Instance.enemiesSelectedText = buttonText;
             buttonText.text = "Selected";
 
-            MainMenuManager.playerData.SaveData();
+            PlayerData.Instance.SaveData();
         }
         else
         {
-            int price =  MainMenuManager.menuData.shopsData.pricesTrails[(int)enemies];
-            if (price <= MainMenuManager.countData.amountData.coins) {
+            int price =  MenuData.Instance.shopsData.pricesTrails[(int)enemies];
+            if (price <= CountData.Instance.amountData.coins) {
             MainMenuManager.uiMainMenuManager.buyEnemiesButton.GetComponentInChildren<Text>().text="Buy";
             MainMenuManager.uiMainMenuManager.buyEnemiesButton.GetComponent<Button>().interactable = true;
             MainMenuManager.uiMainMenuManager.buyEnemiesButton.SetActive(true);

@@ -10,12 +10,12 @@ public class PS_Trails : MonoBehaviour
     void Start()
     {
         gameObject.GetComponent<Button>().onClick.AddListener(() => ChangePreview());
-        if (MainMenuManager.menuData.shopsData.openTrails.Contains(trails))
+        if (MenuData.Instance.shopsData.openTrails.Contains(trails))
         {
-            if ((int)MainMenuManager.playerData.playerContent.trails == (int)trails)
+            if ((int)PlayerData.Instance.playerContent.trails == (int)trails)
             {
                 buttonText.text = "Selected";
-                MainMenuManager.playerData.trailsSelectedText = buttonText;
+                PlayerData.Instance.trailsSelectedText = buttonText;
             }
             else
             {
@@ -24,28 +24,28 @@ public class PS_Trails : MonoBehaviour
         }
         else
         {
-            buttonText.text = MainMenuManager.menuData.shopsData.pricesTrails[(int)trails].ToString();
+            buttonText.text = MenuData.Instance.shopsData.pricesTrails[(int)trails].ToString();
         }
     }
     private void ChangePreview()
     {
         MainMenuManager.makePlayer.Player(trails);
-        if (MainMenuManager.menuData.shopsData.openTrails.Contains(trails))
+        if (MenuData.Instance.shopsData.openTrails.Contains(trails))
         {
             MainMenuManager.uiMainMenuManager.BuyPs_TrailsButton.SetActive(false);
 
-            MainMenuManager.playerData.playerContent.trails = trails;
+            PlayerData.Instance.playerContent.trails = trails;
 
-            MainMenuManager.playerData.trailsSelectedText.text = "Select";
-            MainMenuManager.playerData.trailsSelectedText = buttonText;
+            PlayerData.Instance.trailsSelectedText.text = "Select";
+            PlayerData.Instance.trailsSelectedText = buttonText;
             buttonText.text = "Selected";
 
-            MainMenuManager.playerData.SaveData();
+            PlayerData.Instance.SaveData();
         }
         else
         {
-            int price =  MainMenuManager.menuData.shopsData.pricesTrails[(int)trails];
-            if (price <= MainMenuManager.countData.amountData.coins) {
+            int price =  MenuData.Instance.shopsData.pricesTrails[(int)trails];
+            if (price <= CountData.Instance.amountData.coins) {
             MainMenuManager.uiMainMenuManager.BuyPs_TrailsButton.GetComponentInChildren<Text>().text="Buy";
              MainMenuManager.uiMainMenuManager.BuyPs_TrailsButton.GetComponent<Button>().interactable = true;
             MainMenuManager.uiMainMenuManager.BuyPs_TrailsButton.SetActive(true);

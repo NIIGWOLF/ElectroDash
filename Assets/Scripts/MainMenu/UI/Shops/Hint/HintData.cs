@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 
-public class HintData : MonoBehaviour
+public class HintData : Singleton<HintData>
 {
     public Hint hint;
     public void Awake()

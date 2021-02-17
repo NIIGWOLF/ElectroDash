@@ -13,12 +13,12 @@ public class MakePlayer : MonoBehaviour
     }
     public void Player()
     {
-        MainMenuManager.uiMainMenuManager.Character.GetComponent<SpriteRenderer>().sprite = MainMenuManager.uiMainMenuManager.costumePrefabs[MainMenuManager.playerData.playerContent.costume.ToString()].GetComponent<SpriteRenderer>().sprite;
+        MainMenuManager.uiMainMenuManager.Character.GetComponent<SpriteRenderer>().sprite = MainMenuManager.uiMainMenuManager.costumePrefabs[PlayerData.Instance.playerContent.costume.ToString()].GetComponent<SpriteRenderer>().sprite;
         foreach (Transform tr in MainMenuManager.uiMainMenuManager.Character.transform)
         {
             if (tr.gameObject.name.Equals("Eyes"))
             {
-                tr.gameObject.GetComponent<SpriteRenderer>().sprite = MainMenuManager.uiMainMenuManager.eyesPrefabs[MainMenuManager.playerData.playerContent.costume.ToString()].GetComponent<SpriteRenderer>().sprite;
+                tr.gameObject.GetComponent<SpriteRenderer>().sprite = MainMenuManager.uiMainMenuManager.eyesPrefabs[PlayerData.Instance.playerContent.costume.ToString()].GetComponent<SpriteRenderer>().sprite;
             }
             if (tr.gameObject.name.Equals("ParticleSystem"))
             {
@@ -27,8 +27,8 @@ public class MakePlayer : MonoBehaviour
                     Destroy(tr.GetChild(0).gameObject);
                     Destroy(tr.GetChild(1).gameObject);
                 }
-                Instantiate(MainMenuManager.uiMainMenuManager.psPrefabs[MainMenuManager.playerData.playerContent.trails.ToString()], tr.transform);
-                Instantiate(MainMenuManager.uiMainMenuManager.trailsPrefabs[MainMenuManager.playerData.playerContent.trails.ToString()], tr.transform);
+                Instantiate(MainMenuManager.uiMainMenuManager.psPrefabs[PlayerData.Instance.playerContent.trails.ToString()], tr.transform);
+                Instantiate(MainMenuManager.uiMainMenuManager.trailsPrefabs[PlayerData.Instance.playerContent.trails.ToString()], tr.transform);
 
 
             }
@@ -38,13 +38,13 @@ public class MakePlayer : MonoBehaviour
         if (MainMenuManager.uiMainMenuManager.Enemy.transform.childCount!=0){
             Destroy(MainMenuManager.uiMainMenuManager.Enemy.transform.GetChild(0).gameObject);
         }
-        Instantiate(MainMenuManager.uiMainMenuManager.enemyPrefabs[MainMenuManager.playerData.playerContent.enemyies.ToString()], MainMenuManager.uiMainMenuManager.Enemy.transform);
+        Instantiate(MainMenuManager.uiMainMenuManager.enemyPrefabs[PlayerData.Instance.playerContent.enemyies.ToString()], MainMenuManager.uiMainMenuManager.Enemy.transform);
     }
     public void Bot(){
         if (MainMenuManager.uiMainMenuManager.Bot.transform.childCount!=0){
             Destroy(MainMenuManager.uiMainMenuManager.Bot.transform.GetChild(0).gameObject);
         }
-        Instantiate(MainMenuManager.uiMainMenuManager.botPrefabs[MainMenuManager.playerData.playerContent.bots.ToString()], MainMenuManager.uiMainMenuManager.Bot.transform);
+        Instantiate(MainMenuManager.uiMainMenuManager.botPrefabs[PlayerData.Instance.playerContent.bots.ToString()], MainMenuManager.uiMainMenuManager.Bot.transform);
     }
     public void Player(MenuData.ShopsData.COSTUME costume)
     {

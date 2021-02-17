@@ -11,26 +11,26 @@ public class BuyPs_TrailsButton : MonoBehaviour
     void Start()
     {
         gameObject.GetComponent<Button>().onClick.AddListener(()=>TrailsTap());
-        price =  MainMenuManager.menuData.shopsData.pricesTrails[(int)trails];
+        price =  MenuData.Instance.shopsData.pricesTrails[(int)trails];
     }
 
     public void TrailsTap(){
-        if (price <= MainMenuManager.countData.amountData.coins){
-            MainMenuManager.menuData.shopsData.openTrails.Add(trails);
-            MainMenuManager.playerData.playerContent.trails = trails;
+        if (price <= CountData.Instance.amountData.coins){
+            MenuData.Instance.shopsData.openTrails.Add(trails);
+            PlayerData.Instance.playerContent.trails = trails;
             
-            MainMenuManager.playerData.trailsSelectedText.text = "Select";
-            MainMenuManager.playerData.trailsSelectedText = buttonText;
+            PlayerData.Instance.trailsSelectedText.text = "Select";
+            PlayerData.Instance.trailsSelectedText = buttonText;
             buttonText.text = "Selected";
 
-            MainMenuManager.countData.amountData.coins -= price;
+            CountData.Instance.amountData.coins -= price;
             MainMenuManager.uiMainMenuManager.coins.GetComponentInChildren<ParticleSystem>().Play();
-            MainMenuManager.uiMainMenuManager.coins.text = MainMenuManager.countData.amountData.coins.ToString();
+            MainMenuManager.uiMainMenuManager.coins.text = CountData.Instance.amountData.coins.ToString();
             
 
-            MainMenuManager.playerData.SaveData();
-            MainMenuManager.menuData.SaveData();
-            MainMenuManager.countData.SaveData();
+            PlayerData.Instance.SaveData();
+            MenuData.Instance.SaveData();
+            CountData.Instance.SaveData();
 
             gameObject.SetActive(false);
         }

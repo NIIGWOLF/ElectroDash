@@ -15,7 +15,7 @@ public class LevelButton : MonoBehaviour
     void Start()
     {
         levelNumber = int.Parse(gameObject.GetComponentInChildren<Text>().text.Split(' ')[1]);
-        levelOpenCoins = MainMenuManager.levelData.levelInfo.levelStars[levelNumber];
+        levelOpenCoins = LevelData.Instance.levelInfo.levelStars[levelNumber];
          switch(levelOpenCoins){
              case 0:
                 leftCoin.gameObject.GetComponent<Image>().color = noCoin;

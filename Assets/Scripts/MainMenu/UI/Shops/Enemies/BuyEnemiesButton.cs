@@ -10,26 +10,26 @@ public class BuyEnemiesButton : MonoBehaviour
     void Start()
     {
         gameObject.GetComponent<Button>().onClick.AddListener(()=>EnemiesTap());
-        price =  MainMenuManager.menuData.shopsData.pricesEnemyies[(int)enemies];
+        price =  MenuData.Instance.shopsData.pricesEnemyies[(int)enemies];
     }
 
     public void EnemiesTap(){
-        if (price <= MainMenuManager.countData.amountData.coins){
-            MainMenuManager.menuData.shopsData.openEnemyies.Add(enemies);
-            MainMenuManager.playerData.playerContent.enemyies = enemies;
+        if (price <= CountData.Instance.amountData.coins){
+            MenuData.Instance.shopsData.openEnemyies.Add(enemies);
+            PlayerData.Instance.playerContent.enemyies = enemies;
             
-            MainMenuManager.playerData.enemiesSelectedText.text = "Select";
-            MainMenuManager.playerData.enemiesSelectedText = buttonText;
+            PlayerData.Instance.enemiesSelectedText.text = "Select";
+            PlayerData.Instance.enemiesSelectedText = buttonText;
             buttonText.text = "Selected";
 
-            MainMenuManager.countData.amountData.coins -= price;
+            CountData.Instance.amountData.coins -= price;
             MainMenuManager.uiMainMenuManager.coins.GetComponentInChildren<ParticleSystem>().Play();
-            MainMenuManager.uiMainMenuManager.coins.text = MainMenuManager.countData.amountData.coins.ToString();
+            MainMenuManager.uiMainMenuManager.coins.text = CountData.Instance.amountData.coins.ToString();
             
 
-            MainMenuManager.playerData.SaveData();
-            MainMenuManager.menuData.SaveData();
-            MainMenuManager.countData.SaveData();
+            PlayerData.Instance.SaveData();
+            MenuData.Instance.SaveData();
+            CountData.Instance.SaveData();
 
             gameObject.SetActive(false);
         }

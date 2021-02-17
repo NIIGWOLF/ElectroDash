@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 
-public class MenuData : MonoBehaviour
+public class MenuData : Singleton<MenuData>
 {
     public ShopsData shopsData;
     public void Awake()

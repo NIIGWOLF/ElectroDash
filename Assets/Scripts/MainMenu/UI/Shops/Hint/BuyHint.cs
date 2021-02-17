@@ -6,14 +6,14 @@ using UnityEngine.UI;
 public class BuyHint : MonoBehaviour
 {
     public void BuySimpleHint(){
-         MainMenuManager.hintData.hint.simpleHint++;
-         MainMenuManager.hintData.SaveData();
-         MainMenuManager.uiMainMenuManager.simpleHintCount.GetComponentInChildren<Text>().text = MainMenuManager.hintData.hint.simpleHint.ToString();
+         HintData.Instance.hint.simpleHint++;
+         HintData.Instance.SaveData();
+         MainMenuManager.uiMainMenuManager.simpleHintCount.GetComponentInChildren<Text>().text = HintData.Instance.hint.simpleHint.ToString();
         
     }
     public void BuyMapHint(){
-         MainMenuManager.hintData.hint.mapHint++;
-         MainMenuManager.hintData.SaveData();
-         MainMenuManager.uiMainMenuManager.mapHintCount.GetComponentInChildren<Text>().text = MainMenuManager.hintData.hint.mapHint.ToString();
+         HintData.Instance.hint.mapHint++;
+         HintData.Instance.SaveData();
+         MainMenuManager.uiMainMenuManager.mapHintCount.GetComponentInChildren<Text>().text = HintData.Instance.hint.mapHint.ToString();
     }
 }

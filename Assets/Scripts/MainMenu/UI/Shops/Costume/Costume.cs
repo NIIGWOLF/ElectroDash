@@ -9,12 +9,12 @@ public class Costume : MonoBehaviour
     void Start()
     {
         gameObject.GetComponent<Button>().onClick.AddListener(() => ChangePreview());
-        if (MainMenuManager.menuData.shopsData.openCostumes.Contains(costume))
+        if (MenuData.Instance.shopsData.openCostumes.Contains(costume))
         {
-            if ((int)MainMenuManager.playerData.playerContent.costume == (int)costume)
+            if ((int)PlayerData.Instance.playerContent.costume == (int)costume)
             {
                 buttonText.text = "Selected";
-                MainMenuManager.playerData.costumeSelectedText = buttonText;
+                PlayerData.Instance.costumeSelectedText = buttonText;
             }
             else
             {
@@ -23,28 +23,28 @@ public class Costume : MonoBehaviour
         }
         else
         {
-            buttonText.text = MainMenuManager.menuData.shopsData.pricesCostume[(int)costume].ToString();
+            buttonText.text = MenuData.Instance.shopsData.pricesCostume[(int)costume].ToString();
         }
     }
     private void ChangePreview()
     {
         MainMenuManager.makePlayer.Player(costume);
-        if (MainMenuManager.menuData.shopsData.openCostumes.Contains(costume))
+        if (MenuData.Instance.shopsData.openCostumes.Contains(costume))
         {
             MainMenuManager.uiMainMenuManager.buyCostumeButton.SetActive(false);
 
-            MainMenuManager.playerData.playerContent.costume = costume;
+            PlayerData.Instance.playerContent.costume = costume;
 
-            MainMenuManager.playerData.costumeSelectedText.text = "Select";
-            MainMenuManager.playerData.costumeSelectedText = buttonText;
+            PlayerData.Instance.costumeSelectedText.text = "Select";
+            PlayerData.Instance.costumeSelectedText = buttonText;
             buttonText.text = "Selected";
 
-            MainMenuManager.playerData.SaveData();
+            PlayerData.Instance.SaveData();
         }
         else
         {
-            int price =  MainMenuManager.menuData.shopsData.pricesTrails[(int)costume];
-            if (price <= MainMenuManager.countData.amountData.coins) {
+            int price =  MenuData.Instance.shopsData.pricesTrails[(int)costume];
+            if (price <= CountData.Instance.amountData.coins) {
             MainMenuManager.uiMainMenuManager.buyCostumeButton.GetComponentInChildren<Text>().text="Buy";
             MainMenuManager.uiMainMenuManager.buyCostumeButton.GetComponent<Button>().interactable = true;
             MainMenuManager.uiMainMenuManager.buyCostumeButton.SetActive(true);

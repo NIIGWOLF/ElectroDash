@@ -10,8 +10,8 @@ public class LevelsController : MonoBehaviour
     private List<GameObject> buttons;
     void Start()
     {
-        lastOpenLevel = MainMenuManager.levelData.levelInfo.lastOpenLevel;
-        levelCount = MainMenuManager.levelData.levelInfo.levelCount;
+        lastOpenLevel = LevelData.Instance.levelInfo.lastOpenLevel;
+        levelCount = LevelData.Instance.levelInfo.levelCount;
         buttons = new List<GameObject>();
         for (int i=1; i<=levelCount; i++){
             GameObject newlevel = Instantiate(levelButton, new Vector3(0, 0, 0), Quaternion.identity);

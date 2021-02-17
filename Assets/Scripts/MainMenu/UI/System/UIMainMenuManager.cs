@@ -64,8 +64,8 @@ public class UIMainMenuManager : MonoBehaviour
         
     }
     void Start(){
-        coins.text = MainMenuManager.countData.amountData.coins.ToString();
-        simpleHintCount.GetComponentInChildren<Text>().text = MainMenuManager.hintData.hint.simpleHint.ToString();
-        mapHintCount.GetComponentInChildren<Text>().text = MainMenuManager.hintData.hint.mapHint.ToString();
+        coins.text = CountData.Instance.amountData.coins.ToString();
+        simpleHintCount.GetComponentInChildren<Text>().text = HintData.Instance.hint.simpleHint.ToString();
+        mapHintCount.GetComponentInChildren<Text>().text = HintData.Instance.hint.mapHint.ToString();
     }
 }
