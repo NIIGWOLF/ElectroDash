@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+namespace Assets.SimpleLocalization { 
 public class Costume : MonoBehaviour
 {
     public Text buttonText;
@@ -13,12 +14,12 @@ public class Costume : MonoBehaviour
         {
             if ((int)PlayerData.Instance.playerContent.costume == (int)costume)
             {
-                buttonText.text = "Selected";
+                buttonText.text = LocalizationManager.Localize("Shop.Selected");
                 PlayerData.Instance.costumeSelectedText = buttonText;
             }
             else
             {
-                buttonText.text = "Select";
+                buttonText.text = LocalizationManager.Localize("Shop.Select");
             }
         }
         else
@@ -35,9 +36,9 @@ public class Costume : MonoBehaviour
 
             PlayerData.Instance.playerContent.costume = costume;
 
-            PlayerData.Instance.costumeSelectedText.text = "Select";
+            PlayerData.Instance.costumeSelectedText.text = LocalizationManager.Localize("Shop.Select");
             PlayerData.Instance.costumeSelectedText = buttonText;
-            buttonText.text = "Selected";
+            buttonText.text = LocalizationManager.Localize("Shop.Selected");
 
             PlayerData.Instance.SaveData();
         }
@@ -45,7 +46,7 @@ public class Costume : MonoBehaviour
         {
             int price =  MenuData.Instance.shopsData.pricesTrails[(int)costume];
             if (price <= CountData.Instance.amountData.coins) {
-            MainMenuManager.uiMainMenuManager.buyCostumeButton.GetComponentInChildren<Text>().text="Buy";
+            MainMenuManager.uiMainMenuManager.buyCostumeButton.GetComponentInChildren<Text>().text=LocalizationManager.Localize("Shop.Bue");
             MainMenuManager.uiMainMenuManager.buyCostumeButton.GetComponent<Button>().interactable = true;
             MainMenuManager.uiMainMenuManager.buyCostumeButton.SetActive(true);
             var buy = MainMenuManager.uiMainMenuManager.buyCostumeButton;
@@ -53,7 +54,7 @@ public class Costume : MonoBehaviour
             buy.buttonText = buttonText;
             }
              else {
-                MainMenuManager.uiMainMenuManager.buyCostumeButton.GetComponentInChildren<Text>().text="Not enough money";
+                MainMenuManager.uiMainMenuManager.buyCostumeButton.GetComponentInChildren<Text>().text=LocalizationManager.Localize("Shop.NotMoney");
                 MainMenuManager.uiMainMenuManager.buyCostumeButton.SetActive(true);
                 MainMenuManager.uiMainMenuManager.buyCostumeButton.GetComponent<Button>().interactable = false;
             }
@@ -64,4 +65,4 @@ public class Costume : MonoBehaviour
 
     }
 }
-
+}

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+namespace Assets.SimpleLocalization { 
 public class Bots : MonoBehaviour
 {
     
@@ -15,12 +16,12 @@ public class Bots : MonoBehaviour
         {
             if ((int)PlayerData.Instance.playerContent.bots == (int)bots)
             {
-                buttonText.text = "Selected";
+                buttonText.text = LocalizationManager.Localize("Shop.Selected");
                 PlayerData.Instance.botSelectedText = buttonText;
             }
             else
             {
-                buttonText.text = "Select";
+                buttonText.text = LocalizationManager.Localize("Shop.Select");
             }
         }
         else
@@ -37,9 +38,9 @@ public class Bots : MonoBehaviour
 
             PlayerData.Instance.playerContent.bots = bots;
 
-            PlayerData.Instance.botSelectedText.text = "Select";
+            PlayerData.Instance.botSelectedText.text = LocalizationManager.Localize("Shop.Select");
             PlayerData.Instance.botSelectedText = buttonText;
-            buttonText.text = "Selected";
+            buttonText.text = LocalizationManager.Localize("Shop.Selected");
 
             PlayerData.Instance.SaveData();
         }
@@ -47,7 +48,7 @@ public class Bots : MonoBehaviour
         {
             int price =  MenuData.Instance.shopsData.pricesTrails[(int)bots];
             if (price <= CountData.Instance.amountData.coins) {
-            MainMenuManager.uiMainMenuManager.buyBotsButton.GetComponentInChildren<Text>().text="Buy";
+            MainMenuManager.uiMainMenuManager.buyBotsButton.GetComponentInChildren<Text>().text=LocalizationManager.Localize("Shop.Bue");
             MainMenuManager.uiMainMenuManager.buyBotsButton.GetComponent<Button>().interactable = true;
             MainMenuManager.uiMainMenuManager.buyBotsButton.SetActive(true);
             var buy = MainMenuManager.uiMainMenuManager.buyBotsButton;
@@ -55,7 +56,7 @@ public class Bots : MonoBehaviour
             buy.buttonText = buttonText;
             }
              else {
-                MainMenuManager.uiMainMenuManager.buyBotsButton.GetComponentInChildren<Text>().text="Not enough money";
+                MainMenuManager.uiMainMenuManager.buyBotsButton.GetComponentInChildren<Text>().text=LocalizationManager.Localize("Shop.NotMoney");
                 MainMenuManager.uiMainMenuManager.buyBotsButton.SetActive(true);
                 MainMenuManager.uiMainMenuManager.buyBotsButton.GetComponent<Button>().interactable = false;
             }
@@ -65,4 +66,5 @@ public class Bots : MonoBehaviour
         }
 
     }
+}
 }

@@ -19,9 +19,9 @@ public class BuyCostumeButton : MonoBehaviour
             MenuData.Instance.shopsData.openCostumes.Add(costume);
             PlayerData.Instance.playerContent.costume = costume;
             
-            PlayerData.Instance.costumeSelectedText.text = "Select";
+            PlayerData.Instance.costumeSelectedText.text =  Assets.SimpleLocalization.LocalizationManager.Localize("Shop.Select");
             PlayerData.Instance.costumeSelectedText = buttonText;
-            buttonText.text = "Selected";
+            buttonText.text = Assets.SimpleLocalization.LocalizationManager.Localize("Shop.Selected");
 
             CountData.Instance.amountData.coins -= price;
             MainMenuManager.uiMainMenuManager.coins.GetComponentInChildren<ParticleSystem>().Play();
