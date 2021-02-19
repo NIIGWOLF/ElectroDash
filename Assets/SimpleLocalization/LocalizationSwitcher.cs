@@ -9,7 +9,7 @@ namespace Assets.SimpleLocalization
         public void Awake()
         {
             LocalizationManager.Read();
-
+            if (SettingsData.Instance.configurationData.language.Equals(""))
             switch (Application.systemLanguage)
             {
                 case SystemLanguage.German:
@@ -22,7 +22,11 @@ namespace Assets.SimpleLocalization
                     LocalizationManager.Language = "English";
                     break;
             }
+            else{
+                LocalizationManager.Language = SettingsData.Instance.configurationData.language;
+            }
         }
+        
 
         /// <summary>
         /// Change localization at runtime
@@ -30,6 +34,8 @@ namespace Assets.SimpleLocalization
         public void SetLocalization(string localization)
         {
             LocalizationManager.Language = localization;
+            SettingsData.Instance.configurationData.language = localization;
+            SettingsData.Instance.SaveData();
         }
     }
 }

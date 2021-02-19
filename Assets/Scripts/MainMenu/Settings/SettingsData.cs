@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
-public class SettingsData : MonoBehaviour
+public class SettingsData : Singleton<SettingsData>
 {
     public ConfigurationData configurationData;
     public void Awake()
@@ -31,6 +31,6 @@ public class SettingsData : MonoBehaviour
         }
     }
     public class ConfigurationData {
-        public string language = "English";
+        public string language = "";
     }
 }
