@@ -16,7 +16,7 @@ public class LevelsController : MonoBehaviour
         for (int i=1; i<=levelCount; i++){
             GameObject newlevel = Instantiate(levelButton, new Vector3(0, 0, 0), Quaternion.identity);
             newlevel.transform.SetParent(gameObject.transform, false);
-            newlevel.GetComponentInChildren<Text>().text = "Level " + i;
+            newlevel.GetComponentInChildren<Text>().text = Assets.SimpleLocalization.LocalizationManager.Localize("Level.Text")+" " + i;
             if (i>lastOpenLevel) newlevel.GetComponent<Button>().interactable = false;
             buttons.Add(newlevel);
         }

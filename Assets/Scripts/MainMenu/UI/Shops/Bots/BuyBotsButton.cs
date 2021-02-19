@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+
 public class BuyBotsButton : MonoBehaviour
 {
      public MenuData.ShopsData.BOTS bots;
@@ -18,10 +19,9 @@ public class BuyBotsButton : MonoBehaviour
             MenuData.Instance.shopsData.openBots.Add(bots);
             PlayerData.Instance.playerContent.bots = bots;
             
-            PlayerData.Instance.botSelectedText.text = "Select";
+            PlayerData.Instance.botSelectedText.text =  Assets.SimpleLocalization.LocalizationManager.Localize("Shop.Select");
             PlayerData.Instance.botSelectedText = buttonText;
-            buttonText.text = "Selected";
-
+            buttonText.text = Assets.SimpleLocalization.LocalizationManager.Localize("Shop.Selected");
             CountData.Instance.amountData.coins -= price;
             MainMenuManager.uiMainMenuManager.coins.GetComponentInChildren<ParticleSystem>().Play();
             MainMenuManager.uiMainMenuManager.coins.text = CountData.Instance.amountData.coins.ToString();

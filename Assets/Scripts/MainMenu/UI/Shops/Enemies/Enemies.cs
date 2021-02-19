@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+namespace Assets.SimpleLocalization { 
 public class Enemies : MonoBehaviour
 {
     public Text buttonText;
@@ -14,12 +14,12 @@ public class Enemies : MonoBehaviour
         {
             if ((int)PlayerData.Instance.playerContent.enemyies == (int)enemies)
             {
-                buttonText.text = "Selected";
+                buttonText.text = LocalizationManager.Localize("Shop.Selected");
                 PlayerData.Instance.enemiesSelectedText = buttonText;
             }
             else
             {
-                buttonText.text = "Select";
+                buttonText.text = LocalizationManager.Localize("Shop.Select");
             }
         }
         else
@@ -37,9 +37,9 @@ public class Enemies : MonoBehaviour
 
             PlayerData.Instance.playerContent.enemyies = enemies;
 
-            PlayerData.Instance.enemiesSelectedText.text = "Select";
+            PlayerData.Instance.enemiesSelectedText.text = LocalizationManager.Localize("Shop.Select");
             PlayerData.Instance.enemiesSelectedText = buttonText;
-            buttonText.text = "Selected";
+            buttonText.text = LocalizationManager.Localize("Shop.Selected");
 
             PlayerData.Instance.SaveData();
         }
@@ -47,7 +47,7 @@ public class Enemies : MonoBehaviour
         {
             int price =  MenuData.Instance.shopsData.pricesTrails[(int)enemies];
             if (price <= CountData.Instance.amountData.coins) {
-            MainMenuManager.uiMainMenuManager.buyEnemiesButton.GetComponentInChildren<Text>().text="Buy";
+            MainMenuManager.uiMainMenuManager.buyEnemiesButton.GetComponentInChildren<Text>().text=LocalizationManager.Localize("Shop.Bue");
             MainMenuManager.uiMainMenuManager.buyEnemiesButton.GetComponent<Button>().interactable = true;
             MainMenuManager.uiMainMenuManager.buyEnemiesButton.SetActive(true);
             var buy = MainMenuManager.uiMainMenuManager.buyEnemiesButton;
@@ -55,7 +55,7 @@ public class Enemies : MonoBehaviour
             buy.buttonText = buttonText;
             }
             else {
-                MainMenuManager.uiMainMenuManager.buyEnemiesButton.GetComponentInChildren<Text>().text="Not enough money";
+                MainMenuManager.uiMainMenuManager.buyEnemiesButton.GetComponentInChildren<Text>().text=LocalizationManager.Localize("Shop.NotMoney");
                 MainMenuManager.uiMainMenuManager.buyEnemiesButton.SetActive(true);
                 MainMenuManager.uiMainMenuManager.buyEnemiesButton.GetComponent<Button>().interactable = false;
             }
@@ -65,4 +65,5 @@ public class Enemies : MonoBehaviour
         }
 
     }
+}
 }

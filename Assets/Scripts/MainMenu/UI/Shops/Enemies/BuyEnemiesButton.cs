@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+
 public class BuyEnemiesButton : MonoBehaviour
 {
    public MenuData.ShopsData.ENEMYIES enemies;
@@ -18,9 +19,9 @@ public class BuyEnemiesButton : MonoBehaviour
             MenuData.Instance.shopsData.openEnemyies.Add(enemies);
             PlayerData.Instance.playerContent.enemyies = enemies;
             
-            PlayerData.Instance.enemiesSelectedText.text = "Select";
+            PlayerData.Instance.enemiesSelectedText.text =  Assets.SimpleLocalization.LocalizationManager.Localize("Shop.Select");
             PlayerData.Instance.enemiesSelectedText = buttonText;
-            buttonText.text = "Selected";
+            buttonText.text = Assets.SimpleLocalization.LocalizationManager.Localize("Shop.Selected");
 
             CountData.Instance.amountData.coins -= price;
             MainMenuManager.uiMainMenuManager.coins.GetComponentInChildren<ParticleSystem>().Play();

@@ -19,9 +19,9 @@ public class BuyPs_TrailsButton : MonoBehaviour
             MenuData.Instance.shopsData.openTrails.Add(trails);
             PlayerData.Instance.playerContent.trails = trails;
             
-            PlayerData.Instance.trailsSelectedText.text = "Select";
+            PlayerData.Instance.trailsSelectedText.text = Assets.SimpleLocalization.LocalizationManager.Localize("Shop.Select");
             PlayerData.Instance.trailsSelectedText = buttonText;
-            buttonText.text = "Selected";
+            buttonText.text = Assets.SimpleLocalization.LocalizationManager.Localize("Shop.Selected");
 
             CountData.Instance.amountData.coins -= price;
             MainMenuManager.uiMainMenuManager.coins.GetComponentInChildren<ParticleSystem>().Play();
