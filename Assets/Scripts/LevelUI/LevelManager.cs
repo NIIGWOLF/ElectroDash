@@ -14,8 +14,8 @@ public class LevelManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        countSimpleHint.GetComponent<Text>().text = StaticManager.hintData.hint.simpleHint.ToString();
-        countMapHint.GetComponent<Text>().text = StaticManager.hintData.hint.mapHint.ToString();
+        countSimpleHint.GetComponent<Text>().text = HintData.Instance.hint.simpleHint.ToString();
+        countMapHint.GetComponent<Text>().text = HintData.Instance.hint.mapHint.ToString();
 
     }
 
