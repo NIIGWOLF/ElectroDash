@@ -17,6 +17,7 @@ public class LoadMainMenu : MonoBehaviour
         if (Application.CanStreamedLevelBeLoaded("MainMenu")) {
             StaticManager.nameLevel.LoadMainMenu();
             StaticManager.loadScene.BeforeNewScene();
+            Time.timeScale=1;
             Invoke("LoadNewScene",0.59f);
         }
         else
@@ -25,6 +26,7 @@ public class LoadMainMenu : MonoBehaviour
         }
     }
     void LoadNewScene(){
+        Time.timeScale=1;
         ScriptManager.objectManager.activStartDaethPS=false;
         SceneManager.LoadScene("MainMenu");
     }
