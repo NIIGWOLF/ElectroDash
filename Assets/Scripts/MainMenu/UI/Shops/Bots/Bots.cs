@@ -14,7 +14,7 @@ public class Bots : MonoBehaviour
         gameObject.GetComponent<Button>().onClick.AddListener(() => ChangePreview());
         if (MenuData.Instance.shopsData.openBots.Contains(bots))
         {
-            if ((int)PlayerData.Instance.playerContent.bots == (int)bots)
+            if ((int)PlayerData.Instance.playerContent.Bots == (int)bots)
             {
                 buttonText.text = LocalizationManager.Localize("Shop.Selected");
                 PlayerData.Instance.botSelectedText = buttonText;
@@ -36,7 +36,7 @@ public class Bots : MonoBehaviour
         {
             MainMenuManager.uiMainMenuManager.buyBotsButton.SetActive(false);
 
-            PlayerData.Instance.playerContent.bots = bots;
+            PlayerData.Instance.playerContent.Bots = bots;
 
             PlayerData.Instance.botSelectedText.text = LocalizationManager.Localize("Shop.Select");
             PlayerData.Instance.botSelectedText = buttonText;

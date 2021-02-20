@@ -12,7 +12,7 @@ public class Enemies : MonoBehaviour
         gameObject.GetComponent<Button>().onClick.AddListener(() => ChangePreview());
         if (MenuData.Instance.shopsData.openEnemyies.Contains(enemies))
         {
-            if ((int)PlayerData.Instance.playerContent.enemyies == (int)enemies)
+            if ((int)PlayerData.Instance.playerContent.Enemyies == (int)enemies)
             {
                 buttonText.text = LocalizationManager.Localize("Shop.Selected");
                 PlayerData.Instance.enemiesSelectedText = buttonText;
@@ -35,7 +35,7 @@ public class Enemies : MonoBehaviour
         {
             MainMenuManager.uiMainMenuManager.buyEnemiesButton.SetActive(false);
 
-            PlayerData.Instance.playerContent.enemyies = enemies;
+            PlayerData.Instance.playerContent.Enemyies = enemies;
 
             PlayerData.Instance.enemiesSelectedText.text = LocalizationManager.Localize("Shop.Select");
             PlayerData.Instance.enemiesSelectedText = buttonText;

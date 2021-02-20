@@ -17,7 +17,7 @@ public class BuyEnemiesButton : MonoBehaviour
     public void EnemiesTap(){
         if (price <= CountData.Instance.amountData.coins){
             MenuData.Instance.shopsData.openEnemyies.Add(enemies);
-            PlayerData.Instance.playerContent.enemyies = enemies;
+            PlayerData.Instance.playerContent.Enemyies = enemies;
             
             PlayerData.Instance.enemiesSelectedText.text =  Assets.SimpleLocalization.LocalizationManager.Localize("Shop.Select");
             PlayerData.Instance.enemiesSelectedText = buttonText;

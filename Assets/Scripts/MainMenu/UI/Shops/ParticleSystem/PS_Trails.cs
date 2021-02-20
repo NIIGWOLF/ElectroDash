@@ -12,7 +12,7 @@ public class PS_Trails : MonoBehaviour
         gameObject.GetComponent<Button>().onClick.AddListener(() => ChangePreview());
         if (MenuData.Instance.shopsData.openTrails.Contains(trails))
         {
-            if ((int)PlayerData.Instance.playerContent.trails == (int)trails)
+            if ((int)PlayerData.Instance.playerContent.Trails == (int)trails)
             {
                 buttonText.text = LocalizationManager.Localize("Shop.Selected");
                 PlayerData.Instance.trailsSelectedText = buttonText;
@@ -34,7 +34,7 @@ public class PS_Trails : MonoBehaviour
         {
             MainMenuManager.uiMainMenuManager.BuyPs_TrailsButton.SetActive(false);
 
-            PlayerData.Instance.playerContent.trails = trails;
+            PlayerData.Instance.playerContent.Trails = trails;
 
             PlayerData.Instance.trailsSelectedText.text = LocalizationManager.Localize("Shop.Select");
             PlayerData.Instance.trailsSelectedText = buttonText;

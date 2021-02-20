@@ -17,7 +17,7 @@ public class BuyBotsButton : MonoBehaviour
     public void BotsTap(){
         if (price <= CountData.Instance.amountData.coins){
             MenuData.Instance.shopsData.openBots.Add(bots);
-            PlayerData.Instance.playerContent.bots = bots;
+            PlayerData.Instance.playerContent.Bots = bots;
             
             PlayerData.Instance.botSelectedText.text =  Assets.SimpleLocalization.LocalizationManager.Localize("Shop.Select");
             PlayerData.Instance.botSelectedText = buttonText;

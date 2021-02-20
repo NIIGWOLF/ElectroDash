@@ -17,7 +17,7 @@ public class BuyCostumeButton : MonoBehaviour
     public void CostumeTap(){
         if (price <= CountData.Instance.amountData.coins){
             MenuData.Instance.shopsData.openCostumes.Add(costume);
-            PlayerData.Instance.playerContent.costume = costume;
+            PlayerData.Instance.playerContent.Costume = costume;
             
             PlayerData.Instance.costumeSelectedText.text =  Assets.SimpleLocalization.LocalizationManager.Localize("Shop.Select");
             PlayerData.Instance.costumeSelectedText = buttonText;

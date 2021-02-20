@@ -17,7 +17,7 @@ public class BuyPs_TrailsButton : MonoBehaviour
     public void TrailsTap(){
         if (price <= CountData.Instance.amountData.coins){
             MenuData.Instance.shopsData.openTrails.Add(trails);
-            PlayerData.Instance.playerContent.trails = trails;
+            PlayerData.Instance.playerContent.Trails = trails;
             
             PlayerData.Instance.trailsSelectedText.text = Assets.SimpleLocalization.LocalizationManager.Localize("Shop.Select");
             PlayerData.Instance.trailsSelectedText = buttonText;

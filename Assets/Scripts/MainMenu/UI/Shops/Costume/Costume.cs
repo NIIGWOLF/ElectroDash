@@ -12,7 +12,7 @@ public class Costume : MonoBehaviour
         gameObject.GetComponent<Button>().onClick.AddListener(() => ChangePreview());
         if (MenuData.Instance.shopsData.openCostumes.Contains(costume))
         {
-            if ((int)PlayerData.Instance.playerContent.costume == (int)costume)
+            if ((int)PlayerData.Instance.playerContent.Costume == (int)costume)
             {
                 buttonText.text = LocalizationManager.Localize("Shop.Selected");
                 PlayerData.Instance.costumeSelectedText = buttonText;
@@ -34,7 +34,7 @@ public class Costume : MonoBehaviour
         {
             MainMenuManager.uiMainMenuManager.buyCostumeButton.SetActive(false);
 
-            PlayerData.Instance.playerContent.costume = costume;
+            PlayerData.Instance.playerContent.Costume = costume;
 
             PlayerData.Instance.costumeSelectedText.text = LocalizationManager.Localize("Shop.Select");
             PlayerData.Instance.costumeSelectedText = buttonText;
