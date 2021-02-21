@@ -9,6 +9,7 @@ public class ObjectManager : MonoBehaviour
     public GameObject BlackBarier;
     public List<GameObject> AllCharacter = new List<GameObject>();
     public bool activStartDaethPS = true;
+    public MoveSizeCamera moveSizeCamera;
 
     void OnApplicationQuit()
     {

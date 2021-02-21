@@ -56,6 +56,7 @@ public class Player : Character
                         tileMap.GetInstantiatedObject(currentPos).GetComponent<BasePoint>().OutComming(true);
                         AnimatedStartMove();
                         AnimatedEye();
+                        ScriptManager.objectManager.moveSizeCamera.zoomIn();
                         isMove = true;
                     }
                 }
@@ -71,6 +72,7 @@ public class Player : Character
                         tileMap.GetInstantiatedObject(currentPos).GetComponent<BasePoint>().OutComming(true);
                         AnimatedStartMove();
                         AnimatedEye();
+                        ScriptManager.objectManager.moveSizeCamera.zoomIn();
                         isMove = true;
                     }
                 }
@@ -86,6 +88,7 @@ public class Player : Character
                         tileMap.GetInstantiatedObject(currentPos).GetComponent<BasePoint>().OutComming(true);
                         AnimatedStartMove();
                         AnimatedEye();
+                        ScriptManager.objectManager.moveSizeCamera.zoomIn();
                         isMove = true;
                     }
                 }
@@ -101,6 +104,7 @@ public class Player : Character
                         tileMap.GetInstantiatedObject(currentPos).GetComponent<BasePoint>().OutComming(true);
                         AnimatedStartMove();
                         AnimatedEye();
+                        ScriptManager.objectManager.moveSizeCamera.zoomIn();
                         isMove = true;
                     }
                 }
