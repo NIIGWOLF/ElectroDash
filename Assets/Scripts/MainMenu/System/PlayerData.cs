@@ -18,7 +18,10 @@ public class PlayerData : Singleton<PlayerData>
     }
     public void SaveData()
     {
+        Debug.Log("Save player data");
+        Debug.Log(playerContent.ToString());
         string json = JsonUtility.ToJson(playerContent);
+        Debug.Log(json);
         File.WriteAllText(Application.persistentDataPath + "/Data/Player.json", json);
     }
     public void LoadData()
@@ -38,43 +41,20 @@ public class PlayerData : Singleton<PlayerData>
 
     public class PlayerContent
     {
-        private MenuData.ShopsData.COSTUME costume = MenuData.ShopsData.COSTUME.Classic;
-        private MenuData.ShopsData.BOTS bots = MenuData.ShopsData.BOTS.Classic;
-        private MenuData.ShopsData.ENEMYIES enemyies = MenuData.ShopsData.ENEMYIES.Classic;
-        private MenuData.ShopsData.TRAILS trails = MenuData.ShopsData.TRAILS.Classic;
+        public MenuData.ShopsData.COSTUME costume = MenuData.ShopsData.COSTUME.Classic;
+        public MenuData.ShopsData.BOTS bots = MenuData.ShopsData.BOTS.Classic;
+        public MenuData.ShopsData.ENEMYIES enemyies = MenuData.ShopsData.ENEMYIES.Classic;
+        public MenuData.ShopsData.TRAILS trails = MenuData.ShopsData.TRAILS.Classic;
+        
 
-        public MenuData.ShopsData.COSTUME Costume
-        {
-            get => costume;
-            set
-            {
-                costume = value;
-            }
-        }
-        public MenuData.ShopsData.BOTS Bots
-        {
-            get => bots;
-            set
-            {
+        public MenuData.ShopsData.COSTUME Costume {get => costume;set{costume = value;}}
+        public MenuData.ShopsData.BOTS Bots{get => bots;set{bots = value;}}
+        public MenuData.ShopsData.ENEMYIES Enemyies{get => enemyies;set{enemyies = value;}}
+        public MenuData.ShopsData.TRAILS Trails{get => trails;set{trails = value;}}
 
-                bots = value;
-            }
-        }
-        public MenuData.ShopsData.ENEMYIES Enemyies
+        public override string ToString()
         {
-            get => enemyies;
-            set
-            {
-                enemyies = value;
-            }
-        }
-        public MenuData.ShopsData.TRAILS Trails
-        {
-            get => trails;
-            set
-            {
-                trails = value;
-            }
+            return Costume.ToString()+" "+Bots.ToString()+" "+Enemyies.ToString()+" "+ Trails.ToString();
         }
     }
 

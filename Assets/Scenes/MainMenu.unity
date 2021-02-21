@@ -1428,24 +1428,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LocalizationKey: Enemy.Button
---- !u!1 &1513244373 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6620257595742111724, guid: 04253d7e1fe1a6f49895ad2651b2e2d4,
-    type: 3}
-  m_PrefabInstance: {fileID: 6620257595944001073}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1513244374
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1513244373}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c88cb95fe83ba924fb185a442c989f98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1618857471 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2305692196718412181, guid: 8dcaa30741541744c96838865829e2de,
@@ -2943,5 +2925,10 @@ PrefabInstance:
       propertyPath: botSelectedText
       value: 
       objectReference: {fileID: 1153195173}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6620257595742111700, guid: 04253d7e1fe1a6f49895ad2651b2e2d4, type: 3}
+    - {fileID: 6620257595742111727, guid: 04253d7e1fe1a6f49895ad2651b2e2d4, type: 3}
+    - {fileID: 6620257595742111703, guid: 04253d7e1fe1a6f49895ad2651b2e2d4, type: 3}
+    - {fileID: 6620257595742111697, guid: 04253d7e1fe1a6f49895ad2651b2e2d4, type: 3}
+    - {fileID: 6620257595742111726, guid: 04253d7e1fe1a6f49895ad2651b2e2d4, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 04253d7e1fe1a6f49895ad2651b2e2d4, type: 3}
