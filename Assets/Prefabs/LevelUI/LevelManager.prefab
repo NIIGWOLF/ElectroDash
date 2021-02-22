@@ -1172,6 +1172,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: LoadPanelCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 4017398088849585230, guid: 550b55e75fb84cf428a975f1b2915a06,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 550b55e75fb84cf428a975f1b2915a06, type: 3}
 --- !u!114 &2952274267607281619 stripped
@@ -1339,6 +1344,22 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[5].m_CallState
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4359339960851805690, guid: 244c663691287b24cb2ba3fa439b0683,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4359339960851805690, guid: 244c663691287b24cb2ba3fa439b0683,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 208.45367
+      objectReference: {fileID: 0}
+    - target: {fileID: 5262597869797637983, guid: 244c663691287b24cb2ba3fa439b0683,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 670b4d40121db8844b3ccd2b42795eaf,
+        type: 3}
     - target: {fileID: 5537897964043062983, guid: 244c663691287b24cb2ba3fa439b0683,
         type: 3}
       propertyPath: m_Name
@@ -1682,6 +1703,37 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5442164025271619566, guid: 2caaf405158145145984d64d720b1cdf,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5442164025271619566, guid: 2caaf405158145145984d64d720b1cdf,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 190
+      objectReference: {fileID: 0}
+    - target: {fileID: 5442164025271619566, guid: 2caaf405158145145984d64d720b1cdf,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5442164025271619566, guid: 2caaf405158145145984d64d720b1cdf,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1250.0001
+      objectReference: {fileID: 0}
+    - target: {fileID: 5442164025271619567, guid: 2caaf405158145145984d64d720b1cdf,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 670b4d40121db8844b3ccd2b42795eaf,
+        type: 3}
+    - target: {fileID: 5442164025271619567, guid: 2caaf405158145145984d64d720b1cdf,
+        type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5442164025549759352, guid: 2caaf405158145145984d64d720b1cdf,
         type: 3}
@@ -2337,6 +2389,27 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8772452222065202394}
     m_Modifications:
+    - target: {fileID: 1278217533849675469, guid: fe2cd0e7e3d94b147af594dc168c6f7c,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 94f4867ff42cb814d8ea1559a631b12b,
+        type: 3}
+    - target: {fileID: 1278217533849675469, guid: fe2cd0e7e3d94b147af594dc168c6f7c,
+        type: 3}
+      propertyPath: m_FontData.m_FontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1278217533849675470, guid: fe2cd0e7e3d94b147af594dc168c6f7c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1278217533849675470, guid: fe2cd0e7e3d94b147af594dc168c6f7c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1278217533922535168, guid: fe2cd0e7e3d94b147af594dc168c6f7c,
         type: 3}
       propertyPath: m_Name
