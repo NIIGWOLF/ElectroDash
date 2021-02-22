@@ -9,6 +9,7 @@ public class LevelManager : MonoBehaviour
     public  GameObject countMapHint;
     public GameObject levelCompleteCanvas;
     public CoinManager coinManager;
+    public Text timer;
     
    
     // Start is called before the first frame update
