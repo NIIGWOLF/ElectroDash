@@ -115,10 +115,8 @@ public class Player : Character
     public override void Die()
     {
         Handheld.Vibrate();
-        ScriptManager.objectManager.AllCharacter.Remove(gameObject);
-        var go = Instantiate(deathPlayer,transform.position,Quaternion.identity);
         Instantiate(deathPS,transform.position,Quaternion.identity);
-        go.AddComponent<RestartAfterDeath>();
-        Destroy(gameObject);
+        gameObject.AddComponent<RestartAfterDeath>();
+        Destroy(gameObject.GetComponent<Player>());
     }
 }
