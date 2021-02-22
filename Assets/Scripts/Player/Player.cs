@@ -115,7 +115,7 @@ public class Player : Character
     public override void Die()
     {
         Handheld.Vibrate();
-        Instantiate(deathPS,transform.position,Quaternion.identity);
+        Instantiate(deathPS,transform.position,Quaternion.Euler(70,0,0));
         gameObject.AddComponent<RestartAfterDeath>();
         Destroy(gameObject.GetComponent<Player>());
     }

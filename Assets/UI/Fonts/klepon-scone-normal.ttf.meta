@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1621e3560550960489c43afc4e97a4b3
+guid: 670b4d40121db8844b3ccd2b42795eaf
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -8,9 +8,9 @@ TrueTypeFontImporter:
   characterSpacing: 0
   characterPadding: 1
   includeFontData: 1
-  fontName: TT Cottons Light DEMO
+  fontName: Klepon Scone
   fontNames:
-  - TT Cottons Light DEMO
+  - Klepon Scone
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
