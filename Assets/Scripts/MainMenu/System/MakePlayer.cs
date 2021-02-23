@@ -8,8 +8,9 @@ public class MakePlayer : MonoBehaviour
     void Start()
     {
         Player();
-        Enemy();
         Bot();
+        Enemy();
+       
     }
     public void Player()
     {
@@ -27,9 +28,10 @@ public class MakePlayer : MonoBehaviour
                     Destroy(tr.GetChild(0).gameObject);
                     Destroy(tr.GetChild(1).gameObject);
                 }
-                Instantiate(MainMenuManager.uiMainMenuManager.psPrefabs[PlayerData.Instance.playerContent.Trails.ToString()], tr.transform);
-                Instantiate(MainMenuManager.uiMainMenuManager.trailsPrefabs[PlayerData.Instance.playerContent.Trails.ToString()], tr.transform);
-
+                var a = Instantiate(MainMenuManager.uiMainMenuManager.psPrefabs[PlayerData.Instance.playerContent.Trails.ToString()], tr.transform);
+                a.GetComponent<Transform>().localScale = new Vector3(2,2,2);
+                var b = Instantiate(MainMenuManager.uiMainMenuManager.trailsPrefabs[PlayerData.Instance.playerContent.Trails.ToString()], tr.transform);
+                b.GetComponent<Transform>().localScale = new Vector3(2,2,2);
 
             }
         }
@@ -38,13 +40,23 @@ public class MakePlayer : MonoBehaviour
         if (MainMenuManager.uiMainMenuManager.Enemy.transform.childCount!=0){
             Destroy(MainMenuManager.uiMainMenuManager.Enemy.transform.GetChild(0).gameObject);
         }
-        Instantiate(MainMenuManager.uiMainMenuManager.enemyPrefabs[PlayerData.Instance.playerContent.Enemyies.ToString()], MainMenuManager.uiMainMenuManager.Enemy.transform);
+        var a = Instantiate(MainMenuManager.uiMainMenuManager.enemyPrefabs[PlayerData.Instance.playerContent.Enemyies.ToString()], MainMenuManager.uiMainMenuManager.Enemy.transform);
+        foreach (Transform transform in a.GetComponentsInChildren<Transform>()){
+            if (transform.gameObject.name.Contains("PS")){
+                transform.GetComponent<Transform>().localScale = new Vector3(2,2,2);
+            }
+        }
     }
     public void Bot(){
         if (MainMenuManager.uiMainMenuManager.Bot.transform.childCount!=0){
             Destroy(MainMenuManager.uiMainMenuManager.Bot.transform.GetChild(0).gameObject);
         }
-        Instantiate(MainMenuManager.uiMainMenuManager.botPrefabs[PlayerData.Instance.playerContent.Bots.ToString()], MainMenuManager.uiMainMenuManager.Bot.transform);
+       var a = Instantiate(MainMenuManager.uiMainMenuManager.botPrefabs[PlayerData.Instance.playerContent.Bots.ToString()], MainMenuManager.uiMainMenuManager.Bot.transform);
+       foreach (Transform transform in a.GetComponentsInChildren<Transform>()){
+            if (transform.gameObject.name.Contains("PS")){
+                transform.GetComponent<Transform>().localScale = new Vector3(2,2,2);
+            }
+        }
     }
     public void Player(MenuData.ShopsData.COSTUME costume)
     {
@@ -70,9 +82,10 @@ public class MakePlayer : MonoBehaviour
                 Destroy(tr.GetChild(0).gameObject);
                 Destroy(tr.GetChild(1).gameObject);
             }
-            Instantiate(MainMenuManager.uiMainMenuManager.psPrefabs[trail.ToString()], tr.transform);
-            Instantiate(MainMenuManager.uiMainMenuManager.trailsPrefabs[trail.ToString()], tr.transform);
-
+            var a = Instantiate(MainMenuManager.uiMainMenuManager.psPrefabs[trail.ToString()], tr.transform);
+            var b = Instantiate(MainMenuManager.uiMainMenuManager.trailsPrefabs[trail.ToString()], tr.transform);
+            a.GetComponent<Transform>().localScale = new Vector3(2,2,2);
+            b.GetComponent<Transform>().localScale = new Vector3(2,2,2);
 
         }
 
@@ -82,13 +95,23 @@ public class MakePlayer : MonoBehaviour
         if (MainMenuManager.uiMainMenuManager.Enemy.transform.childCount!=0){
             Destroy(MainMenuManager.uiMainMenuManager.Enemy.transform.GetChild(0).gameObject);
         }
-        Instantiate(MainMenuManager.uiMainMenuManager.enemyPrefabs[enemy.ToString()], MainMenuManager.uiMainMenuManager.Enemy.transform);
+        var a = Instantiate(MainMenuManager.uiMainMenuManager.enemyPrefabs[enemy.ToString()], MainMenuManager.uiMainMenuManager.Enemy.transform);
+        foreach (Transform transform in a.GetComponentsInChildren<Transform>()){
+            if (transform.gameObject.name.Contains("PS")){
+                transform.GetComponent<Transform>().localScale = new Vector3(2,2,2);
+            }
+        }
     }
     public void Player(MenuData.ShopsData.BOTS bots){
         if (MainMenuManager.uiMainMenuManager.Bot.transform.childCount!=0){
             Destroy(MainMenuManager.uiMainMenuManager.Bot.transform.GetChild(0).gameObject);
         }
-        Instantiate(MainMenuManager.uiMainMenuManager.botPrefabs[bots.ToString()], MainMenuManager.uiMainMenuManager.Bot.transform);
+       var a = Instantiate(MainMenuManager.uiMainMenuManager.botPrefabs[bots.ToString()], MainMenuManager.uiMainMenuManager.Bot.transform);
+       foreach (Transform transform in a.GetComponentsInChildren<Transform>()){
+            if (transform.gameObject.name.Contains("PS")){
+                transform.GetComponent<Transform>().localScale = new Vector3(2,2,2);
+            }
+        }
     }
 
 }
