@@ -12,14 +12,16 @@ namespace Assets.SimpleLocalization
             if (SettingsData.Instance.configurationData.language.Equals(""))
             switch (Application.systemLanguage)
             {
-                case SystemLanguage.German:
-                    LocalizationManager.Language = "German";
-                    break;
+                //case SystemLanguage.German:
+                   // LocalizationManager.Language = "German";
+                    //break;
                 case SystemLanguage.Russian:
                     LocalizationManager.Language = "Russian";
+                    SettingsData.Instance.configurationData.language = "Russian";
                     break;
                 default:
                     LocalizationManager.Language = "English";
+                    SettingsData.Instance.configurationData.language = "English";
                     break;
             }
             else{

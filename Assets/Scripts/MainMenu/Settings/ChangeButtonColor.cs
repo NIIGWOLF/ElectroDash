@@ -12,4 +12,12 @@ public class ChangeButtonColor : MonoBehaviour
     public void NormalColor(){
         gameObject.GetComponent<Image>().color = normalColor;
     }
+    void Start(){
+        if (gameObject.name.Equals(SettingsData.Instance.configurationData.language)){
+            ChangeColor();
+        }
+        else {
+            NormalColor();
+        }
+    }
 }

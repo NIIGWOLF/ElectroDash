@@ -21445,7 +21445,7 @@ GameObject:
   - component: {fileID: 2305692195851111622}
   - component: {fileID: 447339435}
   m_Layer: 5
-  m_Name: Russhian_Button
+  m_Name: "\u0420\u0443\u0441\u0441\u043A\u0438\u0439"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21951,7 +21951,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 422.9687, y: 72.48828}
+  m_SizeDelta: {x: 422.9687, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2305692196190513099
 MonoBehaviour:
@@ -23041,7 +23041,7 @@ GameObject:
   - component: {fileID: 2305692197271350722}
   - component: {fileID: 1048170415}
   m_Layer: 5
-  m_Name: English_Button
+  m_Name: English
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
