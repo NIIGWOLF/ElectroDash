@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FinishPoint : BasePoint
 {
-    public override Vector3Int InComming(Vector3Int backPos, bool activPoint)
+    public override void InComming(Vector3Int backPos, bool activPoint)
     {
         foreach (GameObject ch in ScriptManager.objectManager.AllCharacter)
         {
@@ -29,6 +29,5 @@ public class FinishPoint : BasePoint
                 }
 
         }
-        return NextPos(backPos);
     }
 }

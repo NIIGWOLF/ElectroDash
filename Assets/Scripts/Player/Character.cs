@@ -9,6 +9,7 @@ public class Character : MonoBehaviour
     protected bool isMove = false;
     protected Vector3Int backPos;
     protected Vector3Int nextPos = new Vector3Int(0, 0, 1);
+    protected Vector3Int nextNextPos = new Vector3Int(0, 0, 1);
     protected Vector3Int currentPos;
     protected float speed = 5f;
     protected Tilemap tileMap;
