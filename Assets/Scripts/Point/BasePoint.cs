@@ -12,10 +12,10 @@ public class BasePoint : MonoBehaviour
         pos = Vector3Int.CeilToInt(transform.position);
         tileMap = ScriptManager.objectManager.tilemap;
     }
-    public virtual void InComming(Vector3Int backPos, bool activPoint)
+    public virtual Vector3Int InComming(Vector3Int backPos, bool activPoint)
     {
         //Debug.Log("In");
-        //return NextPos(backPos);
+        return NextPos(backPos);
     }
 
     public virtual void OutComming(bool activPoint)
@@ -23,7 +23,7 @@ public class BasePoint : MonoBehaviour
         //Debug.Log("Out");
     }
 
-    public virtual Vector3Int NextPos(Vector3Int backPos)
+    protected virtual Vector3Int NextPos(Vector3Int backPos)
     {
         Vector3Int temp = new Vector3Int(0, 0, 1);
         var tileMap = ScriptManager.objectManager.tilemap;

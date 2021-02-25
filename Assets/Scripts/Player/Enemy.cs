@@ -19,9 +19,7 @@ public class Enemy : Character
             if (transform.position.Equals(nextPos))
             {
                 currentPos = nextPos;
-                var bp = tileMap.GetInstantiatedObject(nextPos).GetComponent<BasePoint>();
-                bp.InComming(backPos,false);
-                nextPos = bp.NextPos(backPos);
+                nextPos = tileMap.GetInstantiatedObject(nextPos).GetComponent<BasePoint>().InComming(backPos,false);
                 if (nextPos.z == 0)
                 {
                     backPos = currentPos;

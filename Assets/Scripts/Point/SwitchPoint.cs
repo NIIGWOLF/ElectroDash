@@ -14,13 +14,14 @@ public class SwitchPoint : EnabledPoint
         tileMap = ScriptManager.objectManager.tilemap;
         SetActiv(active);
     }
-    public override void InComming(Vector3Int backPos, bool activPoint)
+    public override Vector3Int InComming(Vector3Int backPos, bool activPoint)
     {
         //Debug.Log("In");
         if (activPoint)
         {
             SetActiv(!activ);
         }
+        return NextPos(backPos);
     }
 
     public override void SetActiv(bool activ)
