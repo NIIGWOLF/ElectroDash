@@ -15,13 +15,21 @@ public class Player : Character
     {
         if (isMove)
         {
-            transform.position = Vector3.MoveTowards(transform.position, nextPos, speed * Time.deltaTime);
+            var distMove = speed * Time.deltaTime;
+            Vector3 oldPos = transform.position;
+            transform.position = Vector3.MoveTowards(transform.position, nextPos, distMove);
             if (transform.position.Equals(nextPos))
             {
                 currentPos = nextPos;
                 nextPos = tileMap.GetInstantiatedObject(nextPos).GetComponent<BasePoint>().InComming(backPos,true);
                 if (nextPos.z == 0)
                 {
+                    //Debug.Log(backPos+"|"+currentPos+"|"+nextPos);
+                    if (nextPos-currentPos==currentPos-backPos){
+                        float dist = distMove - Vector3.Distance(oldPos,currentPos);
+                        Vector3 vector3Dist=nextPos-currentPos;
+                        transform.position += vector3Dist*dist;
+                    }
                     backPos = currentPos;
                     tileMap.GetInstantiatedObject(currentPos).GetComponent<BasePoint>().OutComming(true);
                     AnimatedEye();

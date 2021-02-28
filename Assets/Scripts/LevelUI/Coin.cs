@@ -22,7 +22,6 @@ public class Coin : MonoBehaviour
     {
         if (other.GetComponent<Player>())
         {
-            Debug.Log(CountData.Instance.amountData.coins);
             gameObject.SetActive(false);
             StaticManager.levelManager.coinManager.countCoin++;
         }
