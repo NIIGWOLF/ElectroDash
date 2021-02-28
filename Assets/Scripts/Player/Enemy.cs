@@ -29,6 +29,7 @@ public class Enemy : Character
                 else
                 {
                     isMove = false;
+                    enterBarier = false;
                     AnimatedStopMove();
                 }
             }
@@ -38,7 +39,7 @@ public class Enemy : Character
             timeleft -= Time.deltaTime;
             if (timeleft < 0)
             {
-                timeleft = time;
+                timeleft = time + Random.Range(-0.1f, 0.1f);
                 nextPos = NextPos();
                 if (nextPos==new Vector3Int(0, 0, 1)) return;
                 backPos = currentPos;
@@ -82,11 +83,24 @@ public class Enemy : Character
         }
     }
 
-    protected override void  OnTriggerEnter2D(Collider2D collider){
+    protected virtual void OnTriggerStay2D(Collider2D collider){
+        if (isMove)
+        {
+            if (collider.gameObject.GetComponent<Character>())
+            {
+                if(Vector3.Distance(transform.position,nextPos)>Vector3.Distance(collider.transform.position,nextPos)){
+                    returnBack();
+                }
+            }
+        }
+    }
+
+    protected  void  OnTriggerEnter2D(Collider2D collider){
         if (collider.gameObject.GetComponent<Player>()){
             collider.gameObject.GetComponent<Player>().Die();
             return;
         }
+        /*
         if (isMove)
         {
             if (collider.gameObject.GetComponent<Character>())
@@ -112,6 +126,6 @@ public class Enemy : Character
         else
         {
             timeleft+=0.2f;
-        }
+        }*/
     }
 }

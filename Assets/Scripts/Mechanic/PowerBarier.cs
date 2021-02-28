@@ -10,7 +10,8 @@ public class PowerBarier : MonoBehaviour
         {
             
             Character go = collider.gameObject.GetComponent<Character>();
-            go.returnBack();
+            if (go.IsMove)
+                go.enterBarier = true;
         }
     }
 }

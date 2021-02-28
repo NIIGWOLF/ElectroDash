@@ -28,6 +28,7 @@ public class EnemyActiv : Character
                 else
                 {
                     isMove = false;
+                    enterBarier = false;
                     AnimatedStopMove();
                 }
             }
@@ -37,7 +38,7 @@ public class EnemyActiv : Character
             timeleft -= Time.deltaTime;
             if (timeleft < 0)
             {
-                timeleft = time;
+                timeleft = time + Random.Range(-0.1f, 0.1f);
                 nextPos = NextPos();
                 if (nextPos==new Vector3Int(0, 0, 1)) return;
                 backPos = currentPos;

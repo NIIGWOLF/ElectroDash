@@ -37,9 +37,16 @@ public class Player : Character
                 else
                 {
                     isMove = false;
+                    enterBarier = false;
                     AnimatedStopMove();
                 }
             }
+        }else{
+            if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) Swipe(0);
+            if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow)) Swipe(1);
+            if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow)) Swipe(2);
+            if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow)) Swipe(3);
+
         }
     }
 

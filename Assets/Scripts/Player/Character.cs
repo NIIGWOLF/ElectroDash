@@ -22,10 +22,13 @@ public class Character : MonoBehaviour
 
     public GameObject Eye;
 
+    public bool enterBarier;
+
 
 
     public Vector3Int NextPos { get => nextPos; set => nextPos = value; }
     public Vector3Int CurrentPos { get => currentPos; set => currentPos = value; }
+    public bool IsMove { get => isMove; set => isMove = value; }
 
     protected virtual void Start()
     {
@@ -84,8 +87,27 @@ public class Character : MonoBehaviour
             Eye.transform.DOLocalMove(pos,0.2f);
     }
 
+    protected virtual void OnTriggerStay2D(Collider2D collider){
+        if (isMove)
+        {
+            if (collider.gameObject.GetComponent<Character>())
+            {
+                if(Vector3.Distance(transform.position,nextPos)>Vector3.Distance(collider.transform.position,nextPos)){
+                    returnBack();
+                }
+            }
+            if (enterBarier){
+                if (collider.GetComponent<PowerBarier>()){
+                    if (collider.bounds.Contains(nextPos)) returnBack();
+                }
+            }
+        }
+    }
 
-    protected virtual void OnTriggerEnter2D(Collider2D collider)
+
+
+
+    /*protected virtual void OnTriggerEnter2D(Collider2D collider)
     {
         if (isMove)
         {
@@ -109,10 +131,6 @@ public class Character : MonoBehaviour
                 }
             }
         }
-        else
-        {
-            timeleft += 0.1f;
-        }
-    }
+    }*/
 }
 
