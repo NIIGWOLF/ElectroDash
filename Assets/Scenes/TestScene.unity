@@ -265,6 +265,18 @@ MonoBehaviour:
   glassSound: {fileID: 1652840368}
   PowerOnSound: {fileID: 2017224135}
   PowerOffSound: {fileID: 0}
+--- !u!114 &934046262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 934046260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 998c05ca1f66f304dbda4152eb1918cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1040546184 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1040546184, guid: a0ccbae6b3b0fef4eb8fd7fe819b03bc,
