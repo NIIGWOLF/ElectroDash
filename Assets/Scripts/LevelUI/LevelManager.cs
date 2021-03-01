@@ -10,7 +10,7 @@ public class LevelManager : MonoBehaviour
     public GameObject levelCompleteCanvas;
     public CoinManager coinManager;
     public Text timer;
-    
+    public SoundsManager soundsManager;    
    
     // Start is called before the first frame update
     void Start()
