@@ -22,6 +22,8 @@ public class DinamitPoint : BasePoint
 
     void Complete()
     {
+        StaticManager.levelManager.soundsManager.ExplosionSound.Play();
+
         Instantiate(PSDestroy,transform.position,Quaternion.identity);
         tileMap.SetTile(pos, null);
         tileMap.SetTile(pos + Vector3Int.up, null);

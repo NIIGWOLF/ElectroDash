@@ -15,7 +15,7 @@ public class GlassPoint : BasePoint
     }
 
     void DeletePoint(){
-        StaticManager.levelManager.soundsManager.glassSound.Play();
+        StaticManager.levelManager.soundsManager.GlassSound.Play();
         tileMap.SetColor(pos,new Color(1,1,1,0));
         Sequence sequence= DOTween.Sequence();
         sequence.Append(block.transform.DOShakePosition(0.25f, new Vector3(0.05f,0.05f,0),100,90,false,true));

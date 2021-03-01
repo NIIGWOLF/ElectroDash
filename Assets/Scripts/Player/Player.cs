@@ -52,6 +52,7 @@ public class Player : Character
 
     public void Swipe(int rot)
     {
+        StaticManager.levelManager.soundsManager.SwipeSound.Play();
         if (isMove) return;
 
         if (invert) rot=(rot+2)%4;
@@ -129,6 +130,7 @@ public class Player : Character
 
     public override void Die()
     {
+        StaticManager.levelManager.soundsManager.DeadSound.Play();
         Handheld.Vibrate();
         Instantiate(deathPS,transform.position,Quaternion.Euler(70,0,0));
         gameObject.AddComponent<RestartAfterDeath>();

@@ -48,11 +48,13 @@ public class PowerGenerator : BaseGenerator
     {
         if (activ)
         {
+            StaticManager.levelManager.soundsManager.PowerOnSound.Play();
             seq.Kill();
             seq = DOTween.Sequence();
             seq.Append(barier.transform.DOScale(new Vector3(2, 2, 0), 0.75f));
         }
         else{
+            StaticManager.levelManager.soundsManager.PowerOffSound.Play();
             seq.Kill();
             seq = DOTween.Sequence();
             seq.Append(barier.transform.DOScale(new Vector3(0, 0, 0), 0.75f));

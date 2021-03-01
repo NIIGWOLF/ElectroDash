@@ -11,6 +11,8 @@ public class FinishPoint : BasePoint
             if (ch.GetComponent<Player>())
                 if (ch.transform.position == pos)
                 {
+                    StaticManager.levelManager.soundsManager.FinishSound.Play();
+
                     StaticManager.levelManager.levelCompleteCanvas.GetComponent<PanelAnimation>().GoToTarget();
                     
                     StaticManager.levelManager.coinManager.ActivUI();

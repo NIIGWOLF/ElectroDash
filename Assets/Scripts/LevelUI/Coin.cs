@@ -22,6 +22,7 @@ public class Coin : MonoBehaviour
     {
         if (other.GetComponent<Player>())
         {
+            StaticManager.levelManager.soundsManager.CoinSound.Play();
             gameObject.SetActive(false);
             StaticManager.levelManager.coinManager.countCoin++;
         }

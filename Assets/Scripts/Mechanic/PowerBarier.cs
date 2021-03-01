@@ -10,8 +10,10 @@ public class PowerBarier : MonoBehaviour
         {
             
             Character go = collider.gameObject.GetComponent<Character>();
-            if (go.IsMove)
+            if (go.IsMove){
                 go.enterBarier = true;
+                StaticManager.levelManager.soundsManager.PowerKnockSound.Play();
+            }
         }
     }
 }
