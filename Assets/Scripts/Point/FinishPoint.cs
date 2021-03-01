@@ -12,6 +12,7 @@ public class FinishPoint : BasePoint
                 if (ch.transform.position == pos)
                 {
                     StaticManager.levelManager.soundsManager.FinishSound.Play();
+                    StaticManager.levelManager.timer.GetComponent<Timer>().activ=false;
 
                     StaticManager.levelManager.levelCompleteCanvas.GetComponent<PanelAnimation>().GoToTarget();
                     
