@@ -36,6 +36,7 @@ public class Enemy : Character
         }
         else
         {
+            if (isTransportation) return;
             timeleft -= Time.deltaTime;
             if (timeleft < 0)
             {
@@ -81,6 +82,11 @@ public class Enemy : Character
             AnimatedStartMove();
             return tempList[Random.Range(0, tempList.Count)];
         }
+    }
+
+    public override void Transportation(bool transportation){
+        isTransportation=transportation;
+        timeleft=0.01f;
     }
 
     protected virtual void OnTriggerStay2D(Collider2D collider){

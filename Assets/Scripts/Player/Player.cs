@@ -54,6 +54,7 @@ public class Player : Character
     {
         StaticManager.levelManager.soundsManager.SwipeSound.Play();
         if (isMove) return;
+        if (isTransportation) return;
 
         if (invert) rot=(rot+2)%4;
 
@@ -126,6 +127,10 @@ public class Player : Character
                 }
                 break;
         }
+    }
+
+    public override void Transportation(bool transportation){
+        isTransportation=transportation;
     }
 
     public override void Die()

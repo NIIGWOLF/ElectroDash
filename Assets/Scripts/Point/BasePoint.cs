@@ -73,8 +73,10 @@ public class BasePoint : MonoBehaviour
         foreach(GameObject go in ScriptManager.objectManager.AllCharacter){
             var character = go.GetComponent<Character>();
             if (character.CurrentPos==pos || character.NextPos==pos){
-                character.Die(pos);
-                Debug.Log("isDie");
+                if (!character.IsTransportation){
+                    character.Die(pos);
+                    Debug.Log("isDie");
+                }
             }
         }
     }

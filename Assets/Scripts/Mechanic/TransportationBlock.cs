@@ -1,16 +1,26 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.Tilemaps;
 
-public class TransportationBlock : Character
+public class TransportationBlock : MonoBehaviour
 {
+    protected bool isMove = false;
+    protected Vector3Int backPos;
+    protected Vector3Int nextPos = new Vector3Int(0, 0, 1);
+    protected Vector3Int currentPos;
+    protected Tilemap tileMap;
+    protected float timeleft = 1;
+    public float time = 1;
+
+
+
     [SerializeField] public List<MoveTurtle> moveList = new List<MoveTurtle>();
     int indexList = 0; //текущий индекс движения
     Sequence seq;
     Vector3Int movePos; //позиция прибытия платформы по индексу из листа
 
-    override protected void Start()
+    protected virtual void Start()
     {
         backPos = Vector3Int.CeilToInt(transform.position);
         tileMap = ScriptManager.objectManager.tilemap;

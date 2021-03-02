@@ -233,6 +233,7 @@ MonoBehaviour:
   AllCharacter: []
   activStartDaethPS: 1
   moveSizeCamera: {fileID: 2198440957925801632}
+  timer: {fileID: 6773131935928570995}
 --- !u!114 &1667962727200545716
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -271,7 +272,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19ac9976dce6ba0448b2487f015236be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time: 8
+  time: 999
   activ: 1
 --- !u!1 &1667962727528270607
 GameObject:

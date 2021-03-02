@@ -15,6 +15,7 @@ public class Character : MonoBehaviour
     protected float timeleft = 1;
     public float time = 1;
     public GameObject deathPS;
+    protected bool isTransportation = false;
 
     protected Vector3Int diePos;
 
@@ -29,6 +30,7 @@ public class Character : MonoBehaviour
     public Vector3Int NextPos { get => nextPos; set => nextPos = value; }
     public Vector3Int CurrentPos { get => currentPos; set => currentPos = value; }
     public bool IsMove { get => isMove; set => isMove = value; }
+    public bool IsTransportation { get => isTransportation; }
 
     protected virtual void Start()
     {
@@ -69,6 +71,10 @@ public class Character : MonoBehaviour
                 Die();
             
         }
+    }
+
+    public virtual void Transportation(bool transportation){
+
     }
 
     public virtual void AnimatedStartMove(){

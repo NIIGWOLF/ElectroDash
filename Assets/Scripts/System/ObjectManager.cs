@@ -10,6 +10,7 @@ public class ObjectManager : MonoBehaviour
     public List<GameObject> AllCharacter = new List<GameObject>();
     public bool activStartDaethPS = true;
     public MoveSizeCamera moveSizeCamera;
+    public Timer timer;
 
     void OnApplicationQuit()
     {
