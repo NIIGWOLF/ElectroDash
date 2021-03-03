@@ -26,6 +26,9 @@ public class FinishPoint : BasePoint
                             GameObject go = ScriptManager.objectManager.AllCharacter[i];
                             ScriptManager.objectManager.AllCharacter.Remove(go);
                             Destroy(go);
+                        }else
+                        {
+                            ScriptManager.objectManager.AllCharacter[i].GetComponent<Player>().Transportation(true);
                         }
                     }
                     break;
@@ -33,5 +36,10 @@ public class FinishPoint : BasePoint
 
         }
         return NextPos(backPos);
+    }
+
+    protected override Vector3Int NextPos(Vector3Int backPos)
+    {
+        return new Vector3Int(0,0,1);
     }
 }

@@ -6,6 +6,7 @@ public class LoadNextLevel : MonoBehaviour
 {
    public void LoadLevel()
     {
+        ScriptManager.objectManager.activStartDaethPS=false;
         int level = int.Parse(SceneManager.GetActiveScene().name.Split('_')[1]);
         string levelName = "level_" + (level + 1);
         print(levelName);
