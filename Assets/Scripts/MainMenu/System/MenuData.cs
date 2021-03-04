@@ -40,21 +40,39 @@ public class MenuData : Singleton<MenuData>
             Classic = 0,
             Blue = 1,
             Rose = 2,
+            Yellow = 3,
+            Red = 4,
+            Violet = 5,
+            LightViolet = 6,
+            GreenBlue = 7,
+            Fire = 8,
+            Transparent = 9,
+            YEEE = 10,
+            Pirat = 11,
         }
         public List<COSTUME> openCostumes = new List<COSTUME>(){COSTUME.Classic};
-        public List<int> pricesCostume = new List<int>(){0,1,1};
+        public List<int> pricesCostume = new List<int>(){0,1,1,1,2,2,2,3,3,3,4,4};
 
         // Eyes data
         public List<COSTUME> openEyes = new List<COSTUME>(){COSTUME.Classic};
 
         // Trails data
         public List<TRAILS> openTrails = new List<TRAILS>(){TRAILS.Classic};
-        public List<int> pricesTrails = new List<int>(){0,1,1};
+        public List<int> pricesTrails = new List<int>(){0,1,1,1,2,2,2,3,3,3,4,4};
         public enum TRAILS
         {
             Classic = 0,
             Blue = 1,
             Rose = 2,
+            Yellow = 3,
+            Red = 4,
+            Violet = 5,
+            LightViolet = 6,
+            GreenBlue = 7,
+            Fire = 8,
+            Transparent = 9,
+            YEEE = 10,
+            Pirat = 11,
         }
 
         // Enemyies data
