@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ArrowPoint : EnabledPoint
+public class ArrowPoint : ActivPoint
 {
     public Vector3Int direct;
     public SpriteRenderer button;
@@ -11,7 +11,7 @@ public class ArrowPoint : EnabledPoint
         button.color = new Color(1,1,1,1f);
     }
 
-    public override Vector3Int InComming(Vector3Int backPos, bool activPoint)
+    public override Vector3Int InComming(Vector3Int backPos, bool activPoint, GameObject character)
     {
         Debug.Log("In");
         if (activ)

@@ -67,7 +67,6 @@ public class MakePlayer : MonoBehaviour
             {
                 tr.gameObject.GetComponent<SpriteRenderer>().sprite = MainMenuManager.uiMainMenuManager.eyesPrefabs[costume.ToString()].GetComponent<SpriteRenderer>().sprite;
             }
-
         }
     }
 

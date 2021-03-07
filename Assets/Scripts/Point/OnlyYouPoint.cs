@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StickyPoint : BasePoint
+public class OnlyYouPoint : BasePoint
 {
     public override Vector3Int InComming(Vector3Int backPos, bool activPoint, GameObject character)
     {
         //Debug.Log("In");
-        return new Vector3Int(0, 0, 1);
+        if (!character.GetComponent<Player>())
+        return backPos;
+        else
+        return NextPos(backPos);
     }
 }
