@@ -44,7 +44,9 @@ public class Costume : MonoBehaviour
         }
         else
         {
-            int price =  MenuData.Instance.shopsData.pricesTrails[(int)costume];
+           
+            //nt price =  MenuData.Instance.shopsData.pricesTrails[(int)costume];
+            int price =  MenuData.Instance.shopsData.pricesCostume[(int)costume];
             if (price <= CountData.Instance.amountData.coins) {
             MainMenuManager.uiMainMenuManager.buyCostumeButton.GetComponentInChildren<Text>().text=LocalizationManager.Localize("Shop.Bue");
             MainMenuManager.uiMainMenuManager.buyCostumeButton.GetComponent<Button>().interactable = true;
