@@ -49,9 +49,10 @@ public class MenuData : Singleton<MenuData>
             Transparent = 9,
             YEEE = 10,
             Pirat = 11,
+            Gin = 12,
         }
         public List<COSTUME> openCostumes = new List<COSTUME>(){COSTUME.Classic};
-        public List<int> pricesCostume = new List<int>(){0,1,1,1,2,2,2,3,3,3,4,4};
+        public List<int> pricesCostume = new List<int>(){0,1,1,1,2,2,2,3,3,3,4,4,4};
 
         // Eyes data
         public List<COSTUME> openEyes = new List<COSTUME>(){COSTUME.Classic};
