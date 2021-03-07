@@ -14,7 +14,7 @@ public class SwitchPoint : EnabledPoint
         tileMap = ScriptManager.objectManager.tilemap;
         SetActiv(active);
     }
-    public override Vector3Int InComming(Vector3Int backPos, bool activPoint)
+    public override Vector3Int InComming(Vector3Int backPos, bool activPoint, GameObject character)
     {
         //Debug.Log("In");
         if (activPoint)

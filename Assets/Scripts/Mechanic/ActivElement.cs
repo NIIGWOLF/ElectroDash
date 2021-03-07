@@ -130,6 +130,7 @@ public class ActivElement : MonoBehaviour
     {
         SetActiv(activ);
         if (gameObject.GetComponent<EnabledPoint>()) gameObject.GetComponent<EnabledPoint>().SetActiv(activ);
+        if (gameObject.GetComponent<ActivPoint>()) gameObject.GetComponent<ActivPoint>().SetActiv(activ);
         foreach (ActivElement element in listElements)
         {
             if (element.GetActiv() != activ)

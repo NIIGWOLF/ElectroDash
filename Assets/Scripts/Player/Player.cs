@@ -21,7 +21,7 @@ public class Player : Character
             if (transform.position.Equals(nextPos))
             {
                 currentPos = nextPos;
-                nextPos = tileMap.GetInstantiatedObject(nextPos).GetComponent<BasePoint>().InComming(backPos,true);
+                nextPos = tileMap.GetInstantiatedObject(nextPos).GetComponent<BasePoint>().InComming(backPos,true,gameObject);
                 if (nextPos.z == 0)
                 {
                     //Debug.Log(backPos+"|"+currentPos+"|"+nextPos);

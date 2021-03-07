@@ -1,4 +1,4 @@
-﻿public class EnabledPoint : BasePoint
+﻿public class ActivPoint : BasePoint
 {
     protected bool activ=false;
     public virtual void SetActiv(bool activ){

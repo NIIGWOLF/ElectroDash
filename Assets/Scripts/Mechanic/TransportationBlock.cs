@@ -12,6 +12,7 @@ public class TransportationBlock : MonoBehaviour
     protected Tilemap tileMap;
     protected float timeleft = 1;
     public float time = 1;
+    public float delayStart = 1;
 
 
 
@@ -25,7 +26,7 @@ public class TransportationBlock : MonoBehaviour
         backPos = Vector3Int.CeilToInt(transform.position);
         tileMap = ScriptManager.objectManager.tilemap;
         currentPos = Vector3Int.CeilToInt(transform.position);
-        timeleft = time;
+        timeleft = delayStart;
 
         for (int i = moveList.Count - 1; i >= 0; i--) // добавляем инвертированный лист
         {
