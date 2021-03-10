@@ -36,7 +36,7 @@ public class MenuData : Singleton<MenuData>
     {
         // Costume data
         public enum COSTUME
-        { Classic = 0,
+        {  Classic = 0,
             Blue = 1,
             Rose = 2,
             Yellow = 3,
@@ -49,12 +49,13 @@ public class MenuData : Singleton<MenuData>
             Transparent = 10,
             YEEE = 11,
             Pirat = 12,
-            Ogr = 14,
-            Simpson = 15,
+            Ogr = 13,
+            Simpson = 14,
+            Iden = 15,
             Gin = 16,
         }
         public List<COSTUME> openCostumes = new List<COSTUME>(){COSTUME.Classic};
-        public List<int> pricesCostume = new List<int>(){0,1,1,1,2,2,2,3,3,3,3,4,4,4,4,4};
+        public List<int> pricesCostume = new List<int>(){0,1,1,1,2,2,2,3,3,3,3,4,4,4,4,4,4,4,4};
 
         // Eyes data
         public List<COSTUME> openEyes = new List<COSTUME>(){COSTUME.Classic};
@@ -64,7 +65,7 @@ public class MenuData : Singleton<MenuData>
         public List<int> pricesTrails = new List<int>(){0,1,1,1,2,2,2,3,3,3,4,4};
         public enum TRAILS
         {
-            Classic = 0,
+           Classic = 0,
             Blue = 1,
             Rose = 2,
             Yellow = 3,
@@ -72,15 +73,20 @@ public class MenuData : Singleton<MenuData>
             Violet = 5,
             LightViolet = 6,
             GreenBlue = 7,
-            Fire = 8,
-            Transparent = 9,
-            YEEE = 10,
-            Pirat = 11,
+            GreenMetal = 8,
+            Fire = 9,
+            Transparent = 10,
+            YEEE = 11,
+            Pirat = 12,
+            Ogr = 13,
+            Simpson = 14,
+            Iden = 15,
+            Gin = 16,
         }
 
         // Enemyies data
         public List<ENEMYIES> openEnemyies = new List<ENEMYIES>(){ENEMYIES.Classic};
-        public List<int> pricesEnemyies = new List<int>(){0,1,1,1,1,2,2,2,3,3,3,3,4,4,4,4,4,4};
+        public List<int> pricesEnemyies = new List<int>(){0,1,1,1,1,2,2,2,3,3,3,3,4,4,4,4,4,4,4,4,4};
         public enum ENEMYIES
         {
            Classic = 0,

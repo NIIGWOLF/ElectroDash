@@ -45,7 +45,7 @@ public class Enemies : MonoBehaviour
         }
         else
         {
-            int price =  MenuData.Instance.shopsData.pricesTrails[(int)enemies];
+            int price =  MenuData.Instance.shopsData.pricesEnemyies[(int)enemies];
             if (price <= CountData.Instance.amountData.coins) {
             MainMenuManager.uiMainMenuManager.buyEnemiesButton.GetComponentInChildren<Text>().text=LocalizationManager.Localize("Shop.Bue");
             MainMenuManager.uiMainMenuManager.buyEnemiesButton.GetComponent<Button>().interactable = true;

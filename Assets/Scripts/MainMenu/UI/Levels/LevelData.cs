@@ -35,7 +35,7 @@ public class LevelData : Singleton<LevelData>
     }
 
     public class LevelInfo{
-        public int levelCount = 4;
+        public int levelCount = 14;
         public int lastOpenLevel = 2;
         public List<string> levelActivStars = new List<string>(){"000","000","000","000","000"};
         public List<int> levelStars = new List<int>(){0,1,2,0,0};
