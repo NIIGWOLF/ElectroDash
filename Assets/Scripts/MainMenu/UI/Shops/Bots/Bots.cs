@@ -46,7 +46,7 @@ public class Bots : MonoBehaviour
         }
         else
         {
-            int price =  MenuData.Instance.shopsData.pricesTrails[(int)bots];
+            int price =  MenuData.Instance.shopsData.pricesBots[(int)bots];
             if (price <= CountData.Instance.amountData.coins) {
             MainMenuManager.uiMainMenuManager.buyBotsButton.GetComponentInChildren<Text>().text=LocalizationManager.Localize("Shop.Bue");
             MainMenuManager.uiMainMenuManager.buyBotsButton.GetComponent<Button>().interactable = true;
