@@ -220,9 +220,9 @@ ParticleSystem:
         m_RotationOrder: 4
     startColor:
       serializedVersion: 2
-      minMaxState: 0
-      minColor: {r: 0.4433962, g: 0.4433962, b: 0.4433962, a: 1}
-      maxColor: {r: 1, g: 1, b: 1, a: 1}
+      minMaxState: 2
+      minColor: {r: 0.13725491, g: 0.6, b: 0.9686275, a: 1}
+      maxColor: {r: 0.13333334, g: 1, b: 0.36078432, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -982,7 +982,7 @@ ParticleSystem:
         m_Curve:
         - serializedVersion: 3
           time: 0
-          value: 0.292305
+          value: 0.34636053
           inSlope: 5.8461823
           outSlope: 5.8461823
           tangentMode: 0
@@ -991,12 +991,12 @@ ParticleSystem:
           outWeight: 0.092105255
         - serializedVersion: 3
           time: 1
-          value: 0.36923027
-          inSlope: -2.286497
-          outSlope: -2.286497
+          value: 0.7611174
+          inSlope: 1.2797012
+          outSlope: 1.2797012
           tangentMode: 0
           weightedMode: 0
-          inWeight: 0.1480264
+          inWeight: 0.18292695
           outWeight: 0
         m_PreInfinity: 2
         m_PostInfinity: 2
@@ -4709,7 +4709,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2b3cb83d3b56cf04c993186efe78f361, type: 2}
+  - {fileID: 2100000, guid: cfcbbbb91386a454e859ebf4f2e8dbad, type: 2}
   - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -4974,9 +4974,9 @@ ParticleSystem:
         m_RotationOrder: 4
     startColor:
       serializedVersion: 2
-      minMaxState: 0
-      minColor: {r: 0.4433962, g: 0.4433962, b: 0.4433962, a: 1}
-      maxColor: {r: 1, g: 1, b: 1, a: 1}
+      minMaxState: 2
+      minColor: {r: 0.13725491, g: 0.6, b: 0.9686275, a: 1}
+      maxColor: {r: 0.13333334, g: 1, b: 0.36078432, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -5736,7 +5736,7 @@ ParticleSystem:
         m_Curve:
         - serializedVersion: 3
           time: 0
-          value: 0.292305
+          value: 0.34636053
           inSlope: 5.8461823
           outSlope: 5.8461823
           tangentMode: 0
@@ -5745,12 +5745,12 @@ ParticleSystem:
           outWeight: 0.092105255
         - serializedVersion: 3
           time: 1
-          value: 0.36923027
-          inSlope: -2.286497
-          outSlope: -2.286497
+          value: 0.7611174
+          inSlope: 1.2797012
+          outSlope: 1.2797012
           tangentMode: 0
           weightedMode: 0
-          inWeight: 0.1480264
+          inWeight: 0.18292695
           outWeight: 0
         m_PreInfinity: 2
         m_PostInfinity: 2
@@ -7380,7 +7380,7 @@ ParticleSystem:
     strength:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -7537,7 +7537,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     separateAxes: 0
-    frequency: 0.5
+    frequency: 0.77
     damping: 1
     octaves: 1
     octaveMultiplier: 0.5
@@ -9463,7 +9463,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2b3cb83d3b56cf04c993186efe78f361, type: 2}
+  - {fileID: 2100000, guid: cfcbbbb91386a454e859ebf4f2e8dbad, type: 2}
   - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -9519,7 +9519,7 @@ GameObject:
   - component: {fileID: 4338569047434768565}
   - component: {fileID: 4338569047434768564}
   m_Layer: 0
-  m_Name: BlueGreen
+  m_Name: GreenBlue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9532,7 +9532,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4338569047434768554}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
