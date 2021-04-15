@@ -135,6 +135,7 @@ public class Player : Character
 
     public override void Die()
     {
+        ScriptManager.objectManager.timer.activ = false;
         StaticManager.levelManager.soundsManager.DeadSound.Play();
         Handheld.Vibrate();
         Instantiate(deathPS,transform.position,Quaternion.Euler(70,0,0));

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d1514134bc4fbd41bb739b1b9a49231, type: 3}
   m_Name: ArrowPointDown
   m_EditorClassIdentifier: 
-  m_DefaultSprite: {fileID: 21300000, guid: 099b59cc25dd14343983395212d83e0f, type: 3}
+  m_DefaultSprite: {fileID: 21300000, guid: 6438046c89622df48b0c95a5cbe8bd53, type: 3}
   m_DefaultGameObject: {fileID: 7661380756074419308, guid: a8aebcc37cd3b294bb5c5accc987583f,
     type: 3}
   m_DefaultColliderType: 1
