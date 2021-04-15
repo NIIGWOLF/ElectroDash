@@ -22,6 +22,7 @@ public class Character : MonoBehaviour
     private Vector3 scale;
 
     public GameObject Eye;
+    [Range(0.01f,0.5f)]public float eyeOffset=0.03f;
 
     public bool enterBarier;
 
@@ -88,7 +89,7 @@ public class Character : MonoBehaviour
     }
 
     public virtual void AnimatedEye(){
-        var pos = (Vector3)(nextPos-currentPos)*0.03f;
+        var pos = (Vector3)(nextPos-currentPos)*eyeOffset;
         if (Eye.transform.localPosition!=pos)
             Eye.transform.DOLocalMove(pos,0.2f);
     }
