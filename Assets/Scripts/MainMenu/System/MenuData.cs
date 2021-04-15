@@ -58,16 +58,18 @@ public class MenuData : Singleton<MenuData>
             Scelet = 19,
             Iden = 20,
             Gin = 21,
+            KingStory = 22,
+            Strawberry = 23,
         }
         public List<COSTUME> openCostumes = new List<COSTUME>(){COSTUME.Classic};
-        public List<int> pricesCostume = new List<int>(){0,1,1,1,2,2,2,3,3,3,3,4,4,4,4,4,4,4,4,3,3,3,3,3};
+        public List<int> pricesCostume = new List<int>(){0,1,1,1,2,2,2,3,3,3,3,4,4,4,4,4,4,4,4,3,3,3,3,3,7,7};
 
         // Eyes data
         public List<COSTUME> openEyes = new List<COSTUME>(){COSTUME.Classic};
 
         // Trails data
         public List<TRAILS> openTrails = new List<TRAILS>(){TRAILS.Classic};
-        public List<int> pricesTrails = new List<int>(){0,1,1,1,2,2,2,3,3,3,4,4};
+        public List<int> pricesTrails = new List<int>(){0,1,1,1,2,2,2,3,3,3,3,4,4,4,4,4,4,4,4,3,3,3,3,3,7,7};
         public enum TRAILS
         {
            Classic = 0,
@@ -75,23 +77,30 @@ public class MenuData : Singleton<MenuData>
             Rose = 2,
             Yellow = 3,
             Red = 4,
-            Violet = 5,
-            LightViolet = 6,
-            GreenBlue = 7,
-            GreenMetal = 8,
-            Fire = 9,
-            Transparent = 10,
-            YEEE = 11,
-            Pirat = 12,
-            Ogr = 13,
-            Simpson = 14,
-            Iden = 15,
-            Gin = 16,
+            Metal = 5,
+            Violet = 6,
+            LightViolet = 7,
+            GreenBlue = 8,
+            GreenMetal = 9,
+            Fire = 10,
+            Heart = 11,
+            Transparent = 12,
+            YEEE = 13,
+            Mustashe = 14,
+            Pirat = 15,
+            Ogr = 16,
+            Simpson = 17,
+            Anime = 18,
+            Scelet = 19,
+            Iden = 20,
+            Gin = 21,
+            KingStory = 22,
+            Strawberry = 23,
         }
 
         // Enemyies data
         public List<ENEMYIES> openEnemyies = new List<ENEMYIES>(){ENEMYIES.Classic};
-        public List<int> pricesEnemyies = new List<int>(){0,1,1,1,1,2,2,2,3,3,3,3,4,4,4,4,4,4,4,4,4,3,3,3,3,3};
+        public List<int> pricesEnemyies = new List<int>(){0,1,1,1,1,2,2,2,3,3,3,3,4,4,4,4,4,4,4,4,4,3,3,3,3,3,7};
         public enum ENEMYIES
         {
            Classic = 0,
@@ -116,12 +125,14 @@ public class MenuData : Singleton<MenuData>
             Metal = 20,
             Mustashe = 21,
             Scelet = 22,
+            KingStory = 23,
+            Apple = 24,
 
         }
 
         // Bots data
         public List<BOTS> openBots = new List<BOTS>(){BOTS.Classic};
-        public List<int> pricesBots = new List<int>(){0,1,1,1,1,2,2,2,3,3,3,3,4,4,4,4,4,4,3,3,3,3,3};
+        public List<int> pricesBots = new List<int>(){0,1,1,1,1,2,2,2,3,3,3,3,4,4,4,4,4,4,3,3,3,3,3,7,7};
         public enum BOTS
         {
             Classic = 0,
@@ -147,7 +158,8 @@ public class MenuData : Singleton<MenuData>
             Mustashe = 20,
             Metal = 21,
             Scelet = 22,
-
+             KingStory = 23,
+            Blueberry = 24,
 
         }
 
