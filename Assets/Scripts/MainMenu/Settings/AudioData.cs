@@ -31,7 +31,7 @@ public class AudioData : Singleton<AudioData>
         }
     }
     public class Audio{
-        public float musicVolume = 1;
-        public float soundsVolume = 1;
+        public float musicVolume = 0;
+        public float soundsVolume = 0;
     }
 }

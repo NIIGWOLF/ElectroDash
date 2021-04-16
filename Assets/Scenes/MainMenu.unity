@@ -7781,7 +7781,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f6b58874f94a66f44977aae32dcf8848, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ea16356e1c4071b4ba66c788c52e32cc, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -25095,7 +25095,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonText: {fileID: 1383888570}
-  enemies: 23
+  enemies: 1
 --- !u!114 &752015971
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49893,7 +49893,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f6b58874f94a66f44977aae32dcf8848, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ea16356e1c4071b4ba66c788c52e32cc, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -54344,7 +54344,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f6b58874f94a66f44977aae32dcf8848, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ea16356e1c4071b4ba66c788c52e32cc, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
