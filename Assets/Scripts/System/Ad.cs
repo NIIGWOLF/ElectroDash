@@ -1,27 +1,29 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.Advertisements;
+﻿using UnityEngine;
 
 public class Ad : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        if (Advertisement.isSupported){
-            Advertisement.Initialize("4092201",true);
-        }
-        Invoke("pokaz",2);
+    public void ShowAddMap(){
+        AdEvent.Instance.ShowAddMap(this);
     }
 
-    void pokaz(){
-        print("pokaz");
-        if (Advertisement.IsReady()){
-            print("Show");
-            Advertisement.Show();
-        }
-        else
-        print("Don't show");
-        
+    public void ShowAddHelp(){
+        AdEvent.Instance.ShowAddHelp(this);
+    }
+
+    public void ShowAddCoin(){
+        AdEvent.Instance.ShowAddCoin(this);
+    }
+
+    public void AddValue(AdEvent.Add add){
+        switch(add){
+                case AdEvent.Add.Map:
+                    GetComponent<BuyHint>().BuyMapHint();
+                break;
+                case AdEvent.Add.Help:
+                    GetComponent<BuyHint>().BuySimpleHint();
+                break;
+                case AdEvent.Add.Coin:
+                break;
+            }
     }
 }
