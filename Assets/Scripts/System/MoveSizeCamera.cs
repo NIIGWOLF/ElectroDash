@@ -17,10 +17,10 @@ public class MoveSizeCamera : MonoBehaviour
         seq = DOTween.Sequence();
         seq.Append(cam.DOOrthoSize(2.5f,0.25f));
     }
-    public void zoomOut(){
-        if (cam.orthographicSize==6f) return;
+    public void zoomOut(float valueZoom){
+        if (cam.orthographicSize==valueZoom) return;
         seq.Kill();
         seq = DOTween.Sequence();
-        seq.Append(cam.DOOrthoSize(6f,0.25f));
+        seq.Append(cam.DOOrthoSize(valueZoom,0.25f));
     }
 }

@@ -60,15 +60,15 @@ EditorBuildSettings:
     path: Assets/Levels/level_16.unity
     guid: a356967cb54a05444935f0005e1066cf
   - enabled: 1
-    path: Assets/Levels/level_17.unity
+    path: Assets/Levels/lena1.unity
     guid: 7ce65f87c049ab8418d74442a14113f8
   - enabled: 1
-    path: Assets/Levels/level_18.unity
+    path: Assets/Levels/lena2.unity
     guid: 5058717145c9d2247821de015811dfa5
   - enabled: 1
-    path: Assets/Levels/level_19.unity
+    path: Assets/Levels/Lena3.unity
     guid: a5f42e3c2d8f0cb428097300fb600044
   - enabled: 1
-    path: Assets/Levels/level_20.unity
+    path: Assets/Levels/lena4.unity
     guid: 52fcdbc2c7e73774cb62922bf29b38db
   m_configObjects: {}
