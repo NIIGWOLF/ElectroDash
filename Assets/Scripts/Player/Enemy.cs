@@ -41,7 +41,12 @@ public class Enemy : Character
             if (timeleft < 0)
             {
                 timeleft = time + Random.Range(-0.1f, 0.1f);
-                nextPos = NextPos();
+                
+                for(int i=0; i<3;i++){
+                    nextPos = NextPos();
+                    if (nextPos!=backPos) break;
+                }
+
                 if (nextPos==new Vector3Int(0, 0, 1)) return;
                 backPos = currentPos;
                 tileMap.GetInstantiatedObject(currentPos).GetComponent<BasePoint>().OutComming(false);

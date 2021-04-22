@@ -8,6 +8,7 @@ public class Player : Character
 
     void Awake(){
         Camera.main.GetComponent<MoveCamera>().SetTarget(gameObject);
+        ScriptManager.player = gameObject;
     }
 
     // Update is called once per frame
