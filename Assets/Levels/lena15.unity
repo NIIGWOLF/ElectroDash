@@ -136,11 +136,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 549308874, guid: a0ccbae6b3b0fef4eb8fd7fe819b03bc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -13
+      value: -21
       objectReference: {fileID: 0}
     - target: {fileID: 549308874, guid: a0ccbae6b3b0fef4eb8fd7fe819b03bc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5
+      value: -3
       objectReference: {fileID: 0}
     - target: {fileID: 1040546184, guid: a0ccbae6b3b0fef4eb8fd7fe819b03bc, type: 3}
       propertyPath: uiCoin1
@@ -160,19 +160,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2020549505, guid: a0ccbae6b3b0fef4eb8fd7fe819b03bc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4
+      value: -9
       objectReference: {fileID: 0}
     - target: {fileID: 2020549505, guid: a0ccbae6b3b0fef4eb8fd7fe819b03bc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2131684289, guid: a0ccbae6b3b0fef4eb8fd7fe819b03bc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2131684289, guid: a0ccbae6b3b0fef4eb8fd7fe819b03bc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -8
+      value: -9
       objectReference: {fileID: 0}
     - target: {fileID: 2952274265668294950, guid: a0ccbae6b3b0fef4eb8fd7fe819b03bc,
         type: 3}
