@@ -14,6 +14,9 @@ public class ActivElement : MonoBehaviour
     public bool isDelete;
     public bool fastDeleteWire;
 
+
+    private bool isDebug = true;
+
     protected virtual void Start()
     {
         currentPos = Vector3Int.RoundToInt(transform.position);
@@ -28,6 +31,9 @@ public class ActivElement : MonoBehaviour
 
     protected void RecheckWire()
     {
+        if (isDebug){
+            Debug.Log("RecheckWire");
+        }
         List<ActivElement> oldList = new List<ActivElement>(listElements);
         listElements.Clear();
         for (int i = 1; i < sizeWire; i++) //right
@@ -163,7 +169,9 @@ public class ActivElement : MonoBehaviour
     public bool SearchEnabledPoint()
     {
         bool temp = false;
-        if (gameObject.GetComponent<EnabledPoint>()) return true;
+        if (gameObject.GetComponent<EnabledPoint>()) {
+            return gameObject.GetComponent<EnabledPoint>().GetActiv();
+        }
         else
         {
             List<ActivElement> list = new List<ActivElement>() { this };
@@ -177,8 +185,14 @@ public class ActivElement : MonoBehaviour
 
     public bool SearchEnabledPoint(List<ActivElement> list)
     {
+        
         bool temp = false;
-        if (gameObject.GetComponent<EnabledPoint>()) return gameObject.GetComponent<EnabledPoint>().GetActiv();
+        if (gameObject.GetComponent<EnabledPoint>()) {
+            if (isDebug){
+            Debug.Log("SearchEnabledPoint "+gameObject.GetComponent<EnabledPoint>().GetActiv());
+            }
+            return gameObject.GetComponent<EnabledPoint>().GetActiv();
+        }
         else
         {
             foreach (ActivElement element in listElements)
@@ -188,6 +202,9 @@ public class ActivElement : MonoBehaviour
                 temp = temp | element.SearchEnabledPoint(list);
             }
         }
+        if (isDebug){
+            Debug.Log("SearchEnabledPoint "+temp);
+            }
         return temp;
     }
 
