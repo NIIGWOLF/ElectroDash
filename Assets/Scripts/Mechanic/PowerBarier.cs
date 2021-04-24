@@ -8,9 +8,9 @@ public class PowerBarier : MonoBehaviour
     {
         if (collider.gameObject.GetComponent<Character>())
         {
-            
             Character go = collider.gameObject.GetComponent<Character>();
             if (go.IsMove){
+                Debug.Log("Character");
                 go.enterBarier = true;
                 StaticManager.levelManager.soundsManager.PowerKnockSound.Play();
             }

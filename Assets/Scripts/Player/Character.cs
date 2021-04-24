@@ -105,6 +105,7 @@ public class Character : MonoBehaviour
             }
             if (enterBarier){
                 if (collider.GetComponent<PowerBarier>()){
+                    Debug.Log("Back");
                     if (collider.bounds.Contains(nextPos)) returnBack();
                 }
             }

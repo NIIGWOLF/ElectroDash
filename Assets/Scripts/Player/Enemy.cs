@@ -94,18 +94,6 @@ public class Enemy : Character
         timeleft=0.01f;
     }
 
-    protected virtual void OnTriggerStay2D(Collider2D collider){
-        if (isMove)
-        {
-            if (collider.gameObject.GetComponent<Character>())
-            {
-                if(Vector3.Distance(transform.position,nextPos)>Vector3.Distance(collider.transform.position,nextPos)){
-                    returnBack();
-                }
-            }
-        }
-    }
-
     protected  void  OnTriggerEnter2D(Collider2D collider){
         if (collider.gameObject.GetComponent<Player>()){
             collider.gameObject.GetComponent<Player>().Die();
