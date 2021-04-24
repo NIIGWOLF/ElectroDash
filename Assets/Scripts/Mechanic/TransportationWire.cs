@@ -16,15 +16,12 @@ public class TransportationWire : TransportationBlock
     {
         GameObject go = tileMap.GetInstantiatedObject(currentPos);
         if (go)
-            if (go.GetComponentInChildren<BasePoint>())
-            {
-                brush=tileMap.GetTile(currentPos);
-                block.GetComponent<SpriteRenderer>().sprite = ((RuleTile)brush).m_DefaultSprite;
-            }
-            else {
-                brush = null;
-            }
-        else {
+        {
+            brush = tileMap.GetTile(currentPos);
+            block.GetComponent<SpriteRenderer>().sprite = ((RuleTile)brush).m_DefaultSprite;
+        }
+        else
+        {
             brush = null;
         }
 
@@ -33,7 +30,7 @@ public class TransportationWire : TransportationBlock
         if (go)
             if (go.GetComponent<GenerateWire>())
             {
-                go.GetComponent<GenerateWire>().isNew=true;
+                go.GetComponent<GenerateWire>().isNew = true;
             }
     }
     protected override void EndMove()
@@ -44,16 +41,17 @@ public class TransportationWire : TransportationBlock
         GameObject go = tileMap.GetInstantiatedObject(currentPos);
         if (go)
         {
-            if (go.GetComponent<StartDeathPS>()){
-                go.GetComponent<StartDeathPS>().enabled=true;
+            if (go.GetComponent<StartDeathPS>())
+            {
+                go.GetComponent<StartDeathPS>().enabled = true;
             }
             if (go.GetComponent<GenerateWire>())
             {
-                go.GetComponent<GenerateWire>().isNew=true;
+                go.GetComponent<GenerateWire>().isNew = true;
             }
             if (go.GetComponent<ActivElement>())
             {
-                go.GetComponent<ActivElement>().fastDeleteWire=true;
+                go.GetComponent<ActivElement>().fastDeleteWire = true;
             }
         }
     }
