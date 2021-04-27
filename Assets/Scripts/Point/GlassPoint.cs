@@ -9,8 +9,10 @@ public class GlassPoint : BasePoint
     public Sprite destroy1;
     public Sprite destroy2;
     public GameObject PSDestroy;
+    public bool isDestroy = false;
     public override void OutComming(bool activPoint)
     {
+        isDestroy=true;
         DeletePoint();
     }
 

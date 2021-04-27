@@ -17,15 +17,43 @@ public class TransportationWire : TransportationBlock
         GameObject go = tileMap.GetInstantiatedObject(currentPos);
         if (go)
         {
-            brush = tileMap.GetTile(currentPos);
-            block.GetComponent<SpriteRenderer>().sprite = ((RuleTile)brush).m_DefaultSprite;
+            if (go.GetComponent<GlassPoint>())
+            {
+                if (go.GetComponent<GlassPoint>().isDestroy)
+                {
+                    brush = null;
+                    block.GetComponent<SpriteRenderer>().sprite = null;
+                }
+                else
+                {
+                    brush = tileMap.GetTile(currentPos);
+                    block.GetComponent<SpriteRenderer>().sprite = ((RuleTile)brush).m_DefaultSprite;
+                }
+            }
+            else
+            {
+                brush = tileMap.GetTile(currentPos);
+                block.GetComponent<SpriteRenderer>().sprite = ((RuleTile)brush).m_DefaultSprite;
+            }
         }
         else
         {
             brush = null;
+            block.GetComponent<SpriteRenderer>().sprite = null;
         }
 
-        tileMap.SetTile(currentPos, old);
+        if (go)
+        {
+            if (!go.GetComponent<GlassPoint>())
+            {
+                tileMap.SetTile(currentPos, old);
+            }
+            else
+            {
+                if (!go.GetComponent<GlassPoint>().isDestroy)
+                    tileMap.SetTile(currentPos, old);
+            }
+        }
         go = tileMap.GetInstantiatedObject(currentPos);
         if (go)
             if (go.GetComponent<GenerateWire>())
