@@ -1,14 +1,27 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class Enemy : Character
 {
 
     public override void Die()
     {
-        Instantiate(deathPS,transform.position,Quaternion.identity);
+        //Instantiate(deathPS,transform.position,Quaternion.identity);
+        gameObject.GetComponent<Collider2D>().enabled=false;
+        foreach(ParticleSystem ps in gameObject.GetComponentsInChildren<ParticleSystem>()){
+            ps.Stop();
+        }
         ScriptManager.objectManager.AllCharacter.Remove(gameObject);
+        Sequence sequence= DOTween.Sequence();
+        sequence.Append(gameObject.transform.DOShakePosition(1f, new Vector3(0.05f,0.05f,0),100,90,false,true));
+        foreach(SpriteRenderer spr in gameObject.GetComponentsInChildren<SpriteRenderer>()){
+            sequence.Join(spr.DOFade(0,1));
+        }
+        sequence.OnComplete(OnDie);
+    }
+    public void OnDie(){
         Destroy(gameObject);
     }
     void Update()
