@@ -66,6 +66,12 @@ public class TransportationPlayer : TransportationBlock
                     tileMap.SetTile(currentPos, old);
             }
         }
+        go = tileMap.GetInstantiatedObject(currentPos);
+        if (go)
+            if (go.GetComponent<GenerateWire>())
+            {
+                go.GetComponent<GenerateWire>().isNew = true;
+            }
     }
     protected override void EndMove()
     {

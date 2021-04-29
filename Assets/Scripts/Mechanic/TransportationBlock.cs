@@ -10,7 +10,8 @@ public class TransportationBlock : MonoBehaviour
     protected Vector3Int nextPos = new Vector3Int(0, 0, 1);
     protected Vector3Int currentPos;
     protected Tilemap tileMap;
-    protected float timeleft = 1;
+    //protected float timeleft = 1;
+    protected float nextTime;
     public float time = 1;
     public float delayStart = 1;
 
@@ -26,7 +27,8 @@ public class TransportationBlock : MonoBehaviour
         backPos = Vector3Int.CeilToInt(transform.position);
         tileMap = ScriptManager.objectManager.tilemap;
         currentPos = Vector3Int.CeilToInt(transform.position);
-        timeleft = delayStart;
+        //timeleft = delayStart;
+        nextTime = ScriptManager.objectManager.timer.time - delayStart;
 
         for (int i = moveList.Count - 1; i >= 0; i--) // добавляем инвертированный лист
         {
@@ -59,9 +61,9 @@ public class TransportationBlock : MonoBehaviour
         }
         else
         {
-            if (timeleft < 0)
+            if (ScriptManager.objectManager.timer.time <= nextTime)
             {
-
+                nextTime -= (1 + time);
                 switch (moveList[indexList].direction)
                 {
                     case MoveTurtle.Direction.Up:
@@ -91,10 +93,6 @@ public class TransportationBlock : MonoBehaviour
                 isMove = true;
                 StartMove();
             }
-            else
-            {
-                timeleft -= Time.deltaTime;
-            }
         }
     }
 
@@ -117,7 +115,7 @@ public class TransportationBlock : MonoBehaviour
         if (Vector3Int.RoundToInt(transform.position).Equals(movePos))
         {
             isMove = false;
-            timeleft = time;
+            //timeleft = time;
             currentPos = nextPos;
             EndMove();
         }
