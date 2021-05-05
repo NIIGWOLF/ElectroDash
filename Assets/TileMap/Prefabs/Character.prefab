@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 1235886806}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 20, y: 20, z: 1}
+  m_LocalScale: {x: 30, y: 30, z: 1}
   m_Children: []
   m_Father: {fileID: 1201232231258933092}
   m_RootOrder: 0
@@ -185,6 +185,7 @@ MonoBehaviour:
   time: 1
   deathPS: {fileID: 5166278959815639723, guid: 0f959783c80b049419e151a5a0014806, type: 3}
   Eye: {fileID: 0}
+  eyeOffset: 0.03
   enterBarier: 0
   invert: 0
   deathPlayer: {fileID: 6513427145400265795, guid: 1e483c5733aa7814b9177fa0a773a2e6,

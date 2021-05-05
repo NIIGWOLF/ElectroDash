@@ -7,15 +7,16 @@ public class MoveSizeCamera : MonoBehaviour
 {
     Sequence seq;
     Camera cam;
+    float defaultSize = 3.2f;
     void Awake()
     {
         cam = gameObject.GetComponent<Camera>();
     }
     public void zoomIn(){
-        if (cam.orthographicSize==2.5f) return;
+        if (cam.orthographicSize==defaultSize) return;
         seq.Kill();
         seq = DOTween.Sequence();
-        seq.Append(cam.DOOrthoSize(2.5f,0.25f));
+        seq.Append(cam.DOOrthoSize(defaultSize,0.25f));
     }
     public void zoomOut(float valueZoom){
         if (cam.orthographicSize==valueZoom) return;
