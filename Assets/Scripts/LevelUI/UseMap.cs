@@ -14,7 +14,7 @@ public class UseMap : MonoBehaviour
 
             HintData.Instance.hint.mapHint--;
             HintData.Instance.SaveData();
-            StaticManager.levelManager.countMapHint.GetComponent<Text>().text = HintData.Instance.hint.simpleHint.ToString();
+            StaticManager.levelManager.countMapHint.GetComponent<Text>().text = HintData.Instance.hint.mapHint.ToString();
             isUsedMap = true;
         }
 
