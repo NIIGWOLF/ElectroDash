@@ -24,7 +24,7 @@ public class Timer : MonoBehaviour
             if ((int)temp != (int)time)
             {
                 string minutes = Mathf.Floor(time / 60).ToString("00");
-                string seconds = (time % 60).ToString("00");
+                string seconds = (Mathf.Floor(time) % 60).ToString("00");
 
                 StaticManager.levelManager.timer.text=string.Format("{0}:{1}", minutes, seconds);
             }

@@ -5,7 +5,7 @@ public class RestartAfterDeath : MonoBehaviour
 {
     void Start()
     {
-        Invoke("Restart",1.75f);
+        Invoke("Restart",1.25f);
         
     }
     

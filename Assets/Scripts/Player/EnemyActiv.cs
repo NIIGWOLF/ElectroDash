@@ -6,7 +6,6 @@ public class EnemyActiv : Character
 
     public override void Die()
     {
-        Instantiate(deathPS,transform.position,Quaternion.identity);
         gameObject.GetComponent<Collider2D>().enabled=false;
         foreach(ParticleSystem ps in gameObject.GetComponentsInChildren<ParticleSystem>()){
             ps.Stop();
