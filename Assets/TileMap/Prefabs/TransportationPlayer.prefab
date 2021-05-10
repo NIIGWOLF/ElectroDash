@@ -96,6 +96,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   time: 2
+  delayStart: 1
   moveList: []
   brush: {fileID: 11400000, guid: 0918124c3b04b524593df5f68e31ae25, type: 2}
   block: {fileID: 3589880413794876081}

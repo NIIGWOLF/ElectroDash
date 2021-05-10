@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 public class StartDeathPS : MonoBehaviour
 {
     public GameObject PSCreate;
-    public int orderLayer=0;
+    //public int orderLayer=0;
     bool exit = false;
     void OnEnable()
     {
@@ -12,7 +12,7 @@ public class StartDeathPS : MonoBehaviour
         GameObject gops=Instantiate(PSCreate,transform.position,Quaternion.Euler(transform.eulerAngles));
         gops.GetComponent<ParentPS>().parent=gameObject;
         var ps = gops.GetComponent<ParticleSystem>();
-        ps.GetComponent<ParticleSystemRenderer>().sortingOrder=orderLayer;
+        //ps.GetComponent<ParticleSystemRenderer>().sortingOrder=orderLayer;
         var shps = ps.shape;
         shps.sprite=sp;
     }
@@ -23,7 +23,7 @@ public class StartDeathPS : MonoBehaviour
         GameObject gops=Instantiate(PSCreate,transform.position,Quaternion.Euler(transform.eulerAngles));
         gops.GetComponent<ParentPS>().parent=gameObject;
         var ps = gops.GetComponent<ParticleSystem>();
-        ps.GetComponent<ParticleSystemRenderer>().sortingOrder=orderLayer;
+        //ps.GetComponent<ParticleSystemRenderer>().sortingOrder=orderLayer;
         var shps = ps.shape;
         shps.sprite=sp;
         

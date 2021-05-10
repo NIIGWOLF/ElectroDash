@@ -96,6 +96,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   time: 3
+  delayStart: 1
   moveList:
   - direction: 3
     blockCount: 3
