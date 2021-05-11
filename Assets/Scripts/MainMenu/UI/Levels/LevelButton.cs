@@ -15,6 +15,12 @@ public class LevelButton : MonoBehaviour
     void Start()
     {
         levelNumber = int.Parse(gameObject.GetComponentInChildren<Text>().text.Split(' ')[1]);
+        /*if (LevelData.Instance.levelInfo.levelStars.Count<levelNumber){
+            while(LevelData.Instance.levelInfo.levelStars.Count!=levelNumber){
+                LevelData.Instance.levelInfo.levelStars.Add(0);
+            }
+        }
+        LevelData.Instance.SaveData();*/
         levelOpenCoins = LevelData.Instance.levelInfo.levelStars[levelNumber];
          switch(levelOpenCoins){
              case 0:

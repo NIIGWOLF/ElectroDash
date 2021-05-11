@@ -8,6 +8,8 @@ public class MainMenuManager : MonoBehaviour
     public static MakePlayer makePlayer;
     public static LoadScene loadScene;
     public static NameLevel nameLevel; 
+    public static int levelCount = 100;
+
    
     void Awake()
     {
