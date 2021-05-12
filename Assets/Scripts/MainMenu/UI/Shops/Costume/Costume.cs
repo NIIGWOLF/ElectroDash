@@ -25,7 +25,7 @@ public class Costume : MonoBehaviour
         }
         else
         {
-            buttonText.text = price.ToString();
+            buttonText.text = ((int)price).ToString();
         }
     }
     private void ChangePreview()

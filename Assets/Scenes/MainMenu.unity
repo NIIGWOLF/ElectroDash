@@ -948,7 +948,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonText: {fileID: 183402905}
   trails: 11
-  price: 0
+  price: 10
 --- !u!114 &19193180
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1389,7 +1389,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonText: {fileID: 416962354}
   enemies: 0
-  price: 0
+  price: 4
 --- !u!114 &26054467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2866,7 +2866,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonText: {fileID: 632328160}
   costume: 3
-  price: 1
+  price: 4
 --- !u!114 &104242212
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3089,7 +3089,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonText: {fileID: 1376414766}
   trails: 12
-  price: 0
+  price: 10
 --- !u!114 &105402454
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3407,7 +3407,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonText: {fileID: 1909033315}
   trails: 10
-  price: 0
+  price: 7
 --- !u!114 &108350244
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3623,7 +3623,7 @@ RectTransform:
   - {fileID: 1734285452}
   - {fileID: 354874949}
   m_Father: {fileID: 226420950}
-  m_RootOrder: 14
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3644,7 +3644,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonText: {fileID: 354874950}
   bots: 14
-  price: 0
+  price: 15
 --- !u!114 &109576355
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4351,7 +4351,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonText: {fileID: 126070703}
   trails: 6
-  price: 0
+  price: 7
 --- !u!114 &126403583
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4590,7 +4590,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonText: {fileID: 362821967}
   costume: 4
-  price: 2
+  price: 7
 --- !u!114 &131819004
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5137,7 +5137,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonText: {fileID: 896797194}
   enemies: 23
-  price: 0
+  price: 30
 --- !u!114 &162925170
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5631,7 +5631,7 @@ RectTransform:
   - {fileID: 1953451578}
   - {fileID: 1436375929}
   m_Father: {fileID: 897359371}
-  m_RootOrder: 17
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -5652,7 +5652,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonText: {fileID: 1436375930}
   enemies: 17
-  price: 0
+  price: 20
 --- !u!114 &177338951
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6918,7 +6918,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonText: {fileID: 1429283903}
   trails: 7
-  price: 0
+  price: 4
 --- !u!114 &220630826
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7194,23 +7194,23 @@ RectTransform:
   - {fileID: 891021069}
   - {fileID: 2143162411}
   - {fileID: 939498765}
+  - {fileID: 1507170547}
   - {fileID: 1702892269}
   - {fileID: 866981088}
   - {fileID: 1918009297}
   - {fileID: 360286104}
   - {fileID: 1474182294}
+  - {fileID: 350952650}
   - {fileID: 506174340}
   - {fileID: 1942240670}
+  - {fileID: 749379171}
   - {fileID: 378475943}
   - {fileID: 109576353}
   - {fileID: 1764870798}
+  - {fileID: 807185050}
+  - {fileID: 1763076412}
   - {fileID: 867571036}
   - {fileID: 779593365}
-  - {fileID: 807185050}
-  - {fileID: 350952650}
-  - {fileID: 749379171}
-  - {fileID: 1507170547}
-  - {fileID: 1763076412}
   - {fileID: 608118953}
   - {fileID: 747921353}
   m_Father: {fileID: 1976034372}
@@ -12827,7 +12827,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonText: {fileID: 15560688}
   enemies: 6
-  price: 0
+  price: 7
 --- !u!114 &276591692
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13597,7 +13597,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonText: {fileID: 274661663}
   costume: 1
-  price: 1
+  price: 4
 --- !u!114 &315583463
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13820,7 +13820,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonText: {fileID: 74381337}
   costume: 13
-  price: 4
+  price: 10
 --- !u!114 &329268137
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14488,7 +14488,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonText: {fileID: 717147872}
   enemies: 8
-  price: 0
+  price: 10
 --- !u!114 &347906324
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14702,7 +14702,7 @@ RectTransform:
   - {fileID: 1097033883}
   - {fileID: 1967284141}
   m_Father: {fileID: 226420950}
-  m_RootOrder: 19
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -14723,7 +14723,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonText: {fileID: 1967284142}
   bots: 19
-  price: 0
+  price: 10
 --- !u!114 &350952652
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15191,7 +15191,7 @@ RectTransform:
   - {fileID: 838304135}
   - {fileID: 1369388509}
   m_Father: {fileID: 226420950}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -15212,7 +15212,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonText: {fileID: 1369388510}
   bots: 9
-  price: 0
+  price: 7
 --- !u!114 &360286106
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15735,7 +15735,7 @@ RectTransform:
   - {fileID: 840397032}
   - {fileID: 1804854724}
   m_Father: {fileID: 226420950}
-  m_RootOrder: 13
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -15756,7 +15756,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonText: {fileID: 1804854725}
   bots: 13
-  price: 0
+  price: 15
 --- !u!114 &378475945
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16073,7 +16073,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonText: {fileID: 1820392859}
   bots: 2
-  price: 0
+  price: 4
 --- !u!114 &382841407
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16221,7 +16221,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonText: {fileID: 57258386}
   costume: 7
-  price: 3
+  price: 7
 --- !u!114 &383336370
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16797,7 +16797,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonText: {fileID: 631258233}
   trails: 4
-  price: 0
+  price: 4
 --- !u!114 &398750383
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16999,7 +16999,7 @@ RectTransform:
   - {fileID: 698248343}
   - {fileID: 1751314525}
   m_Father: {fileID: 897359371}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -17020,7 +17020,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonText: {fileID: 1751314526}
   enemies: 3
-  price: 0
+  price: 4
 --- !u!114 &402121311
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19114,7 +19114,7 @@ RectTransform:
   - {fileID: 480364465}
   - {fileID: 430403105}
   m_Father: {fileID: 226420950}
-  m_RootOrder: 11
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -19135,7 +19135,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonText: {fileID: 430403106}
   bots: 11
-  price: 0
+  price: 10
 --- !u!114 &506174342
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20473,7 +20473,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonText: {fileID: 347821450}
   costume: 15
-  price: 5
+  price: 15
 --- !u!114 &576455013
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20807,7 +20807,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonText: {fileID: 1574473948}
   costume: 22
-  price: 6
+  price: 30
 --- !u!114 &594645642
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21317,7 +21317,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonText: {fileID: 564635541}
   bots: 23
-  price: 0
+  price: 30
 --- !u!114 &608118955
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21688,7 +21688,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonText: {fileID: 1295568346}
   costume: 23
-  price: 6
+  price: 30
 --- !u!114 &612660881
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24792,7 +24792,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonText: {fileID: 455431924}
   trails: 9
-  price: 0
+  price: 7
 --- !u!114 &741660546
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25015,7 +25015,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonText: {fileID: 981028420}
   bots: 24
-  price: 0
+  price: 30
 --- !u!114 &747921355
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25142,7 +25142,7 @@ RectTransform:
   - {fileID: 1651626695}
   - {fileID: 1039255171}
   m_Father: {fileID: 226420950}
-  m_RootOrder: 20
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -25163,7 +25163,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonText: {fileID: 1039255172}
   bots: 20
-  price: 0
+  price: 10
 --- !u!114 &749379173
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25324,7 +25324,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonText: {fileID: 1383888570}
   enemies: 1
-  price: 1
+  price: 4
 --- !u!114 &752015971
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26200,7 +26200,7 @@ RectTransform:
   - {fileID: 603079810}
   - {fileID: 107440806}
   m_Father: {fileID: 226420950}
-  m_RootOrder: 17
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -26221,7 +26221,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonText: {fileID: 107440807}
   bots: 17
-  price: 0
+  price: 20
 --- !u!114 &779593367
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27096,7 +27096,7 @@ RectTransform:
   - {fileID: 2029989035}
   - {fileID: 820958771}
   m_Father: {fileID: 226420950}
-  m_RootOrder: 18
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -27117,7 +27117,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonText: {fileID: 820958772}
   bots: 18
-  price: 0
+  price: 15
 --- !u!114 &807185052
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27434,7 +27434,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonText: {fileID: 178977609}
   trails: 21
-  price: 0
+  price: 7
 --- !u!114 &808029633
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29179,7 +29179,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonText: {fileID: 144118164}
   enemies: 5
-  price: 0
+  price: 7
 --- !u!114 &865589828
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29306,7 +29306,7 @@ RectTransform:
   - {fileID: 611840823}
   - {fileID: 94135983}
   m_Father: {fileID: 897359371}
-  m_RootOrder: 13
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -29327,7 +29327,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonText: {fileID: 94135984}
   enemies: 12
-  price: 0
+  price: 15
 --- !u!114 &866348447
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29699,7 +29699,7 @@ RectTransform:
   - {fileID: 1058063587}
   - {fileID: 1708098226}
   m_Father: {fileID: 226420950}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -29720,7 +29720,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonText: {fileID: 1708098227}
   bots: 7
-  price: 0
+  price: 7
 --- !u!114 &866981090
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29868,7 +29868,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonText: {fileID: 341261675}
   costume: 2
-  price: 1
+  price: 4
 --- !u!114 &867181662
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29995,7 +29995,7 @@ RectTransform:
   - {fileID: 452094959}
   - {fileID: 1116428475}
   m_Father: {fileID: 226420950}
-  m_RootOrder: 16
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -30016,7 +30016,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonText: {fileID: 1116428476}
   bots: 16
-  price: 0
+  price: 20
 --- !u!114 &867571038
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30548,7 +30548,7 @@ RectTransform:
   - {fileID: 31132544}
   - {fileID: 1698492712}
   m_Father: {fileID: 897359371}
-  m_RootOrder: 15
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -30569,7 +30569,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonText: {fileID: 1698492713}
   enemies: 15
-  price: 0
+  price: 15
 --- !u!114 &889907019
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30717,7 +30717,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonText: {fileID: 1239868315}
   bots: 3
-  price: 0
+  price: 4
 --- !u!114 &891021071
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31053,7 +31053,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonText: {fileID: 1365064904}
   trails: 3
-  price: 0
+  price: 4
 --- !u!114 &891344152
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31201,7 +31201,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonText: {fileID: 864353026}
   costume: 10
-  price: 4
+  price: 10
 --- !u!114 &896749793
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31402,26 +31402,26 @@ RectTransform:
   m_Children:
   - {fileID: 26054465}
   - {fileID: 752015969}
-  - {fileID: 1763543472}
   - {fileID: 402121309}
-  - {fileID: 1504457371}
+  - {fileID: 1763543472}
   - {fileID: 1645941283}
+  - {fileID: 1504457371}
   - {fileID: 865589826}
   - {fileID: 276591690}
   - {fileID: 1503477764}
   - {fileID: 347906322}
   - {fileID: 1546788958}
+  - {fileID: 1051895890}
   - {fileID: 1385238730}
   - {fileID: 2026900490}
+  - {fileID: 1342611669}
   - {fileID: 866348445}
   - {fileID: 1574180585}
   - {fileID: 889907017}
+  - {fileID: 1361282794}
+  - {fileID: 1845303409}
   - {fileID: 1243183911}
   - {fileID: 177338949}
-  - {fileID: 1361282794}
-  - {fileID: 1051895890}
-  - {fileID: 1845303409}
-  - {fileID: 1342611669}
   - {fileID: 162925168}
   - {fileID: 1328336675}
   m_Father: {fileID: 2089691340}
@@ -31600,7 +31600,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonText: {fileID: 195960680}
   costume: 11
-  price: 4
+  price: 10
 --- !u!114 &901770003
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31988,7 +31988,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonText: {fileID: 1153195173}
   bots: 0
-  price: 1
+  price: 4
 --- !u!114 &915636261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32815,7 +32815,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonText: {fileID: 987674381}
   trails: 8
-  price: 0
+  price: 7
 --- !u!114 &932302721
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33057,7 +33057,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonText: {fileID: 1092316420}
   bots: 5
-  price: 0
+  price: 7
 --- !u!114 &939498767
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33421,7 +33421,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonText: {fileID: 1529028051}
   costume: 17
-  price: 5
+  price: 15
 --- !u!114 &951262989
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35359,7 +35359,7 @@ RectTransform:
   - {fileID: 843068038}
   - {fileID: 1841611680}
   m_Father: {fileID: 897359371}
-  m_RootOrder: 19
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -35380,7 +35380,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonText: {fileID: 1841611681}
   enemies: 19
-  price: 0
+  price: 10
 --- !u!114 &1051895892
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36144,7 +36144,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonText: {fileID: 1455218203}
   trails: 16
-  price: 0
+  price: 10
 --- !u!114 &1094561196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36870,7 +36870,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonText: {fileID: 1879054040}
   costume: 19
-  price: 5
+  price: 20
 --- !u!114 &1122539377
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37919,7 +37919,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonText: {fileID: 1125329230}
   trails: 5
-  price: 0
+  price: 4
 --- !u!114 &1170458754
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39573,7 +39573,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonText: {fileID: 1876192826}
   trails: 20
-  price: 0
+  price: 10
 --- !u!114 &1238245173
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39981,7 +39981,7 @@ RectTransform:
   - {fileID: 1864121668}
   - {fileID: 862871698}
   m_Father: {fileID: 897359371}
-  m_RootOrder: 16
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -40002,7 +40002,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonText: {fileID: 862871699}
   enemies: 16
-  price: 0
+  price: 20
 --- !u!114 &1243183913
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40726,7 +40726,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonText: {fileID: 1725768962}
   costume: 21
-  price: 5
+  price: 20
 --- !u!114 &1287747822
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41179,7 +41179,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonText: {fileID: 17009614}
   bots: 1
-  price: 1
+  price: 4
 --- !u!114 &1299399045
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41904,7 +41904,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonText: {fileID: 672768317}
   enemies: 24
-  price: 0
+  price: 30
 --- !u!114 &1328336677
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42210,7 +42210,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonText: {fileID: 634636002}
   costume: 20
-  price: 5
+  price: 20
 --- !u!114 &1339116731
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42337,7 +42337,7 @@ RectTransform:
   - {fileID: 143975044}
   - {fileID: 1176376129}
   m_Father: {fileID: 897359371}
-  m_RootOrder: 21
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -42358,7 +42358,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonText: {fileID: 1176376130}
   enemies: 21
-  price: 0
+  price: 10
 --- !u!114 &1342611671
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42733,7 +42733,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonText: {fileID: 1815980374}
   costume: 12
-  price: 4
+  price: 10
 --- !u!114 &1349304187
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43149,7 +43149,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonText: {fileID: 450787320}
   trails: 22
-  price: 0
+  price: 7
 --- !u!114 &1360008952
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43297,7 +43297,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonText: {fileID: 1401505696}
   enemies: 18
-  price: 0
+  price: 15
 --- !u!114 &1361282796
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43782,7 +43782,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonText: {fileID: 1345307916}
   costume: 16
-  price: 5
+  price: 15
 --- !u!114 &1372390312
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44456,7 +44456,7 @@ RectTransform:
   - {fileID: 1969327215}
   - {fileID: 1950924678}
   m_Father: {fileID: 897359371}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -44477,7 +44477,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonText: {fileID: 1950924679}
   enemies: 10
-  price: 0
+  price: 10
 --- !u!114 &1385238732
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44884,7 +44884,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonText: {fileID: 1373293502}
   costume: 9
-  price: 3
+  price: 10
 --- !u!114 &1401859695
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46449,7 +46449,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonText: {fileID: 2063875491}
   costume: 14
-  price: 5
+  price: 10
 --- !u!114 &1462682892
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46809,7 +46809,7 @@ RectTransform:
   - {fileID: 1199837096}
   - {fileID: 1580506051}
   m_Father: {fileID: 226420950}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -46830,7 +46830,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonText: {fileID: 1580506052}
   bots: 10
-  price: 0
+  price: 10
 --- !u!114 &1474182296
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47093,7 +47093,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonText: {fileID: 1383190832}
   costume: 18
-  price: 5
+  price: 15
 --- !u!114 &1477591671
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47625,7 +47625,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonText: {fileID: 1250338878}
   enemies: 7
-  price: 0
+  price: 7
 --- !u!114 &1503477766
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47826,7 +47826,7 @@ RectTransform:
   - {fileID: 380868389}
   - {fileID: 1668780990}
   m_Father: {fileID: 897359371}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -47847,7 +47847,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonText: {fileID: 1668780991}
   enemies: 20
-  price: 0
+  price: 7
 --- !u!114 &1504457373
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47974,7 +47974,7 @@ RectTransform:
   - {fileID: 1636079203}
   - {fileID: 572702533}
   m_Father: {fileID: 226420950}
-  m_RootOrder: 21
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -47995,7 +47995,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonText: {fileID: 572702534}
   bots: 21
-  price: 0
+  price: 7
 --- !u!114 &1507170549
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49128,7 +49128,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonText: {fileID: 146107785}
   enemies: 9
-  price: 0
+  price: 10
 --- !u!114 &1546788960
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49404,7 +49404,7 @@ RectTransform:
   - {fileID: 1541868799}
   - {fileID: 993868148}
   m_Father: {fileID: 897359371}
-  m_RootOrder: 14
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -49425,7 +49425,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonText: {fileID: 993868149}
   enemies: 14
-  price: 0
+  price: 15
 --- !u!114 &1574180587
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49893,7 +49893,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonText: {fileID: 883990283}
   trails: 13
-  price: 0
+  price: 10
 --- !u!114 &1579246398
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50910,7 +50910,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonText: {fileID: 698622308}
   costume: 6
-  price: 2
+  price: 7
 --- !u!114 &1625248064
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51132,7 +51132,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonText: {fileID: 2059744797}
   trails: 23
-  price: 0
+  price: 4
 --- !u!114 &1628598698
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51557,7 +51557,7 @@ RectTransform:
   - {fileID: 1805840076}
   - {fileID: 2005075756}
   m_Father: {fileID: 897359371}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -51578,7 +51578,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonText: {fileID: 2005075757}
   enemies: 4
-  price: 0
+  price: 7
 --- !u!114 &1645941285
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53145,7 +53145,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonText: {fileID: 131683809}
   costume: 0
-  price: 1
+  price: 4
 --- !u!1 &1690679266
 GameObject:
   m_ObjectHideFlags: 0
@@ -53202,7 +53202,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonText: {fileID: 922644249}
   costume: 5
-  price: 2
+  price: 7
 --- !u!114 &1690679269
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53501,7 +53501,7 @@ RectTransform:
   - {fileID: 910557308}
   - {fileID: 721240202}
   m_Father: {fileID: 226420950}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -53522,7 +53522,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonText: {fileID: 721240203}
   bots: 6
-  price: 0
+  price: 7
 --- !u!114 &1702892271
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53670,7 +53670,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonText: {fileID: 784258978}
   trails: 14
-  price: 0
+  price: 4
 --- !u!114 &1705302639
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54143,7 +54143,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonText: {fileID: 705636905}
   trails: 15
-  price: 0
+  price: 7
 --- !u!114 &1716766288
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55730,7 +55730,7 @@ RectTransform:
   - {fileID: 2140557762}
   - {fileID: 1685508632}
   m_Father: {fileID: 226420950}
-  m_RootOrder: 22
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -55751,7 +55751,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonText: {fileID: 1685508633}
   bots: 22
-  price: 0
+  price: 20
 --- !u!114 &1763076414
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55878,7 +55878,7 @@ RectTransform:
   - {fileID: 2135412124}
   - {fileID: 1790149193}
   m_Father: {fileID: 897359371}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -55899,7 +55899,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonText: {fileID: 1790149194}
   enemies: 2
-  price: 0
+  price: 4
 --- !u!114 &1763543474
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56026,7 +56026,7 @@ RectTransform:
   - {fileID: 398760541}
   - {fileID: 719122624}
   m_Father: {fileID: 226420950}
-  m_RootOrder: 15
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -56047,7 +56047,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonText: {fileID: 719122625}
   bots: 15
-  price: 0
+  price: 15
 --- !u!114 &1764870800
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56285,7 +56285,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonText: {fileID: 760895649}
   trails: 2
-  price: 0
+  price: 4
 --- !u!114 &1775513550
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56952,7 +56952,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonText: {fileID: 364756762}
   costume: 8
-  price: 3
+  price: 7
 --- !u!114 &1789493713
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58624,7 +58624,7 @@ RectTransform:
   - {fileID: 1038950369}
   - {fileID: 1189002505}
   m_Father: {fileID: 897359371}
-  m_RootOrder: 20
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -58645,7 +58645,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonText: {fileID: 1189002506}
   enemies: 22
-  price: 0
+  price: 20
 --- !u!114 &1845303411
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58979,7 +58979,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonText: {fileID: 374912654}
   trails: 1
-  price: 1
+  price: 4
 --- !u!114 &1852421026
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59293,7 +59293,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonText: {fileID: 1748183174}
   trails: 18
-  price: 0
+  price: 7
 --- !u!114 &1859327164
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60814,7 +60814,7 @@ RectTransform:
   - {fileID: 699728024}
   - {fileID: 111607736}
   m_Father: {fileID: 226420950}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -60835,7 +60835,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonText: {fileID: 111607737}
   bots: 8
-  price: 0
+  price: 7
 --- !u!114 &1918009299
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61224,7 +61224,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonText: {fileID: 1803509009}
   trails: 0
-  price: 1
+  price: 4
 --- !u!114 &1934839040
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61537,7 +61537,7 @@ RectTransform:
   - {fileID: 1617651080}
   - {fileID: 1313490229}
   m_Father: {fileID: 226420950}
-  m_RootOrder: 12
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -61558,7 +61558,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonText: {fileID: 1313490230}
   bots: 12
-  price: 0
+  price: 10
 --- !u!114 &1942240672
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62609,7 +62609,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonText: {fileID: 287497585}
   trails: 17
-  price: 0
+  price: 7
 --- !u!114 &1993497261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63322,7 +63322,7 @@ RectTransform:
   - {fileID: 555434054}
   - {fileID: 1179458536}
   m_Father: {fileID: 897359371}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -63343,7 +63343,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonText: {fileID: 1179458537}
   enemies: 11
-  price: 0
+  price: 10
 --- !u!114 &2026900492
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -65097,7 +65097,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonText: {fileID: 1417925774}
   trails: 19
-  price: 0
+  price: 10
 --- !u!114 &2124437214
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -65543,7 +65543,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonText: {fileID: 311265003}
   bots: 4
-  price: 0
+  price: 4
 --- !u!114 &2143162413
 MonoBehaviour:
   m_ObjectHideFlags: 0

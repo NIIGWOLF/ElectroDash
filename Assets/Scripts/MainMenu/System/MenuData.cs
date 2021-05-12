@@ -62,12 +62,12 @@ public class MenuData : Singleton<MenuData>
             Strawberry = 23,
         }
         public enum Prices{
-            cheap = 1,
-            low_cost = 2,
-            medium = 3,
-            expensive = 4,
-            exclusive = 5,
-            legendary = 6,
+            cheap = 4,
+            low_cost = 7,
+            medium = 10,
+            expensive = 15,
+            exclusive = 20,
+            legendary = 30,
         }
         public List<COSTUME> openCostumes = new List<COSTUME>(){COSTUME.Classic};
        
