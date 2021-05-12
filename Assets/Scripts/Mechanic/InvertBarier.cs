@@ -7,14 +7,16 @@ public class InvertBarier : MonoBehaviour
     protected virtual void OnTriggerEnter2D(Collider2D collider)
     {
         if (collider.GetComponent<Player>()){
-            collider.GetComponent<Player>().invert=true;
+            if (!collider.GetComponent<Player>().invert.Contains(gameObject))
+            collider.GetComponent<Player>().invert.Add(gameObject);
         }
     }
 
     protected virtual void OnTriggerExit2D(Collider2D collider)
     {
         if (collider.GetComponent<Player>()){
-            collider.GetComponent<Player>().invert=false;
+           if (collider.GetComponent<Player>().invert.Contains(gameObject))
+            collider.GetComponent<Player>().invert.Remove(gameObject);
         }
     }
 }

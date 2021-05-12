@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
-
+using System.Collections.Generic;
 
 public class Player : Character
 {
-    public bool invert=false;
+    public List<GameObject> invert= new List<GameObject>();
     public GameObject deathPlayer;
 
     void Awake(){
@@ -57,7 +57,7 @@ public class Player : Character
         if (isMove) return;
         if (isTransportation) return;
 
-        if (invert) rot=(rot+2)%4;
+        if (invert.Count>0) rot=(rot+2)%4;
 
         GameObject goTemp;
         Debug.Log("swipe");
