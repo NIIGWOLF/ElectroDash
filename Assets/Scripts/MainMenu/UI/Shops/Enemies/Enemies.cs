@@ -7,6 +7,7 @@ public class Enemies : MonoBehaviour
 {
     public Text buttonText;
     public MenuData.ShopsData.ENEMYIES enemies;
+    public MenuData.ShopsData.Prices price;
     void Start()
     {
         gameObject.GetComponent<Button>().onClick.AddListener(() => ChangePreview());
@@ -25,7 +26,7 @@ public class Enemies : MonoBehaviour
         else
         {
             print((int)enemies);
-            buttonText.text = MenuData.Instance.shopsData.pricesEnemyies[(int)enemies].ToString();
+            buttonText.text = ((int)price).ToString();
         }
     }
     private void ChangePreview()
@@ -45,14 +46,15 @@ public class Enemies : MonoBehaviour
         }
         else
         {
-            int price =  MenuData.Instance.shopsData.pricesEnemyies[(int)enemies];
-            if (price <= CountData.Instance.amountData.coins) {
+            //int price =  MenuData.Instance.shopsData.pricesEnemyies[(int)enemies];
+            if ((int)price <= CountData.Instance.amountData.coins) {
             MainMenuManager.uiMainMenuManager.buyEnemiesButton.GetComponentInChildren<Text>().text=LocalizationManager.Localize("Shop.Bue");
             MainMenuManager.uiMainMenuManager.buyEnemiesButton.GetComponent<Button>().interactable = true;
             MainMenuManager.uiMainMenuManager.buyEnemiesButton.SetActive(true);
             var buy = MainMenuManager.uiMainMenuManager.buyEnemiesButton;
             buy.enemies = enemies;
             buy.buttonText = buttonText;
+            buy.price = (int)price;
             }
             else {
                 MainMenuManager.uiMainMenuManager.buyEnemiesButton.GetComponentInChildren<Text>().text=LocalizationManager.Localize("Shop.NotMoney");

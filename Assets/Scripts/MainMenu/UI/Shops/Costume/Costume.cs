@@ -7,6 +7,7 @@ public class Costume : MonoBehaviour
 {
     public Text buttonText;
     public MenuData.ShopsData.COSTUME costume;
+    public MenuData.ShopsData.Prices price;
     void Start()
     {
         gameObject.GetComponent<Button>().onClick.AddListener(() => ChangePreview());
@@ -24,7 +25,7 @@ public class Costume : MonoBehaviour
         }
         else
         {
-            buttonText.text = MenuData.Instance.shopsData.pricesCostume[(int)costume].ToString();
+            buttonText.text = price.ToString();
         }
     }
     private void ChangePreview()
@@ -46,14 +47,16 @@ public class Costume : MonoBehaviour
         {
            
             //nt price =  MenuData.Instance.shopsData.pricesTrails[(int)costume];
-            int price =  MenuData.Instance.shopsData.pricesCostume[(int)costume];
-            if (price <= CountData.Instance.amountData.coins) {
+            //int price =  MenuData.Instance.shopsData.pricesCostume[(int)costume];
+            
+            if ((int)price <= CountData.Instance.amountData.coins) {
             MainMenuManager.uiMainMenuManager.buyCostumeButton.GetComponentInChildren<Text>().text=LocalizationManager.Localize("Shop.Bue");
             MainMenuManager.uiMainMenuManager.buyCostumeButton.GetComponent<Button>().interactable = true;
             MainMenuManager.uiMainMenuManager.buyCostumeButton.SetActive(true);
             var buy = MainMenuManager.uiMainMenuManager.buyCostumeButton;
             buy.costume = costume;
             buy.buttonText = buttonText;
+            buy.price = price;
             }
              else {
                 MainMenuManager.uiMainMenuManager.buyCostumeButton.GetComponentInChildren<Text>().text=LocalizationManager.Localize("Shop.NotMoney");

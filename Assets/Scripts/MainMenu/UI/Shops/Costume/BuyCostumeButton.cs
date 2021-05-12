@@ -6,16 +6,17 @@ using UnityEngine.UI;
 public class BuyCostumeButton : MonoBehaviour
 {
     public MenuData.ShopsData.COSTUME costume;
+    public MenuData.ShopsData.Prices price;
     public Text buttonText;
-    private int price;
+    //private int price;
     void Start()
     {
         gameObject.GetComponent<Button>().onClick.AddListener(()=>CostumeTap());
-        price =  MenuData.Instance.shopsData.pricesCostume[(int)costume];
+        //price =  MenuData.Instance.shopsData.pricesCostume[(int)costume];
     }
 
     public void CostumeTap(){
-        if (price <= CountData.Instance.amountData.coins){
+        if ((int)price <= CountData.Instance.amountData.coins){
             MenuData.Instance.shopsData.openCostumes.Add(costume);
             PlayerData.Instance.playerContent.Costume = costume;
             
@@ -23,7 +24,7 @@ public class BuyCostumeButton : MonoBehaviour
             PlayerData.Instance.costumeSelectedText = buttonText;
             buttonText.text = Assets.SimpleLocalization.LocalizationManager.Localize("Shop.Selected");
 
-            CountData.Instance.amountData.coins -= price;
+            CountData.Instance.amountData.coins -= (int)price;
             MainMenuManager.uiMainMenuManager.coins.GetComponentInChildren<ParticleSystem>().Play();
             MainMenuManager.uiMainMenuManager.coins.text = CountData.Instance.amountData.coins.ToString();
             

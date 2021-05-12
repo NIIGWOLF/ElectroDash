@@ -7,6 +7,7 @@ public class PS_Trails : MonoBehaviour
 {
     public Text buttonText;
     public MenuData.ShopsData.TRAILS trails;
+    public MenuData.ShopsData.Prices price;
     void Start()
     {
         gameObject.GetComponent<Button>().onClick.AddListener(() => ChangePreview());
@@ -24,7 +25,7 @@ public class PS_Trails : MonoBehaviour
         }
         else
         {
-            buttonText.text = MenuData.Instance.shopsData.pricesTrails[(int)trails].ToString();
+            buttonText.text = ((int)price).ToString();
         }
     }
     private void ChangePreview()
@@ -44,14 +45,15 @@ public class PS_Trails : MonoBehaviour
         }
         else
         {
-            int price =  MenuData.Instance.shopsData.pricesTrails[(int)trails];
-            if (price <= CountData.Instance.amountData.coins) {
+            //int price =  MenuData.Instance.shopsData.pricesTrails[(int)trails];
+            if ((int)price <= CountData.Instance.amountData.coins) {
             MainMenuManager.uiMainMenuManager.BuyPs_TrailsButton.GetComponentInChildren<Text>().text=LocalizationManager.Localize("Shop.Bue");
              MainMenuManager.uiMainMenuManager.BuyPs_TrailsButton.GetComponent<Button>().interactable = true;
             MainMenuManager.uiMainMenuManager.BuyPs_TrailsButton.SetActive(true);
             var buy = MainMenuManager.uiMainMenuManager.BuyPs_TrailsButton;
             buy.trails = trails;
             buy.buttonText = buttonText;
+            buy.price = (int)price;
             }
             else {
                 MainMenuManager.uiMainMenuManager.BuyPs_TrailsButton.GetComponentInChildren<Text>().text=LocalizationManager.Localize("Shop.NotMoney");

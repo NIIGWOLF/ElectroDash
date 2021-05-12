@@ -7,11 +7,11 @@ public class BuyEnemiesButton : MonoBehaviour
 {
    public MenuData.ShopsData.ENEMYIES enemies;
     public Text buttonText;
-    private int price;
+    public int price;
     void Start()
     {
         gameObject.GetComponent<Button>().onClick.AddListener(()=>EnemiesTap());
-        price =  MenuData.Instance.shopsData.pricesEnemyies[(int)enemies];
+       
     }
 
     public void EnemiesTap(){

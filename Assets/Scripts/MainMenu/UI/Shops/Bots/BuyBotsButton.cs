@@ -7,11 +7,11 @@ public class BuyBotsButton : MonoBehaviour
 {
      public MenuData.ShopsData.BOTS bots;
     public Text buttonText;
-    private int price;
+    public int price;
     void Start()
     {
         gameObject.GetComponent<Button>().onClick.AddListener(()=>BotsTap());
-        price =  MenuData.Instance.shopsData.pricesBots[(int)bots];
+        //price =  MenuData.Instance.shopsData.pricesBots[(int)bots];
     }
 
     public void BotsTap(){

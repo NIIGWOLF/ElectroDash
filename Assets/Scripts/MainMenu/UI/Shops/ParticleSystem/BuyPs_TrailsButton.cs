@@ -7,11 +7,11 @@ public class BuyPs_TrailsButton : MonoBehaviour
 {
      public MenuData.ShopsData.TRAILS trails;
     public Text buttonText;
-    private int price;
+    public int price;
     void Start()
     {
         gameObject.GetComponent<Button>().onClick.AddListener(()=>TrailsTap());
-        price =  MenuData.Instance.shopsData.pricesTrails[(int)trails];
+        //price =  MenuData.Instance.shopsData.pricesTrails[(int)trails];
     }
 
     public void TrailsTap(){

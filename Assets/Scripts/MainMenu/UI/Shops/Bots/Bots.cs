@@ -9,6 +9,7 @@ public class Bots : MonoBehaviour
     
     public Text buttonText;
     public MenuData.ShopsData.BOTS bots;
+    public MenuData.ShopsData.Prices price;
     void Start()
     {
         gameObject.GetComponent<Button>().onClick.AddListener(() => ChangePreview());
@@ -26,7 +27,7 @@ public class Bots : MonoBehaviour
         }
         else
         {
-            buttonText.text = MenuData.Instance.shopsData.pricesBots[(int)bots].ToString();
+            buttonText.text = ((int)price).ToString();
         }
     }
     private void ChangePreview()
@@ -46,14 +47,15 @@ public class Bots : MonoBehaviour
         }
         else
         {
-            int price =  MenuData.Instance.shopsData.pricesBots[(int)bots];
-            if (price <= CountData.Instance.amountData.coins) {
+            //int price =  MenuData.Instance.shopsData.pricesBots[(int)bots];
+            if ((int)price <= CountData.Instance.amountData.coins) {
             MainMenuManager.uiMainMenuManager.buyBotsButton.GetComponentInChildren<Text>().text=LocalizationManager.Localize("Shop.Bue");
             MainMenuManager.uiMainMenuManager.buyBotsButton.GetComponent<Button>().interactable = true;
             MainMenuManager.uiMainMenuManager.buyBotsButton.SetActive(true);
             var buy = MainMenuManager.uiMainMenuManager.buyBotsButton;
             buy.bots = bots;
             buy.buttonText = buttonText;
+            buy.price = (int)price;
             }
              else {
                 MainMenuManager.uiMainMenuManager.buyBotsButton.GetComponentInChildren<Text>().text=LocalizationManager.Localize("Shop.NotMoney");

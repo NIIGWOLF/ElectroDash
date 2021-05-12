@@ -61,15 +61,22 @@ public class MenuData : Singleton<MenuData>
             KingStory = 22,
             Strawberry = 23,
         }
+        public enum Prices{
+            cheap = 1,
+            low_cost = 2,
+            medium = 3,
+            expensive = 4,
+            exclusive = 5,
+            legendary = 6,
+        }
         public List<COSTUME> openCostumes = new List<COSTUME>(){COSTUME.Classic};
-        public List<int> pricesCostume = new List<int>(){0,1,1,1,2,2,2,3,3,3,3,4,4,4,4,4,4,4,4,3,3,3,3,3,7,7};
-
+       
         // Eyes data
         public List<COSTUME> openEyes = new List<COSTUME>(){COSTUME.Classic};
 
         // Trails data
         public List<TRAILS> openTrails = new List<TRAILS>(){TRAILS.Classic};
-        public List<int> pricesTrails = new List<int>(){0,1,1,1,2,2,2,3,3,3,3,4,4,4,4,4,4,4,4,3,3,3,3,3,7,7};
+       
         public enum TRAILS
         {
            Classic = 0,
@@ -100,7 +107,7 @@ public class MenuData : Singleton<MenuData>
 
         // Enemyies data
         public List<ENEMYIES> openEnemyies = new List<ENEMYIES>(){ENEMYIES.Classic};
-        public List<int> pricesEnemyies = new List<int>(){0,1,1,1,1,2,2,2,3,3,3,3,4,4,4,4,4,4,4,4,4,3,3,3,3,3,7};
+       
         public enum ENEMYIES
         {
            Classic = 0,
@@ -132,7 +139,7 @@ public class MenuData : Singleton<MenuData>
 
         // Bots data
         public List<BOTS> openBots = new List<BOTS>(){BOTS.Classic};
-        public List<int> pricesBots = new List<int>(){0,1,1,1,1,2,2,2,3,3,3,3,4,4,4,4,4,4,3,3,3,3,3,7,7};
+
         public enum BOTS
         {
             Classic = 0,
