@@ -17,11 +17,13 @@ Levels.Text,Choose the right level,Выбери правильный урове�
 Menu.Levels,Levels,Уровни
 Menu.Play,Play game,Играть
 Menu.Settings,Settings,Настройки
+Menu.Info,Info,Инфо
 Menu.Shop,Shop,Магазин
+Info.Text,Get some information,Получи немного информации
 Settings.Language,Language,Язык
 Settings.Music,Music volume,Громкость музыки
 Settings.Sounds,Sounds volume,Громкость звуков
-Settings.Text,Be careful! You can change the future!,Будьте осторожны! Вы можете изменить будущее!
+Settings.Text,Be careful! You can change the future!,Будь осторожен! Ты можешь изменить будущее!
 Shop.Bot,Bots,Боты
 Shop.Bue,Buy,Купить
 Shop.Costume,Costumes,Костюмы

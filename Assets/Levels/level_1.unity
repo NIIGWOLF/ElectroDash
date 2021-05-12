@@ -121,6 +121,18 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &409048436 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1682911840751406062, guid: a0ccbae6b3b0fef4eb8fd7fe819b03bc,
+    type: 3}
+  m_PrefabInstance: {fileID: 934046258}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &925976328 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8772452220915050264, guid: a0ccbae6b3b0fef4eb8fd7fe819b03bc,
@@ -303,6 +315,11 @@ PrefabInstance:
       propertyPath: coinManager
       value: 
       objectReference: {fileID: 1040546184}
+    - target: {fileID: 8772452222065202395, guid: a0ccbae6b3b0fef4eb8fd7fe819b03bc,
+        type: 3}
+      propertyPath: coins
+      value: 
+      objectReference: {fileID: 409048436}
     - target: {fileID: 8772452222460319001, guid: a0ccbae6b3b0fef4eb8fd7fe819b03bc,
         type: 3}
       propertyPath: m_LocalPosition.z
