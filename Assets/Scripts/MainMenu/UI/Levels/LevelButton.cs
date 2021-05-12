@@ -21,7 +21,10 @@ public class LevelButton : MonoBehaviour
             }
         }
         LevelData.Instance.SaveData();*/
-        levelOpenCoins = LevelData.Instance.levelInfo.levelStars[levelNumber];
+        if (LevelData.Instance.levelInfo.levelStars.Count-1<levelNumber){
+            levelOpenCoins = 0;
+        }
+        else levelOpenCoins = LevelData.Instance.levelInfo.levelStars[levelNumber];
          switch(levelOpenCoins){
              case 0:
                 leftCoin.gameObject.GetComponent<Image>().color = noCoin;

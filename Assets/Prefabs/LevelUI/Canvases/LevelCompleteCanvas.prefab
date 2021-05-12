@@ -2213,6 +2213,8 @@ GameObject:
   - component: {fileID: 7458593747292749438}
   - component: {fileID: 5201164597953564693}
   - component: {fileID: 7013129704587755669}
+  - component: {fileID: 9168374787439689796}
+  - component: {fileID: 8762499578956824701}
   m_Layer: 5
   m_Name: GetHint
   m_TagString: Untagged
@@ -2320,17 +2322,41 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: BeforeNewScene
-        m_Mode: 1
+      - m_Target: {fileID: 9168374787439689796}
+        m_MethodName: ShowAddHelp
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
+--- !u!114 &9168374787439689796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7231499850532520674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2821d8f91ef8d9a4db2f5dd1dc7b61c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8762499578956824701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7231499850532520674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9fb0f8e3bf7dab41b8d37b12c7a6d10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7287060190422784647
 GameObject:
   m_ObjectHideFlags: 0

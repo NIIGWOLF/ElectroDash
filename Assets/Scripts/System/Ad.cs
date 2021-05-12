@@ -6,8 +6,8 @@ public class Ad : MonoBehaviour
         AdEvent.Instance.ShowAddMap(this);
     }
 
-    public void ShowAddHelp(){
-        AdEvent.Instance.ShowAddHelp(this);
+    public void ShowAddHelp(bool isPlay){
+        AdEvent.Instance.ShowAddHelp(this, isPlay);
     }
 
     public void ShowAddCoin(){
@@ -22,7 +22,11 @@ public class Ad : MonoBehaviour
                 case AdEvent.Add.Help:
                     GetComponent<BuyHint>().BuySimpleHint();
                 break;
+                case AdEvent.Add.HelpPlay:
+                    GetComponent<BuyHint>().BuySimpleHintPlay();
+                break;
                 case AdEvent.Add.Coin:
+                GetComponent<BuyHint>().BuyCoin();
                 break;
             }
     }

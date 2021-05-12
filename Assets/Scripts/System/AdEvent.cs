@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class AdEvent : Singleton<AdEvent>, IUnityAdsListener 
 {
-    public enum Add{ Map, Help, Coin};
+    public enum Add{ Map, Help, Coin, HelpPlay};
     private Add add;
     private Ad ad;
     
@@ -24,6 +24,9 @@ public class AdEvent : Singleton<AdEvent>, IUnityAdsListener
                 break;
                 case Add.Coin:
                     ad.AddValue(Add.Coin);
+                break;
+                case Add.HelpPlay:
+                    ad.AddValue(Add.HelpPlay);
                 break;
             }
             //реклама просмотрена до конца
@@ -49,7 +52,9 @@ public class AdEvent : Singleton<AdEvent>, IUnityAdsListener
             Advertisement.Initialize("4092201",true);
         }
     }
+    public void init(){
 
+    }
     public void ShowAddMap(Ad ad){
         this.ad = ad;
         if (Advertisement.IsReady("Rewarded_Android")){
@@ -60,11 +65,12 @@ public class AdEvent : Singleton<AdEvent>, IUnityAdsListener
             print("Реклама не готова");
     }
 
-    public void ShowAddHelp(Ad ad){
+    public void ShowAddHelp(Ad ad, bool isPlay){
         this.ad = ad;
         if (Advertisement.IsReady("Rewarded_Android")){
             Advertisement.Show("Rewarded_Android");
-            add=Add.Help;
+            if (isPlay) add=Add.HelpPlay;
+            else add=Add.Help;
             print("Реклама запущена");
         }else
             print("Реклама не готова");

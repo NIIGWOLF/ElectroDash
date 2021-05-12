@@ -5975,7 +5975,7 @@ PrefabInstance:
     - target: {fileID: 4017398088849585230, guid: 550b55e75fb84cf428a975f1b2915a06,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 550b55e75fb84cf428a975f1b2915a06, type: 3}
@@ -68063,7 +68063,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 4107233108286699924}
         m_MethodName: ShowAddHelp
-        m_Mode: 1
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
