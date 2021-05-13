@@ -24,6 +24,7 @@ public class UIMainMenuManager : MonoBehaviour
     public GameObject audioSource;
     public GameObject buttonSaveData;
     public GameObject music;
+    public GameObject controlButton;
 
      void Awake(){
         costumePrefabs = new Dictionary<string, GameObject>(); //создаем словарь costume, с помощью имени можем получить префаб
@@ -67,5 +68,6 @@ public class UIMainMenuManager : MonoBehaviour
         coins.text = CountData.Instance.amountData.coins.ToString();
         simpleHintCount.GetComponentInChildren<Text>().text = HintData.Instance.hint.simpleHint.ToString();
         mapHintCount.GetComponentInChildren<Text>().text = HintData.Instance.hint.mapHint.ToString();
+        controlButton.GetComponentInChildren<Text>().text = SettingsData.Instance.configurationData.controlType;
     }
 }

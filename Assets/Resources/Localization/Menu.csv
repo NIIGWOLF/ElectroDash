@@ -24,6 +24,9 @@ Settings.Language,Language,Язык
 Settings.Music,Music volume,Громкость музыки
 Settings.Sounds,Sounds volume,Громкость звуков
 Settings.Text,Be careful! You can change the future!,Будь осторожен! Ты можешь изменить будущее!
+Setting.ControlText,Control,Управление
+Settings.Swipe,Swipe,Свайп
+Settings.Arrows,Arrows,Стрелки
 Shop.Bot,Bots,Боты
 Shop.Bue,Buy,Купить
 Shop.Costume,Costumes,Костюмы
