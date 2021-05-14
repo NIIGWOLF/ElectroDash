@@ -10,7 +10,7 @@ public class MainMenuManager : MonoBehaviour
     public static NameLevel nameLevel; 
     public static int levelCount = 100;
 
-   
+   public static int stateMenu = 0;
     void Awake()
     {
         uiMainMenuManager = Object.FindObjectsOfType<UIMainMenuManager>()[0];

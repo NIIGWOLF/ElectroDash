@@ -23,6 +23,6 @@ public class NameLevel : MonoBehaviour
         gameObject.GetComponent<Text>().text = levelName;
     }
    public void LoadMainMenu(){
-       gameObject.GetComponent<Text>().text = "Electro Dash";
+       gameObject.GetComponent<Text>().text = "Box by dash";
    }
 }
