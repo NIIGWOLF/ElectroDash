@@ -32,6 +32,6 @@ public class SettingsData : Singleton<SettingsData>
     }
     public class ConfigurationData {
         public string language = "";
-        public string controlType = "Swipe";
+        public string controlType = "Arrows";
     }
 }
