@@ -33,7 +33,7 @@ public class HintData : Singleton<HintData>
     }
 
     public class Hint{
-        public int simpleHint = 2;
-        public int mapHint = 2;
+        public int simpleHint = 3;
+        public int mapHint = 3;
     }
 }

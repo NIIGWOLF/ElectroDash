@@ -30,7 +30,7 @@ public class CountData : Singleton<CountData>
     }
 
     public class AmountData{
-        public int coins = 1000;
+        public int coins = 0;
     }
        
 }
