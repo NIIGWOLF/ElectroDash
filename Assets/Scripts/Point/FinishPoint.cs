@@ -15,6 +15,7 @@ public class FinishPoint : BasePoint
 
             StaticManager.levelManager.coinManager.ActivUI();
             StaticManager.levelManager.coinManager.SaveActivStars();
+            StaticManager.levelManager.coins.text = CountData.Instance.amountData.coins.ToString();
 
             for (int i = ScriptManager.objectManager.AllCharacter.Count - 1; i >= 0; i--)
             {
