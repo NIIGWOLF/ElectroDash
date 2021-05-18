@@ -8,7 +8,7 @@ public class StaticManager : MonoBehaviour
     public static LoadScene loadScene;
     public static NameLevel nameLevel;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         levelManager = Object.FindObjectOfType<LevelManager>();
         loadScene = Object.FindObjectOfType<LoadScene>();

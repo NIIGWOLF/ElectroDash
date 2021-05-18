@@ -54,6 +54,10 @@ public class Player : Character
     public void Swipe(int rot)
     {
         StaticManager.levelManager.soundsManager.SwipeSound.Play();
+        if (ScriptManager.objectManager.timer.isStart) {
+            ScriptManager.objectManager.timer.isStart=false;
+            ScriptManager.objectManager.timer.activ=true;
+        }
         if (isMove) return;
         if (isTransportation) return;
 
