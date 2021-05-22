@@ -246,7 +246,7 @@ PlayerSettings:
   AndroidTargetArchitectures: 3
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: "D:/\u041C\u043E\u0438\u0418\u0433\u0440\u044B/ElectroDash/boxbydash.keystore"
+  AndroidKeystoreName: D:/project/Unity/boxbydash.keystore
   AndroidKeyaliasName: milvaenet
   AndroidBuildApkPerCpuArchitecture: 0
   AndroidTVCompatibility: 0
