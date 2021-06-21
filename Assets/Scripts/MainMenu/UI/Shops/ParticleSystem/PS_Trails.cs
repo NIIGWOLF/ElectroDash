@@ -2,70 +2,94 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-namespace Assets.SimpleLocalization { 
-public class PS_Trails : MonoBehaviour
+namespace Assets.SimpleLocalization
 {
-    public Text buttonText;
-    public MenuData.ShopsData.TRAILS trails;
-    public MenuData.ShopsData.Prices price;
-    void Start()
+    public class PS_Trails : MonoBehaviour
     {
-        gameObject.GetComponent<Button>().onClick.AddListener(() => ChangePreview());
-        if (MenuData.Instance.shopsData.openTrails.Contains(trails))
+        public Text buttonText;
+        public MenuData.ShopsData.TRAILS trails;
+        public MenuData.ShopsData.Prices price;
+        void Start()
         {
-            if ((int)PlayerData.Instance.playerContent.Trails == (int)trails)
+            LocalizationManager.LocalizationChanged += Localize;
+            gameObject.GetComponent<Button>().onClick.AddListener(() => ChangePreview());
+            if (MenuData.Instance.shopsData.openTrails.Contains(trails))
             {
-                buttonText.text = LocalizationManager.Localize("Shop.Selected");
-                PlayerData.Instance.trailsSelectedText = buttonText;
+                if ((int)PlayerData.Instance.playerContent.Trails == (int)trails)
+                {
+                    buttonText.text = LocalizationManager.Localize("Shop.Selected");
+                    PlayerData.Instance.trailsSelectedText = buttonText;
+                }
+                else
+                {
+                    buttonText.text = LocalizationManager.Localize("Shop.Select");
+                }
             }
             else
             {
-                buttonText.text = LocalizationManager.Localize("Shop.Select");
+                buttonText.text = ((int)price).ToString();
             }
         }
-        else
+        private void ChangePreview()
         {
-            buttonText.text = ((int)price).ToString();
+            MainMenuManager.makePlayer.Player(trails);
+            if (MenuData.Instance.shopsData.openTrails.Contains(trails))
+            {
+                MainMenuManager.uiMainMenuManager.BuyPs_TrailsButton.SetActive(false);
+
+                PlayerData.Instance.playerContent.Trails = trails;
+
+                PlayerData.Instance.trailsSelectedText.text = LocalizationManager.Localize("Shop.Select");
+                PlayerData.Instance.trailsSelectedText = buttonText;
+                buttonText.text = LocalizationManager.Localize("Shop.Selected");
+
+                PlayerData.Instance.SaveData();
+            }
+            else
+            {
+                //int price =  MenuData.Instance.shopsData.pricesTrails[(int)trails];
+                if ((int)price <= CountData.Instance.amountData.coins)
+                {
+                    MainMenuManager.uiMainMenuManager.BuyPs_TrailsButton.GetComponentInChildren<Text>().text = LocalizationManager.Localize("Shop.Bue");
+                    MainMenuManager.uiMainMenuManager.BuyPs_TrailsButton.GetComponent<Button>().interactable = true;
+                    MainMenuManager.uiMainMenuManager.BuyPs_TrailsButton.SetActive(true);
+                    var buy = MainMenuManager.uiMainMenuManager.BuyPs_TrailsButton;
+                    buy.trails = trails;
+                    buy.buttonText = buttonText;
+                    buy.price = (int)price;
+                }
+                else
+                {
+                    MainMenuManager.uiMainMenuManager.BuyPs_TrailsButton.GetComponentInChildren<Text>().text = LocalizationManager.Localize("Shop.NotMoney");
+                    MainMenuManager.uiMainMenuManager.BuyPs_TrailsButton.SetActive(true);
+                    MainMenuManager.uiMainMenuManager.BuyPs_TrailsButton.GetComponent<Button>().interactable = false;
+                }
+
+
+
+
+            }
+
+        }
+
+        private void Localize()
+        {
+            if (MenuData.Instance.shopsData.openTrails.Contains(trails))
+            {
+                if ((int)PlayerData.Instance.playerContent.Trails == (int)trails)
+                {
+                    buttonText.text = LocalizationManager.Localize("Shop.Selected");
+                    PlayerData.Instance.trailsSelectedText = buttonText;
+                }
+                else
+                {
+                    buttonText.text = LocalizationManager.Localize("Shop.Select");
+                }
+            }
+        }
+        public void OnDestroy()
+        {
+            LocalizationManager.LocalizationChanged -= Localize;
         }
     }
-    private void ChangePreview()
-    {
-        MainMenuManager.makePlayer.Player(trails);
-        if (MenuData.Instance.shopsData.openTrails.Contains(trails))
-        {
-            MainMenuManager.uiMainMenuManager.BuyPs_TrailsButton.SetActive(false);
-
-            PlayerData.Instance.playerContent.Trails = trails;
-
-            PlayerData.Instance.trailsSelectedText.text = LocalizationManager.Localize("Shop.Select");
-            PlayerData.Instance.trailsSelectedText = buttonText;
-            buttonText.text = LocalizationManager.Localize("Shop.Selected");
-
-            PlayerData.Instance.SaveData();
-        }
-        else
-        {
-            //int price =  MenuData.Instance.shopsData.pricesTrails[(int)trails];
-            if ((int)price <= CountData.Instance.amountData.coins) {
-            MainMenuManager.uiMainMenuManager.BuyPs_TrailsButton.GetComponentInChildren<Text>().text=LocalizationManager.Localize("Shop.Bue");
-             MainMenuManager.uiMainMenuManager.BuyPs_TrailsButton.GetComponent<Button>().interactable = true;
-            MainMenuManager.uiMainMenuManager.BuyPs_TrailsButton.SetActive(true);
-            var buy = MainMenuManager.uiMainMenuManager.BuyPs_TrailsButton;
-            buy.trails = trails;
-            buy.buttonText = buttonText;
-            buy.price = (int)price;
-            }
-            else {
-                MainMenuManager.uiMainMenuManager.BuyPs_TrailsButton.GetComponentInChildren<Text>().text=LocalizationManager.Localize("Shop.NotMoney");
-                MainMenuManager.uiMainMenuManager.BuyPs_TrailsButton.SetActive(true);
-                MainMenuManager.uiMainMenuManager.BuyPs_TrailsButton.GetComponent<Button>().interactable = false;
-            }
-
-            
-
-
-        }
-
-    }
-}
 }
