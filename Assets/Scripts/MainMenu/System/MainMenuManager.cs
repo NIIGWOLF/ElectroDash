@@ -17,8 +17,6 @@ public class MainMenuManager : MonoBehaviour
         makePlayer = Object.FindObjectOfType<MakePlayer>();
         loadScene = Object.FindObjectOfType<LoadScene>();
         nameLevel = Object.FindObjectOfType<NameLevel>();
-        AdEvent.Instance.init();
-
     }
 
     
