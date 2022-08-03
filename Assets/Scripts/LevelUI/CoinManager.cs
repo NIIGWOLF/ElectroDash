@@ -91,8 +91,13 @@ public class CoinManager : MonoBehaviour
 
         LevelData.Instance.levelInfo.levelActivStars[nLevel] = str;
         LevelData.Instance.levelInfo.levelStars[nLevel]=countCoin;
-        if (LevelData.Instance.levelInfo.lastOpenLevel<=nLevel)
+        if (LevelData.Instance.levelInfo.lastOpenLevel<=nLevel){
             LevelData.Instance.levelInfo.lastOpenLevel=nLevel+1;
+            HintData.Instance.hint.simpleHint++;
+            HintData.Instance.hint.mapHint++;
+            HintData.Instance.SaveData();
+         
+        }
         LevelData.Instance.SaveData();
         CountData.Instance.amountData.coins +=countCoin-oldCountCoin;
         CountData.Instance.SaveData();
