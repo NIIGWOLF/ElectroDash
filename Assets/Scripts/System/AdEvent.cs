@@ -49,7 +49,7 @@ public class AdEvent : Singleton<AdEvent>, IUnityAdsListener
     {
         Advertisement.AddListener(this);
         if (Advertisement.isSupported){
-            Advertisement.Initialize("4092201",false);
+            Advertisement.Initialize("4869133",false);
         }
     }
     public void init(){
